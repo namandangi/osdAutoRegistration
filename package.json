@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.3",
+    "openseadragon": "^4.0.0",
+    "webix": "^10.0.1"
+  }
+}

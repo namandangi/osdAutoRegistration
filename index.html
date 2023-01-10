@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dsaOpenSeaDragon_Demos</title>
+    <link rel="stylesheet" type="text/css" href="/style/side-by-side.css">
+  <link rel="stylesheet" type="text/css" href="/node_modules/webix/webix.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="top-nav">
+        <label class="combine-label"><input type="checkbox" class="combine-checkbox">Combine</label>
+        <div class="side-by-side-controls">
+          Mode:
+          <label><input type="radio" class="none-radio" name="mode">None</label>
+          <label><input type="radio" class="add-radio" name="mode" checked>Add Points</label>
+          <label><input type="radio" class="remove-radio" name="mode">Remove Points</label>
+          <label><input type="checkbox" class="sync-checkbox">Sync</label>
+        </div>
+      </div>
+      <div class="side-nav">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
+      <div class="viewer-container"></div>
+    </div>
+    <div>Sample Image A</div>
+    <script src="/lib/jquery-3.3.1.min.js"></script>
+    <script src="/lib/underscore-min.js"></script>
+    <script src="/lib/openseadragon/openseadragon.min.js"></script>
+    <script src="/lib/openseadragon-svg-overlay.js"></script>
+    <script src="/lib/openseadragon-filtering.js"></script>
+    <script src="/js/dsa/common.js"></script>
+    <script src="/js/dsa/overlaid-viewer.js"></script>
+    <script src="/js/dsa/side-by-side-viewer.js"></script>
+    <script src="/js/dsa/data-set-manager.js"></script> <!-- Needs to be included above tilesources.js -->
+    <script src="/js/app-common.js"></script>
+    <script src="/js/dsa-items.js"></script> <!-- Needs to be included above tilesources.js -->
+    <script src="/js/tilesources.js"></script>
+    <script src="/js/side-by-side-demo.js"></script>
+  <script src="/node_modules/webix/webix.js"></script>
+  </body>
+</html>

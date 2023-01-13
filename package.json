@@ -1,0 +1,30 @@
+{
+  "name": "osdautoregistration",
+  "version": "1.0.0",
+  "description": "An OpenSeadragon based viewer that leverages OpenCV Js to Register Two Images",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "async": "^3.2.4",
+    "jquery": "^3.6.3",
+    "openseadragon": "^4.0.0",
+    "underscore": "^1.13.6",
+    "webix": "^10.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgutman/osdAutoRegistration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgutman/osdAutoRegistration/issues"
+  },
+  "homepage": "https://github.com/dgutman/osdAutoRegistration#readme"
+}

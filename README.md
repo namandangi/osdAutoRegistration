@@ -11,7 +11,8 @@ https://scottsuhy.com/2021/02/01/image-alignment-feature-based-in-opencv-js-java
 
 ## Getting started
 I am using npm to manage packages, so
-
-   npm install
-   npm run start
-Should start a dev server..
+```
+   npm install  
+   npm run start  
+```
+Should start a dev server via `live-server` 

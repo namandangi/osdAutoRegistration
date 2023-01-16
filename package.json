@@ -12,7 +12,8 @@
     "openseadragon": "^4.0.0",
     "underscore": "^1.13.6",
     "webix": "^10.0.1",
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "osd-paperjs-annotation": "pearcetm/osd-paperjs-annotation#v0.1.0"
   },
   "scripts": {
     "start": "live-server",

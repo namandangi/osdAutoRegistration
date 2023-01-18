@@ -12,6 +12,8 @@ App.dsaItems = [
     "tileSource": {
       "width": 57768,
       "height": 37368,
+      "mm_x": 0.000496,
+      "mm_y": 0.000496,
       "tileWidth": 240,
       "tileHeight": 240,
       "minLevel": 0,
@@ -29,6 +31,8 @@ App.dsaItems = [
     "tileSource": {
       "width": 133463,
       "height": 80984,
+      "mm_x": 0.000246,
+      "mm_y": 0.000246,
       "tileWidth": 240,
       "tileHeight": 240,
       "minLevel": 0,
@@ -46,6 +50,8 @@ App.dsaItems = [
     "tileSource": {
       "width": 61752,
       "height": 38240,
+      "mm_x": 0.000496,
+      "mm_y": 0.000496,
       "tileWidth": 240,
       "tileHeight": 240,
       "minLevel": 0,

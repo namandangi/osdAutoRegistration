@@ -9,10 +9,12 @@
   "dependencies": {
     "async": "^3.2.4",
     "jquery": "^3.6.3",
+    "live-server": "^1.2.2",
     "openseadragon": "^4.0.0",
+    "paper": "^0.12.17",
     "underscore": "^1.13.6",
     "webix": "^10.0.1",
-    "live-server": "^1.2.2"
+    "osd-paperjs-annotation": "https://github.com/pearcetm/osd-paperjs-annotation#6284a71"
   },
   "scripts": {
     "start": "live-server",

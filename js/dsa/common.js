@@ -171,7 +171,7 @@
           callback();
         });
         //         context.save();
-        //   OpenSeadragon.Filters.MO  RPHOLOGICAL_OPERATION(kernelSize, Math.max)
+        //   OpenSeadragon.Filters.MORPHOLOGICAL_OPERATION(kernelSize, Math.max)
         //         context.restore();
         //       }
 

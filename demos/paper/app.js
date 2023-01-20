@@ -1,32 +1,52 @@
-import {AnnotationToolkit} from '/node_modules/osd-paperjs-annotation/js/annotationtoolkit.mjs';
+// import {AnnotationToolkit} from '/node_modules/osd-paperjs-annotation/js/annotationtoolkit.mjs';
 import {RotationControlOverlay} from '/node_modules/osd-paperjs-annotation/js/rotationcontrol.mjs';
-let DSA = window.DSA;
+// let DSA = window.DSA;
 let dsaItems = window.App.dsaItems;
 console.log('Loaded dsaItems:',dsaItems);
 
 let tilesource1 = dsaItems[1].tileSource;
 let tilesource2 = dsaItems[0].tileSource;
+tilesource1.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
+tilesource2.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
 let viewer1 = window.viewer1 = makeViewer('viewer1', tilesource1);
 let viewer2 = window.viewer2 = makeViewer('viewer2', tilesource2);
 
+getGlassColor(tilesource1).then(color=>{
+    enableTransparentBackground(viewer1, color, 10, 0.2);
+});
+getGlassColor(tilesource2).then(color=>{
+    enableTransparentBackground(viewer2, color, 10, 0.2);
+});
+
 // on opening both images, start syncing the zoom
-let resolvers=[];
-let openPromises=[
-    new Promise(resolve=>{resolvers.push(resolve)}),
-    new Promise(resolve=>{resolvers.push(resolve)}),
-];
-viewer1.addOnceHandler('open',function(){
-    resolvers[0]();
-    viewer1.rotationControl = new RotationControlOverlay(viewer1);
-});
+Promise.all([
+    new Promise(resolve=>{
+        viewer1.addOnceHandler('open',function(){
+            viewer1.rotationControl = new RotationControlOverlay(viewer1);
+            // viewer1.AnnotationToolkit = new AnnotationToolkit(viewer1);
+            // viewer1.AnnotationToolkit.addAnnotationUI({
+            //     autoOpen:true,
+            //     addLayerDialog:true,
+            // });
+            resolve();
+        });
+    }),
+    new Promise(resolve=>{
+        viewer2.addOnceHandler('open',function(){
+            viewer2.rotationControl = new RotationControlOverlay(viewer2);
+            // viewer2.AnnotationToolkit = new AnnotationToolkit(viewer2);
+            // viewer2.AnnotationToolkit.addAnnotationUI({
+            //     autoOpen:true,
+            //     addLayerDialog:true,
+            // });
+            resolve();
+        });
+    }),
+]).then(initializeSynchronizeBehavior);
 
-viewer2.addOnceHandler('open',function(){
-    resolvers[1]();
-    viewer2.rotationControl = new RotationControlOverlay(viewer2);
-});
-Promise.all(openPromises).then(initializeSynchronizeBehavior);
-
-
+$('input.opacity-slider').on('input',function(){
+    $('.openseadragon-canvas').css('--stacked-opacity',this.value/100);
+}).trigger('input');
 
 $('input.combine-checkbox').on('change',function(){
     if(this.checked){
@@ -185,8 +205,6 @@ function synchronizingRotateHandler(event){
         let transformed = transformMatrix.transform(new paper.Point(refPoint.x, refPoint.y));
         let newRefPoint = new OpenSeadragon.Point(transformed.x, transformed.y);
         target.viewport.rotateTo(newDegrees, newRefPoint, event.immediately);
-
-        console.log(degrees, newDegrees, newRefPoint);
     });
     //unset flag
     self.synchronizing=false;
@@ -201,5 +219,73 @@ function makeViewer(id, tileSource){
         prefixUrl:'/node_modules/openseadragon/build/openseadragon/images/',
         minZoomImageRatio: 0.2,
         visibilityRatio: 0,
+    });
+}
+function getGlassColor(dsaTileSource){
+    let thumbUrl = dsaTileSource.getTileUrl(1,1,1).replace(/\/tiles\/.*/, '/tiles/thumbnail');
+    let image = new Image();
+    image.crossOrigin = "Anonymous";
+    return new Promise((resolve,reject)=>{
+        image.onload = function(){
+            let w = this.width;
+            let h = this.height;
+            let canvas = document.createElement('canvas');
+            canvas.width = w;
+            canvas.height = h;
+            let context = canvas.getContext("2d",{willReadFrequently: true});
+            context.drawImage(this, 0, 0);
+
+            let left = context.getImageData(0, 0, 1, h);
+            let top = context.getImageData(0, 0, w, 1);
+            let right = context.getImageData(w-1, 0, 1, h);
+            let bottom = context.getImageData(0, h-1, w, 1);
+
+            let length = left.height + top.width + right.height + bottom.width;
+            let red = new Array(length);
+            let green = new Array(length);
+            let blue = new Array(length); 
+            let a=0;
+            [left, top, right, bottom].forEach(edge=>{
+                for(var i=0; i<edge.data.length; i+=4, a+=1){
+                    red[a] = edge.data[i];
+                    green[a] = edge.data[i+1];
+                    blue[a] = edge.data[i+2];
+                }
+            });
+
+            let medianRed = red.sort()[Math.floor(red.length/2)];
+            let medianGreen = green.sort()[Math.floor(green.length/2)];
+            let medianBlue = blue.sort()[Math.floor(blue.length/2)];
+            
+            resolve({red: medianRed, green: medianGreen, blue: medianBlue});
+        };
+        image.onerror = reject;
+        image.src = thumbUrl;
+    });
+}
+function enableTransparentBackground(viewer, background, tolerance, alpha){
+
+    viewer.setFilterOptions({
+        filters: {
+            processors: [
+                function(context, callback) {
+                    let imData = context.getImageData(0, 0, context.canvas.width, context.canvas.height);
+                    
+                    let newImData = imData;
+                    for(var i=0; i<newImData.data.length; i+=4){
+                        if(Math.abs(newImData.data[i] - background.red)<tolerance &&
+                           Math.abs(newImData.data[i+1] - background.green)<tolerance  &&
+                           Math.abs(newImData.data[i+2] - background.blue)<tolerance ){
+                            newImData.data[i+3] = alpha;
+                           }
+                    }
+
+                    context.putImageData(newImData, 0, 0);
+
+                    callback(context);
+                    
+                },
+            ]
+        },
     });
 }

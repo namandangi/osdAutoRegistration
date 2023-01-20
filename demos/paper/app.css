@@ -14,6 +14,9 @@
 .top-nav, .side-nav{
     position:relative;
 }
+.top-nav>label{
+    margin:0 1em;
+}
 .viewer-container{
     position:relative;
 }
@@ -28,7 +31,7 @@
     left:0;
 }
 .viewer-container.stacked .viewer:last-child .openseadragon-canvas{
-    opacity: 0.5;
+    opacity: var(--stacked-opacity);
 }
 .viewer-container.stacked .viewer:not(:last-child)>div:not([class]){
     opacity: 0;

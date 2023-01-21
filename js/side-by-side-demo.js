@@ -44,8 +44,8 @@
       /* Note here you can specify various starting data sets using the urlParams data */
 
 
-      var dataSetKey = 'exampleSet1With2';
-//      var dataSetKey = 'llmpp';
+      //var dataSetKey = 'exampleSet1With2';
+      var dataSetKey = 'llmpptwo'; //better default data set
 
       if (urlParams.data === 'derm') {
         dataSetKey = 'dsaItemsWith2';

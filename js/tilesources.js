@@ -133,7 +133,7 @@
 
   var i, number, url;
   for (i = 0; i < 66; i++) {
-    url = 'zStackExamples/exampleSet1/v00000';
+    url = '../../zStackExamples/exampleSet1/v00000';
     number = '' + i;
     if (number.length === 1) {
       url += '0';

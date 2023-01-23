@@ -15,11 +15,35 @@
       </div>
       <div class="bottom-row">
         <div class="side-nav">
-          <div class="top"></div>
-          <div class="bottom"></div>
+          <div class="image-info static">
+            <h4>Static image</h4>
+            <div class="image-info-grid">
+              <label>X:</label><input type="number" step="0.01" class="coordinate x">
+              <label>Y:</label><input type="number" step="0.01" class="coordinate y">
+              <label>Degrees:</label><input type="number" step="0.01" class="rotation">
+            </div>
+          </div>
+          <div class="image-info moving">
+            <h4>Moving image</h4>
+            <div class="image-info-grid">
+              <label>X:</label><input type="number" step="0.01" class="coordinate x">
+              <label>Y:</label><input type="number" step="0.01" class="coordinate y">
+              <label>Degrees:</label><input type="number" step="0.01" class="rotation">
+            </div>
+          </div>
+          <div class="image-info matrix">
+            <h4>Transform matrix values</h4>
+            <div class="image-info-grid">
+              <label>X offset:</label><input type="number" class="coordinate x" disabled>
+              <label>Y: offset</label><input type="number" class="coordinate y" disabled>
+              <label>Degrees:</label><input type="number" class="rotation" disabled>
+              <label>Scaling:</label><input type="number" class="zoom" disabled>
+            </div>
+          </div>
         </div>
         <div class="viewer-container side-by-side">
-          <div id="viewer1" class="viewer"></div><div id="viewer2" class="viewer"></div>
+          <div id="viewer-static" class="viewer static"></div>
+          <div id="viewer-moving" class="viewer moving"></div>
         </div>
       </div>
       

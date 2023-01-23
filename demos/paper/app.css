@@ -4,6 +4,7 @@
     left:0;
     height:100vh;
     width:100vw;
+    overflow:hidden;
     display:grid;
     grid-template-rows:auto 1fr;
     gap: 1em;
@@ -11,10 +12,13 @@
 .bottom-row{
     display:grid;
     grid-template-columns:auto 1fr;
+    overflow:hidden;
+    min-height:0;
 }
 .top-nav, .side-nav{
     position:relative;
     padding:8px;
+    overflow:scroll;
 }
 .top-nav>label{
     margin:0 1em;
@@ -32,14 +36,21 @@
     top:0;
     left:0;
 }
+.image-info{
+    margin-bottom:0.5em;
+}
 .image-info h4{
-    padding-bottom:0.1em;
-    margin-bottom:0.1em;
+    padding:0.1em 0;
+    margin:0.1em 0;
 }
 .image-info-grid{
     display:grid;
     grid-template-columns: auto 1fr;
     padding:0 10px;
+}
+.image-info.viewport-images img{
+    width:180px;
+    border:thin gray solid;
 }
 .viewer-container.stacked .viewer:last-child .openseadragon-canvas{
     opacity: var(--stacked-opacity);

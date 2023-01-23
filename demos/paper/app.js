@@ -92,6 +92,15 @@ $('input.sync-checkbox').on('change',function(){
     }
 }).attr('checked',false);
 
+$('.create-viewport-images').on('click',function(){
+    console.log('buttton clicked');
+    let staticImage = staticViewer.drawer.canvas.toDataURL('img/jpeg');
+    $('.image-info.viewport-images .static').empty().append($('<img>',{src:staticImage}));
+
+    let movingImage = movingViewer.drawer.canvas.toDataURL('img/jpeg');
+    $('.image-info.viewport-images .moving').empty().append($('<img>',{src:movingImage}));
+})
+
 function setSynchronizingMatrices(){
     //create affine matrices
     //depends on paper.js
@@ -156,9 +165,12 @@ function setupSyncInfoHandler(viewer, container){
                 z.val(scaling.x);
             } 
             
-        })
+        });
+        //clear viewport images, since the view has changed
+        $('.image-info.viewport-images .viewport-image-container').empty();
         
     };
+
     let events = ['pan','zoom','rotate','resize'];
     events.forEach(event=>viewer.addHandler(event, handler));
 }

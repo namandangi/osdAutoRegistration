@@ -5,14 +5,16 @@
     height:100vh;
     width:100vw;
     display:grid;
-    grid-template-rows:60px 1fr;
+    grid-template-rows:auto 1fr;
+    gap: 1em;
 }
 .bottom-row{
     display:grid;
-    grid-template-columns:150px 1fr;
+    grid-template-columns:auto 1fr;
 }
 .top-nav, .side-nav{
     position:relative;
+    padding:8px;
 }
 .top-nav>label{
     margin:0 1em;
@@ -29,6 +31,15 @@
     position:absolute;
     top:0;
     left:0;
+}
+.image-info h4{
+    padding-bottom:0.1em;
+    margin-bottom:0.1em;
+}
+.image-info-grid{
+    display:grid;
+    grid-template-columns: auto 1fr;
+    padding:0 10px;
 }
 .viewer-container.stacked .viewer:last-child .openseadragon-canvas{
     opacity: var(--stacked-opacity);

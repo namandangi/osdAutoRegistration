@@ -8,21 +8,23 @@ let tilesource1 = dsaItems[1].tileSource;
 let tilesource2 = dsaItems[0].tileSource;
 tilesource1.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
 tilesource2.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
-let viewer1 = window.viewer1 = makeViewer('viewer1', tilesource1);
-let viewer2 = window.viewer2 = makeViewer('viewer2', tilesource2);
+let staticViewer = window.viewer1 = makeViewer('viewer-static', tilesource1);
+let movingViewer = window.viewer2 = makeViewer('viewer-moving', tilesource2);
+setupInfoHandler(staticViewer, $('.image-info.static'));
+setupInfoHandler(movingViewer, $('.image-info.moving'));
 
 getGlassColor(tilesource1).then(color=>{
-    enableTransparentBackground(viewer1, color, 10, 0.2);
+    enableTransparentBackground(staticViewer, color, 10, 0.2);
 });
 getGlassColor(tilesource2).then(color=>{
-    enableTransparentBackground(viewer2, color, 10, 0.2);
+    enableTransparentBackground(movingViewer, color, 10, 0.2);
 });
 
 // on opening both images, start syncing the zoom
 Promise.all([
     new Promise(resolve=>{
-        viewer1.addOnceHandler('open',function(){
-            viewer1.rotationControl = new RotationControlOverlay(viewer1);
+        staticViewer.addOnceHandler('open',function(){
+            staticViewer.rotationControl = new RotationControlOverlay(staticViewer);
             // viewer1.AnnotationToolkit = new AnnotationToolkit(viewer1);
             // viewer1.AnnotationToolkit.addAnnotationUI({
             //     autoOpen:true,
@@ -32,8 +34,8 @@ Promise.all([
         });
     }),
     new Promise(resolve=>{
-        viewer2.addOnceHandler('open',function(){
-            viewer2.rotationControl = new RotationControlOverlay(viewer2);
+        movingViewer.addOnceHandler('open',function(){
+            movingViewer.rotationControl = new RotationControlOverlay(movingViewer);
             // viewer2.AnnotationToolkit = new AnnotationToolkit(viewer2);
             // viewer2.AnnotationToolkit.addAnnotationUI({
             //     autoOpen:true,
@@ -51,7 +53,7 @@ $('input.opacity-slider').on('input',function(){
 $('input.combine-checkbox').on('change',function(){
     if(this.checked){
         $('.viewer-container').addClass('stacked').removeClass('side-by-side');
-        viewer1.rotationControl.deactivate();
+        staticViewer.rotationControl.deactivate();
     } else {
         $('.viewer-container').addClass('side-by-side').removeClass('stacked');
     }
@@ -61,29 +63,29 @@ $('input.sync-checkbox').on('change',function(){
     if(this.checked){
         setSynchronizingMatrices();
 
-        viewer1.addHandler('pan',synchronizingPanHandler);
-        viewer2.addHandler('pan',synchronizingPanHandler);
+        staticViewer.addHandler('pan',synchronizingPanHandler);
+        movingViewer.addHandler('pan',synchronizingPanHandler);
 
-        viewer1.addHandler('rotate',synchronizingRotateHandler);
-        viewer2.addHandler('rotate',synchronizingRotateHandler);
+        staticViewer.addHandler('rotate',synchronizingRotateHandler);
+        movingViewer.addHandler('rotate',synchronizingRotateHandler);
 
-        viewer1.removeHandler('pan', setSynchronizingMatrices);
-        viewer2.removeHandler('pan', setSynchronizingMatrices);
+        staticViewer.removeHandler('pan', setSynchronizingMatrices);
+        movingViewer.removeHandler('pan', setSynchronizingMatrices);
         
-        viewer1.removeHandler('rotate', setSynchronizingMatrices);
-        viewer2.removeHandler('rotate', setSynchronizingMatrices);
+        staticViewer.removeHandler('rotate', setSynchronizingMatrices);
+        movingViewer.removeHandler('rotate', setSynchronizingMatrices);
     } else {
-        viewer1.removeHandler('pan',synchronizingPanHandler);
-        viewer2.removeHandler('pan',synchronizingPanHandler);
+        staticViewer.removeHandler('pan',synchronizingPanHandler);
+        movingViewer.removeHandler('pan',synchronizingPanHandler);
 
-        viewer1.removeHandler('rotate',synchronizingRotateHandler);
-        viewer2.removeHandler('rotate',synchronizingRotateHandler);
+        staticViewer.removeHandler('rotate',synchronizingRotateHandler);
+        movingViewer.removeHandler('rotate',synchronizingRotateHandler);
 
-        viewer1.addHandler('pan', setSynchronizingMatrices);
-        viewer2.addHandler('pan', setSynchronizingMatrices);
+        staticViewer.addHandler('pan', setSynchronizingMatrices);
+        movingViewer.addHandler('pan', setSynchronizingMatrices);
         
-        viewer1.addHandler('rotate', setSynchronizingMatrices);
-        viewer2.addHandler('rotate', setSynchronizingMatrices);
+        staticViewer.addHandler('rotate', setSynchronizingMatrices);
+        movingViewer.addHandler('rotate', setSynchronizingMatrices);
     }
 }).attr('checked',false);
 
@@ -93,35 +95,90 @@ function setSynchronizingMatrices(){
     //TO DO: paper.js probably isn't necessary... could likely be implemented with just OpenSeadragon
 
     let m1 = new paper.Matrix();
-    m1.translate(viewer1.viewport.getCenter(false));
-    m1.rotate(-viewer1.viewport.getRotation(false));
-    m1.scale(1/viewer1.viewport.getZoom(false));
+    m1.translate(staticViewer.viewport.getCenter(false));
+    m1.rotate(-staticViewer.viewport.getRotation(false));
+    m1.scale(1/staticViewer.viewport.getZoom(false));
     let m2 = new paper.Matrix();
-    m2.translate(viewer2.viewport.getCenter(false));
-    m2.rotate(-viewer2.viewport.getRotation(false));
-    m2.scale(1/viewer2.viewport.getZoom(false));
+    m2.translate(movingViewer.viewport.getCenter(false));
+    m2.rotate(-movingViewer.viewport.getRotation(false));
+    m2.scale(1/movingViewer.viewport.getZoom(false));
     
     let transform1to2 = m2.appended(m1.inverted());
-    viewer1.synchronizedViewers[0].transformMatrix = transform1to2;
-    viewer2.synchronizedViewers[0].transformMatrix = transform1to2.inverted();
+    staticViewer.synchronizedViewers[0].transformMatrix = transform1to2;
+    movingViewer.synchronizedViewers[0].transformMatrix = transform1to2.inverted();
 }
+function setupInfoHandler(viewer, container){
+    let x = container.find('.x');
+    let y = container.find('.y');
+    let r = container.find('.rotation');
+    let handler= function(event){
+        // console.log('viewport-change', event, viewer, container);
+        let center = viewer.viewport.getCenter(true);
+        let rotation = viewer.viewport.getRotation(true);
+        x.val(center.x);
+        y.val(center.y);
+        r.val(rotation);
+    };
+    let events = ['pan','zoom','rotate','resize'];
+    events.forEach(event=>viewer.addHandler(event, handler));
 
+    let doPan = function(){
+        viewer.viewport.panTo(new OpenSeadragon.Point(Number(x.val()), Number(y.val())), true);
+    }
+    let doRotate = function(){
+        viewer.viewport.rotateTo(Number(r.val()), null, true);
+    }
+    x.on('change', doPan);
+    y.on('change', doPan);
+    r.on('change', doRotate);
+}
+function setupSyncInfoHandler(viewer, container){
+    let x = container.find('.x');
+    let y = container.find('.y');
+    let r = container.find('.rotation');
+    let z = container.find('.zoom');
+    let handler= function(event){
+        //defer to the next event loop so the synchronization handler can execute first
+        window.setTimeout(()=>{
+            let synced = viewer.synchronizedViewers && viewer.synchronizedViewers[0];
+            if(synced){
+                let m = synced.transformMatrix;
+                let offset = m.translation;
+                let rotation = m.rotation;
+                let scaling = m.scaling;
+                
+                x.val(offset.x);
+                y.val(offset.y);
+                r.val(rotation);
+                z.val(scaling.x);
+            } 
+            
+        })
+        
+    };
+    let events = ['pan','zoom','rotate','resize'];
+    events.forEach(event=>viewer.addHandler(event, handler));
+}
 function initializeSynchronizeBehavior(){
     //perform initial zoom to same real-world coordinates (given by mm_x and width values);
-    viewer2.viewport.zoomTo(viewer1.viewport.getZoom() * (tilesource2.mm_x * tilesource2.width) / (tilesource1.mm_x * tilesource1.width) );
+    movingViewer.viewport.zoomTo(staticViewer.viewport.getZoom() * (tilesource2.mm_x * tilesource2.width) / (tilesource1.mm_x * tilesource1.width) );
 
-    viewer1.synchronizedViewers = [{viewer:viewer2}];
-    viewer2.synchronizedViewers = [{viewer:viewer1}];
+    staticViewer.synchronizedViewers = [{viewer:movingViewer}];
+    movingViewer.synchronizedViewers = [{viewer:staticViewer}];
 
     setSynchronizingMatrices();
 
-    viewer1.addHandler('zoom',synchronizingZoomHandler);
-    viewer2.addHandler('zoom',synchronizingZoomHandler);
-    viewer1.addHandler('pan', setSynchronizingMatrices);
-    viewer2.addHandler('pan', setSynchronizingMatrices);
+    staticViewer.addHandler('zoom',synchronizingZoomHandler);
+    movingViewer.addHandler('zoom',synchronizingZoomHandler);
+    staticViewer.addHandler('pan', setSynchronizingMatrices);
+    movingViewer.addHandler('pan', setSynchronizingMatrices);
     
-    viewer1.addHandler('rotate', setSynchronizingMatrices);
-    viewer2.addHandler('rotate', setSynchronizingMatrices);
+    staticViewer.addHandler('rotate', setSynchronizingMatrices);
+    movingViewer.addHandler('rotate', setSynchronizingMatrices);
+
+    setupSyncInfoHandler(staticViewer, $('.image-info.matrix'));
+    setupSyncInfoHandler(movingViewer, $('.image-info.matrix'));
+
 }
 
 function synchronizingPanHandler(event){

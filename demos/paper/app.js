@@ -143,6 +143,32 @@ function setupInfoHandler(viewer, container){
     x.on('change', doPan);
     y.on('change', doPan);
     r.on('change', doRotate);
+
+    //Add mouse tracker to OSD viewer element to watch cursor position
+    let imageName = container.find('.image-name').text();
+    let coordsContainer = $('.cursor-info');
+    let targetElement = coordsContainer.find('.cursor-target');
+    let vx = coordsContainer.find('.viewport-coords .x');
+    let vy = coordsContainer.find('.viewport-coords .y');
+    let ix = coordsContainer.find('.image-coords .x');
+    let iy = coordsContainer.find('.image-coords .y');
+    let mouseCoords = function(event){
+        targetElement.text(imageName);
+        let viewport = viewer.viewport.viewerElementToViewportCoordinates(event.position);
+        let image = viewer.viewport.viewerElementToImageCoordinates(event.position);
+        vx.val(viewport.x);
+        vy.val(viewport.y);
+        ix.val(image.x);
+        iy.val(image.y);
+    }
+    let leaveHandler = function(event){
+        targetElement.text('');
+        vx.val('');
+        vy.val('');
+        ix.val('');
+        iy.val('');
+    }
+    let tracker = new window.OpenSeadragon.MouseTracker({element: viewer.element, moveHandler: mouseCoords, leaveHandler: leaveHandler});
 }
 function setupSyncInfoHandler(viewer, container){
     let x = container.find('.x');

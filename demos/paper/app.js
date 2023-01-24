@@ -13,11 +13,22 @@ let movingViewer = window.viewer2 = makeViewer('viewer-moving', tilesource2);
 setupInfoHandler(staticViewer, $('.image-info.static'));
 setupInfoHandler(movingViewer, $('.image-info.moving'));
 
+let transparentGlassRGBThreshold = 10;
+let transparentGlassEdgeThreshold = 0.5;
+
 getGlassColor(tilesource1).then(color=>{
-    enableTransparentBackground(staticViewer, color, 10, 0.2);
+    tilesource1.backgroundColor = color;
+    $(staticViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+    if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
+        enableTransparentBackground(staticViewer, color, transparentGlassRGBThreshold, 0);
+    }
 });
 getGlassColor(tilesource2).then(color=>{
-    enableTransparentBackground(movingViewer, color, 10, 0.2);
+    tilesource2.backgroundColor = color;
+    $(movingViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+    if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
+        enableTransparentBackground(movingViewer, color, transparentGlassRGBThreshold, 0);
+    }
 });
 
 // on opening both images, start syncing the zoom
@@ -48,6 +59,16 @@ Promise.all([
 
 $('input.opacity-slider').on('input',function(){
     $('.openseadragon-canvas').css('--stacked-opacity',this.value/100);
+}).trigger('input');
+
+$('input.glass-checkbox').on('change',function(){
+    if(this.checked){
+        enableTransparentBackground(staticViewer, tilesource1.backgroundColor, transparentGlassRGBThreshold, 0);
+        enableTransparentBackground(movingViewer, tilesource2.backgroundColor, transparentGlassRGBThreshold, 0);
+    } else {
+        disableTransparentBackground(staticViewer);
+        disableTransparentBackground(movingViewer);
+    }
 }).trigger('input');
 
 $('input.combine-checkbox').on('change',function(){
@@ -165,7 +186,7 @@ function setupInfoHandler(viewer, container){
         ix.val('');
         iy.val('');
     }
-    let tracker = new window.OpenSeadragon.MouseTracker({element: viewer.element, moveHandler: mouseCoords, leaveHandler: leaveHandler});
+    new window.OpenSeadragon.MouseTracker({element: viewer.element, moveHandler: mouseCoords, leaveHandler: leaveHandler});
 }
 function setupSyncInfoHandler(viewer, container){
     let x = container.find('.x');
@@ -314,6 +335,7 @@ function makeViewer(id, tileSource){
         prefixUrl:'/node_modules/openseadragon/build/openseadragon/images/',
         minZoomImageRatio: 0.2,
         visibilityRatio: 0,
+        maxImageCacheCount: 800,
     });
 }
 function getGlassColor(dsaTileSource){
@@ -351,8 +373,16 @@ function getGlassColor(dsaTileSource){
             let medianRed = red.sort()[Math.floor(red.length/2)];
             let medianGreen = green.sort()[Math.floor(green.length/2)];
             let medianBlue = blue.sort()[Math.floor(blue.length/2)];
+
+            let maxDifference = [left, top, right, bottom].map(edge=>{
+                let diff = new Array(edge.data.length/4);
+                for(var i=0; i<edge.data.length; i+=4, a+=1){
+                    diff[a] = Math.max(Math.abs(edge.data[i] - medianRed), Math.abs(edge.data[i+1] - medianGreen), Math.abs(edge.data[i+2] - medianBlue));
+                }
+                return diff;
+            }).flat().sort();
             
-            resolve({red: medianRed, green: medianGreen, blue: medianBlue});
+            resolve({red: medianRed, green: medianGreen, blue: medianBlue, maxDifference: maxDifference});
         };
         image.onerror = reject;
         image.src = thumbUrl;
@@ -383,4 +413,11 @@ function enableTransparentBackground(viewer, background, tolerance, alpha){
             ]
         },
     });
+}
+function disableTransparentBackground(viewer){
+    viewer.setFilterOptions({
+        filters:{
+            processors:[]
+        }
+    })
 }

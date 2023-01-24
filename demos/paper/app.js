@@ -24,6 +24,7 @@ getGlassColor(tilesource1).then(color=>{
     $(staticViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
     if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
         enableTransparentBackground(staticViewer, color, transparentGlassRGBThreshold, 0);
+        $('input.glass-checkbox').attr('checked',true);
     }
 });
 getGlassColor(tilesource2).then(color=>{
@@ -31,6 +32,7 @@ getGlassColor(tilesource2).then(color=>{
     $(movingViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
     if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
         enableTransparentBackground(movingViewer, color, transparentGlassRGBThreshold, 0);
+        $('input.glass-checkbox').attr('checked',true);
     }
 });
 
@@ -72,7 +74,7 @@ $('input.glass-checkbox').on('change',function(){
         disableTransparentBackground(staticViewer);
         disableTransparentBackground(movingViewer);
     }
-}).trigger('input');
+}).attr('checked',false);
 
 $('input.combine-checkbox').on('change',function(){
     if(this.checked){

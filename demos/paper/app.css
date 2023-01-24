@@ -36,6 +36,13 @@
     top:0;
     left:0;
 }
+.viewer{
+    background-color:transparent;
+    background-color:var(--background-color);
+}
+.viewer-container.stacked .viewer:not(:first-child){
+    background-color:transparent;
+}
 .cursor-target{
     font-weight:bold;
 }

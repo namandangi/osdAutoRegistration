@@ -16,3 +16,11 @@ I am using npm to manage packages, so
    npm run start  
 ```
 Should start a dev server via `live-server` 
+
+## Debugging
+
+### 1. npm ERR! git dep preparation
+```
+   npm cache clean --force
+   npm install
+```

@@ -338,9 +338,9 @@ function makeViewer(id, tileSource){
         tileSources: tileSource,
         crossOriginPolicy:'Anonymous',
         prefixUrl:'/node_modules/openseadragon/build/openseadragon/images/',
+        maxZoomPixelRatio: 10,
         minZoomImageRatio: 0.2,
         visibilityRatio: 0,
-        maxImageCacheCount: 800,
     });
 }
 function getGlassColor(dsaTileSource){
@@ -412,7 +412,8 @@ function enableTransparentBackground(viewer, background, tolerance, alpha){
 
                     context.putImageData(newImData, 0, 0);
 
-                    callback(context);
+                    //make the callback async so the tile cache works appropriately
+                    window.setTimeout(()=>callback(context));
                     
                 },
             ]

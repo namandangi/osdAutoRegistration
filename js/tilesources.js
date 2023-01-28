@@ -133,7 +133,7 @@
 
   var i, number, url;
   for (i = 0; i < 66; i++) {
-    url = 'zStackExamples/exampleSet1/v00000';
+    url = '../../zStackExamples/exampleSet1/v00000';
     number = '' + i;
     if (number.length === 1) {
       url += '0';
@@ -261,6 +261,10 @@ DSA.makeLayersFromTileSources(
     DSA.makeLayers(App.dsaItems.slice(0, 2))
   );
 
+  DSA.dataSetManager.register(
+    'llmpptwo',
+    DSA.makeLayers(App.dsaItems.slice(3, 5))
+  );
 
   // DSA.dataSetManager.register('dermPathImageSet', function(callback) {
   //   dsaTileSource(config.BASE_URL, '5bb7abc5e62914001b06be44', function(tileSource) {

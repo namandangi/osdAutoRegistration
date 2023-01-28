@@ -4,8 +4,11 @@ import {RotationControlOverlay} from '/node_modules/osd-paperjs-annotation/js/ro
 let dsaItems = window.App.dsaItems;
 console.log('Loaded dsaItems:',dsaItems);
 
-let tilesource1 = dsaItems[1].tileSource;
-let tilesource2 = dsaItems[0].tileSource;
+let tilesource1 = dsaItems[3].tileSource;
+let tilesource2 = dsaItems[4].tileSource;
+
+console.log(dsaItems)
+
 tilesource1.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
 tilesource2.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
 let staticViewer = window.viewer1 = makeViewer('viewer-static', tilesource1);

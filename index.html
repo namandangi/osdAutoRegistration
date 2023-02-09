@@ -3,15 +3,41 @@
   <head>
     <meta charset="utf-8">
     <title>osdAutoRegistration</title>
+    <link rel="stylesheet" type="text/css" href="/style/index.css">
   </head>
   <body>
-    <h2>osdAutoRegistration</h2>
-    <p>Adaptive co-registration of similar images within multiple OpenSeadragon viewers during synced navigation.</p>
-    <p>Check out the project homepage <a src="https://github.com/dgutman/osdAutoRegistration">on GitHub.</a></p>
-    <h3>Demonstration/development pages</h3>
-    <ul>
-      <li><a href="/demos/orig/">Original page</a></li>
-      <li><a href="/demos/paper/">osd-paperjs-annotation</a></li>
-    </ul>
+    <div class="content">
+      <h2>osdAutoRegistration</h2>
+      <p>Adaptive co-registration of similar images within multiple OpenSeadragon viewers during synced navigation.</p>
+      <p>Check out the project homepage <a href="https://github.com/dgutman/osdAutoRegistration">on GitHub.</a></p>
+      <h3>Demonstration/development pages</h3>
+      <ul class="demo-list">
+        <li>
+          <a href="/demos/transformed-pairs/">
+            <div>
+              <h3>Create image pairs with known transforms</h3>
+              <p>Align images by manually, then generate training data with known transform offsets.</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/demos/paper/">
+            <div>
+              <h3>Syncronizing data</h3>
+              <p>Allow overlapped viewers to be aligned by hand, and display coordinates and synchronizing matrix information.</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/demos/orig/">
+            <div>
+              <h3>Original page</h3>
+              <p>The starting point for development, with multiple filters and input-based shimming of two images</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    
   </body>
 </html>

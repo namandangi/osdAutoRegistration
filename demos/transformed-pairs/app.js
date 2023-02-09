@@ -1,68 +1,69 @@
 // import {AnnotationToolkit} from '/node_modules/osd-paperjs-annotation/js/annotationtoolkit.mjs';
 import {RotationControlOverlay} from '/node_modules/osd-paperjs-annotation/js/rotationcontrol.mjs';
 // let DSA = window.DSA;
-let dsaItems = window.App.dsaItems;
-console.log('Loaded dsaItems:',dsaItems);
 
-let tilesource1 = dsaItems[3].tileSource;
-let tilesource2 = dsaItems[4].tileSource;
+// constants
+const transparentGlassRGBThreshold = 10;
+
+// let dsaItems = window.App.dsaItems;
+// let demoImages = window.App.demoImages;
+let cases = App.demoImages.reduce((acc,item)=>{
+    if(!acc[item.meta.accession]){
+        acc[item.meta.accession] = {items: []};
+    }
+    acc[item.meta.accession].items.push(item); 
+    return acc; 
+}, {});
+Object.values(cases).forEach( c => {
+    c.blocks = c.items.reduce((acc,item)=>{
+        let block = item.meta.block.replace(':00 AM', ' A').replace(':00 PM', ' P');
+        if(!acc[block]){
+            acc[block] = [];
+        }
+        acc[block].push(item); 
+        return acc; 
+    }, {});
+});
+
+// let tilesource1 = demoImages[3].tileSource;
+// let tilesource2 = demoImages[4].tileSource;
 
 let drawingCanvas = document.createElement('canvas');
 
-console.log(dsaItems)
 
-tilesource1.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
-tilesource2.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
-let staticViewer = window.viewer1 = makeViewer('viewer-static', tilesource1);
-let movingViewer = window.viewer2 = makeViewer('viewer-moving', tilesource2);
-setupInfoHandler(staticViewer, $('.image-info.static'));
-setupInfoHandler(movingViewer, $('.image-info.moving'));
+// let staticViewer = window.viewer1 = makeViewer('viewer-static', tilesource1);
+// let movingViewer = window.viewer2 = makeViewer('viewer-moving', tilesource2);
+let staticViewer = window.viewer1 = makeViewer('viewer-static');
+let movingViewer = window.viewer2 = makeViewer('viewer-moving');
+staticViewer.synchronizedViewers = [{viewer:movingViewer}];
+movingViewer.synchronizedViewers = [{viewer:staticViewer}];
+staticViewer.addHandler('open',onImageOpen);
+movingViewer.addHandler('open',onImageOpen);
+staticViewer.rotationControl = new RotationControlOverlay(staticViewer);
+movingViewer.rotationControl = new RotationControlOverlay(movingViewer);
 
-let transparentGlassRGBThreshold = 10;
-let transparentGlassEdgeThreshold = 0.5;
+setupImagePicker(cases);
 
-getGlassColor(tilesource1).then(color=>{
-    tilesource1.backgroundColor = color;
-    $(staticViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-    if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
-        enableTransparentBackground(staticViewer, color, transparentGlassRGBThreshold, 0);
-        $('input.glass-checkbox').attr('checked',true);
-    }
-});
-getGlassColor(tilesource2).then(color=>{
-    tilesource2.backgroundColor = color;
-    $(movingViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-    if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
-        enableTransparentBackground(movingViewer, color, transparentGlassRGBThreshold, 0);
-        $('input.glass-checkbox').attr('checked',true);
-    }
-});
-
-// on opening both images, start syncing the zoom
-Promise.all([
-    new Promise(resolve=>{
-        staticViewer.addOnceHandler('open',function(){
-            staticViewer.rotationControl = new RotationControlOverlay(staticViewer);
-            // viewer1.AnnotationToolkit = new AnnotationToolkit(viewer1);
-            // viewer1.AnnotationToolkit.addAnnotationUI({
-            //     autoOpen:true,
-            //     addLayerDialog:true,
-            // });
-            resolve();
+function onImageOpen(event){
+    let viewer = event.eventSource;
+    
+    let tileSource = viewer.world.getItemAt(0).source;
+    if(tileSource.backgroundColor){
+        $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+    } else {
+         getGlassColor(tileSource).then(color=>{
+            tileSource.backgroundColor = color;
+            //make sure we're still viewing this tile source before updating the viewer background color
+            if(viewer.world.getItemAt(0).source == tileSource){
+                $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+            }  
         });
-    }),
-    new Promise(resolve=>{
-        movingViewer.addOnceHandler('open',function(){
-            movingViewer.rotationControl = new RotationControlOverlay(movingViewer);
-            // viewer2.AnnotationToolkit = new AnnotationToolkit(viewer2);
-            // viewer2.AnnotationToolkit.addAnnotationUI({
-            //     autoOpen:true,
-            //     addLayerDialog:true,
-            // });
-            resolve();
-        });
-    }),
-]).then(initializeSynchronizeBehavior);
+    }
+
+    initializeSynchronizeBehavior();
+   
+}
+
 
 $('input.opacity-slider').on('input',function(){
     $('.openseadragon-canvas').css('--stacked-opacity',this.value/100);
@@ -70,8 +71,8 @@ $('input.opacity-slider').on('input',function(){
 
 $('input.glass-checkbox').on('change',function(){
     if(this.checked){
-        enableTransparentBackground(staticViewer, tilesource1.backgroundColor, transparentGlassRGBThreshold, 0);
-        enableTransparentBackground(movingViewer, tilesource2.backgroundColor, transparentGlassRGBThreshold, 0);
+        enableTransparentBackground(staticViewer, transparentGlassRGBThreshold, 0);
+        enableTransparentBackground(movingViewer, transparentGlassRGBThreshold, 0);
     } else {
         disableTransparentBackground(staticViewer);
         disableTransparentBackground(movingViewer);
@@ -117,6 +118,124 @@ $('input.sync-checkbox').on('change',function(){
     }
 }).attr('checked',false);
 
+$('.viewport-images .toggle').on('click',function(){
+    $('.img-rect').toggle();
+});
+$('.viewport-images input[type=number]').on('input',function(){
+    let dims = $('.viewport-images input[type=number]').toArray().map(i=>i.value);
+    let px = dims.map(d=>d+'px');
+    $('.img-rect').css({width: px[0], height: px[1]});
+    $('.viewport-images').css({'--img-aspect-ratio': `${dims[0]} / ${dims[1]}`});
+    drawingCanvas.width = dims[0];
+    drawingCanvas.height = dims[1];
+}).trigger('input');
+
+$('.create-background-images').on('click',()=>{
+    let targetContainer = $('.image-info .background-images .viewport-image-container');
+    targetContainer.empty();
+    createImages(targetContainer, 0);
+    $('.image-sets.disabled').removeClass('disabled');
+});
+$('.create-viewport-images').on('click',()=>{
+    let targetContainer = $('.image-info .image-sets .viewport-image-container');
+    targetContainer.empty();
+    let bgImgs = $('.background-images img').toArray();
+    createTransformedImages(targetContainer, $('.image-sets .num-sets').val(), bgImgs).then(()=>{
+        console.log('All created!');
+    });
+});
+function createImages(targetContainer, remainingIterations, bgImgs=[]){
+    let staticImage = getImageRect(staticViewer, bgImgs[0], 'image/png');
+    targetContainer.append($('<img>',{src:staticImage, class:'static-image'}));
+
+    let movingImage = getImageRect(movingViewer, bgImgs[1], 'image/png');
+    targetContainer.append($('<img>',{src:movingImage, class:'moving-image'}));
+}
+function createTransformedImages(targetContainer, remainingIterations, bgImgs=[]){
+    let rotation1 = Math.random()*360;
+    let rotation2 = Math.random()*360;
+
+    let tx1 = Math.random()*0.2;
+    let ty1 = Math.random()*0.2;
+
+    let tx2 = Math.random()*0.2;
+    let ty2 = Math.random()*0.2;
+
+    let transform = {
+        dTheta: rotation2-rotation1,
+        dX: tx2-tx1,
+        dY: ty2-ty1,
+    };
+    console.log(transform);
+    //rotate and translate operation 1 - before getting static image
+    staticViewer.viewport.rotateBy(rotation1, null, true);
+    staticViewer.viewport.panBy(new OpenSeadragon.Point(tx1, ty1), true);
+    //wait for the viewers to update
+    return Promise.all([
+        new Promise(resolve=>staticViewer.addOnceHandler('update-viewport',()=>resolve())),
+        new Promise(resolve=>movingViewer.addOnceHandler('update-viewport',()=>resolve())),
+    ]).then( ()=>{
+        //get staticImage data in transformed state
+        let staticImage = getImageRect(staticViewer, bgImgs[0], 'image/png');
+        targetContainer.append($('<img>',{src:staticImage, class:'static-image'}));
+
+        //undo operation 1
+        staticViewer.viewport.rotateBy(-rotation1, null, true);
+        staticViewer.viewport.panBy(new OpenSeadragon.Point(-tx1, -ty1), true);
+
+        //rotate and translate operation 2 - before getting moving image
+        staticViewer.viewport.rotateBy(rotation2, null, true);
+        staticViewer.viewport.panBy(new OpenSeadragon.Point(tx2, ty2), true);
+
+        //wait for viewers to update
+        return Promise.all([
+            new Promise(resolve=>staticViewer.addOnceHandler('update-viewport',()=>resolve())),
+            new Promise(resolve=>movingViewer.addOnceHandler('update-viewport',()=>resolve())),
+        ])
+    }).then( ()=>{
+        let movingImage = getImageRect(movingViewer, bgImgs[1], 'image/png');
+        targetContainer.append($('<img>',{src:movingImage, class:'moving-image', 'data-transform':JSON.stringify(transform)}));
+
+        //undo operation 2
+        staticViewer.viewport.rotateBy(-rotation2, null, true);
+        staticViewer.viewport.panBy(new OpenSeadragon.Point(-tx2, -ty2), true);
+
+        //wait for viewers to update
+        return Promise.all([
+            new Promise(resolve=>staticViewer.addOnceHandler('update-viewport',()=>resolve())),
+            new Promise(resolve=>movingViewer.addOnceHandler('update-viewport',()=>resolve())),
+        ])
+        
+    }).then( ()=>{
+        if(remainingIterations > 1){
+            return createTransformedImages(targetContainer, remainingIterations-1, bgImgs);
+        } else {
+            return;
+        }
+    });
+
+}
+
+function getImageRect(viewer, backgroundImg, type='image/jpg'){
+    let pixelRatio = OpenSeadragon.pixelDensityRatio;
+    let center_x = viewer.drawer.canvas.width/2;
+    let center_y = viewer.drawer.canvas.height/2;
+    let w = drawingCanvas.width;
+    let h = drawingCanvas.height;
+    let left = Math.round(center_x - w*pixelRatio/2);
+    let top = Math.round(center_y - h*pixelRatio/2);
+    
+    let ctx = drawingCanvas.getContext("2d",{willReadFrequently: true});
+    ctx.imageSmoothingEnabled = false;
+    ctx.globalCompositeOperation = 'darken';
+    ctx.clearRect(0, 0, w, h);
+    if(backgroundImg){
+        ctx.drawImage(backgroundImg, 0, 0);
+    }
+    ctx.drawImage(viewer.drawer.canvas, left, top, w*pixelRatio, h*pixelRatio, 0, 0, w, h);
+
+    return drawingCanvas.toDataURL(type);
+}
 
 function setSynchronizingMatrices(){
     //create affine matrices
@@ -136,90 +255,17 @@ function setSynchronizingMatrices(){
     staticViewer.synchronizedViewers[0].transformMatrix = transform1to2;
     movingViewer.synchronizedViewers[0].transformMatrix = transform1to2.inverted();
 }
-function setupInfoHandler(viewer, container){
-    let x = container.find('.x');
-    let y = container.find('.y');
-    let r = container.find('.rotation');
-    let handler= function(event){
-        // console.log('viewport-change', event, viewer, container);
-        let center = viewer.viewport.getCenter(true);
-        let rotation = viewer.viewport.getRotation(true);
-        x.val(center.x);
-        y.val(center.y);
-        r.val(rotation);
-    };
-    let events = ['pan','zoom','rotate','resize'];
-    events.forEach(event=>viewer.addHandler(event, handler));
 
-    let doPan = function(){
-        viewer.viewport.panTo(new OpenSeadragon.Point(Number(x.val()), Number(y.val())), true);
-    }
-    let doRotate = function(){
-        viewer.viewport.rotateTo(Number(r.val()), null, true);
-    }
-    x.on('change', doPan);
-    y.on('change', doPan);
-    r.on('change', doRotate);
-
-    //Add mouse tracker to OSD viewer element to watch cursor position
-    let imageName = container.find('.image-name').text();
-    let coordsContainer = $('.cursor-info');
-    let targetElement = coordsContainer.find('.cursor-target');
-    let vx = coordsContainer.find('.viewport-coords .x');
-    let vy = coordsContainer.find('.viewport-coords .y');
-    let ix = coordsContainer.find('.image-coords .x');
-    let iy = coordsContainer.find('.image-coords .y');
-    let mouseCoords = function(event){
-        targetElement.text(imageName);
-        let viewport = viewer.viewport.viewerElementToViewportCoordinates(event.position);
-        let image = viewer.viewport.viewerElementToImageCoordinates(event.position);
-        vx.val(viewport.x);
-        vy.val(viewport.y);
-        ix.val(image.x);
-        iy.val(image.y);
-    }
-    let leaveHandler = function(event){
-        targetElement.text('');
-        vx.val('');
-        vy.val('');
-        ix.val('');
-        iy.val('');
-    }
-    new window.OpenSeadragon.MouseTracker({element: viewer.element, moveHandler: mouseCoords, leaveHandler: leaveHandler});
-}
-function setupSyncInfoHandler(viewer, container){
-    let x = container.find('.x');
-    let y = container.find('.y');
-    let r = container.find('.rotation');
-    let z = container.find('.zoom');
-    let handler= function(event){
-        //defer to the next event loop so the synchronization handler can execute first
-        window.setTimeout(()=>{
-            let synced = viewer.synchronizedViewers && viewer.synchronizedViewers[0];
-            if(synced){
-                let m = synced.transformMatrix;
-                let offset = m.translation;
-                let rotation = m.rotation;
-                let scaling = m.scaling;
-                
-                x.val(offset.x);
-                y.val(offset.y);
-                r.val(rotation);
-                z.val(scaling.x);
-            } 
-            
-        });
-    };
-
-    let events = ['pan','zoom','rotate','resize'];
-    events.forEach(event=>viewer.addHandler(event, handler));
-}
 function initializeSynchronizeBehavior(){
     //perform initial zoom to same real-world coordinates (given by mm_x and width values);
-    movingViewer.viewport.zoomTo(staticViewer.viewport.getZoom() * (tilesource2.mm_x * tilesource2.width) / (tilesource1.mm_x * tilesource1.width) );
-
-    staticViewer.synchronizedViewers = [{viewer:movingViewer}];
-    movingViewer.synchronizedViewers = [{viewer:staticViewer}];
+    let item1 = staticViewer.world.getItemAt(0);
+    let item2 = movingViewer.world.getItemAt(0);
+    if(!item1 || !item2){
+        return;
+    }
+    let ts1 = item1.source;
+    let ts2 = item2.source;
+    movingViewer.viewport.zoomTo(staticViewer.viewport.getZoom() * (ts2.mm_x * ts2.width) / (ts1.mm_x * ts1.width) );
 
     setSynchronizingMatrices();
 
@@ -230,9 +276,6 @@ function initializeSynchronizeBehavior(){
     
     staticViewer.addHandler('rotate', setSynchronizingMatrices);
     movingViewer.addHandler('rotate', setSynchronizingMatrices);
-
-    setupSyncInfoHandler(staticViewer, $('.image-info.matrix'));
-    setupSyncInfoHandler(movingViewer, $('.image-info.matrix'));
 
 }
 
@@ -322,7 +365,33 @@ function synchronizingRotateHandler(event){
     self.synchronizing=false;
 }
 
-
+function setupImagePicker(cases){
+    $('#open-select-images').on('click',()=>$('.select-images').dialog('open'));
+    $('.select-images').dialog({title:'Pick images to sync',width:'auto',autoOpen:false,});
+    $('.select-images').on('click', '.case-name', ev=>{
+        $(ev.currentTarget).closest('.case').find('.blocklist').toggleClass('collapsed');
+    }).on('click','.thumbnail',ev=>{
+        let d = $(ev.currentTarget).data();
+        d.viewer.open(d.block.tileSource);
+    })
+    let imagePicker=$('.image-picker').empty();
+    Object.keys(cases).forEach(name=>{
+        let blocks = cases[name].blocks;
+        let c = $('<div>',{class:'case'});
+        $('<div>',{class:'case-name'}).text(name).appendTo(c);
+        let blocklist=$('<div>',{class:'blocklist'}).appendTo(c);
+        Object.keys(blocks).sort((a,b)=>a.length - b.length || a.localeCompare(b)).forEach(blockKey=>{
+            $('<span>',{class:'block-name'}).appendTo(blocklist).text(blockKey);
+            let staticList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
+            let movingList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
+            blocks[blockKey].forEach(block=>{
+                $('<img>',{class:'thumbnail',title:block.meta.stain,src:block.tileSource.thumbnailUrl}).appendTo(staticList).data({viewer:staticViewer, block: block});
+                $('<img>',{class:'thumbnail',title:block.meta.stain,src:block.tileSource.thumbnailUrl}).appendTo(movingList).data({viewer:movingViewer, block: block});
+            })
+        });
+        imagePicker.append(c);
+    })
+}
 function makeViewer(id, tileSource){
     return new OpenSeadragon({
         id: id,
@@ -332,11 +401,11 @@ function makeViewer(id, tileSource){
         maxZoomPixelRatio: 10,
         minZoomImageRatio: 0.2,
         visibilityRatio: 0,
-        // subPixelRoundingForTransparency: OpenSeadragon.SUBPIXEL_ROUNDING_OCCURRENCES.ALWAYS
+        subPixelRoundingForTransparency: {'*': OpenSeadragon.SUBPIXEL_ROUNDING_OCCURRENCES.ALWAYS},
     });
 }
-function getGlassColor(dsaTileSource){
-    let thumbUrl = dsaTileSource.getTileUrl(1,1,1).replace(/\/tiles\/.*/, '/tiles/thumbnail');
+function getGlassColor(tileSource){
+    let thumbUrl = tileSource.thumbnailUrl || tileSource.getTileUrl(1,1,1).replace(/\/tiles\/.*/, '/tiles/thumbnail');
     let image = new Image();
     image.crossOrigin = "Anonymous";
     return new Promise((resolve,reject)=>{
@@ -385,7 +454,15 @@ function getGlassColor(dsaTileSource){
         image.src = thumbUrl;
     });
 }
-function enableTransparentBackground(viewer, background, tolerance, alpha){
+function enableTransparentBackground(viewer, tolerance, alpha){
+    let tileSource = viewer.world.getItemAt(0).source;
+    let background = tileSource.backgroundColor;
+    if(!background){
+        return;
+    }
+
+    tileSource.hasTransparency = ()=>true; 
+    
     $(viewer.element).addClass('transparent-glass');
     viewer.setFilterOptions({
         filters: {
@@ -399,7 +476,7 @@ function enableTransparentBackground(viewer, background, tolerance, alpha){
                            Math.abs(newImData.data[i+1] - background.green)<tolerance  &&
                            Math.abs(newImData.data[i+2] - background.blue)<tolerance ){
                             newImData.data[i+3] = alpha;
-                           }
+                        }
                     }
 
                     context.putImageData(newImData, 0, 0);
@@ -413,6 +490,7 @@ function enableTransparentBackground(viewer, background, tolerance, alpha){
     });
 }
 function disableTransparentBackground(viewer){
+    viewer.world.getItemAt(0).source.hasTransparency = ()=>false; 
     $(viewer.element).removeClass('transparent-glass');
     viewer.setFilterOptions({
         filters:{

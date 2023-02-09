@@ -100,7 +100,7 @@
     top:50%;
     transform: translate(-50%, -50%);
     border:medium red solid;
-    z-index:1000;
+    z-index:1;
     width: 0;
     height: 0;
     display:none;
@@ -112,4 +112,42 @@
 .disabled{
     opacity:0.5;
     pointer-events:none;
+}
+.select-images-ui{
+    display:grid;
+    grid-template-rows:auto 1fr;
+    max-height:80vh;
+}
+.select-images-header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+.image-picker{
+    overflow:auto;
+}
+.blocklist{
+    display:grid;
+    grid-template-columns:auto 1fr 1fr;
+}
+.slidelist{
+    display:flex;
+}
+.block-name{
+    white-space: nowrap;
+}
+.thumbnail{
+    width:64px;
+}
+.case{
+    border:thin gray solid;
+    border-radius:5px;
+    padding:5px;
+}
+.case-name{
+    cursor:pointer;
+}
+.blocklist.collapsed{
+    height:1em;
+    overflow:hidden;
 }

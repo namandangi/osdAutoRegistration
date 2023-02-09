@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>osd-paperjs-annotation</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/style/side-by-side.css"> -->
+    <link rel="stylesheet" type="text/css" href="/node_modules/jquery-ui/dist/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./app.css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
+    <script src="/node_modules/underscore/underscore-min.js"></script>
+    <script src="/node_modules/openseadragon/build/openseadragon/openseadragon.js"></script>
+    <script src="/node_modules/openseadragon-filtering/openseadragon-filtering.js"></script>
+    
+    <script src="/node_modules/paper/dist/paper-full.js"></script>
+    <script src="/js/dsa/common.js"></script>
+    <script src="/js/dsa/overlaid-viewer.js"></script>
+    <script src="/js/dsa/side-by-side-viewer.js"></script>
+    <script src="/js/dsa/data-set-manager.js"></script> <!-- Needs to be included above tilesources.js -->
+    <script src="/js/app-common.js"></script>
+    <script src="/js/dsa-items.js"></script> <!-- Needs to be included above tilesources.js -->
+    <script src="/js/pearcelab-demo-images.js"></script> <!-- Needs to be included above tilesources.js -->
+    <script src="/js/tilesources.js"></script>
+    <script src="/js/osdbutton.js"></script>
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="top-nav">
+        <label class="combine-label"><input type="checkbox" class="combine-checkbox">Combine</label>
+        <label><input type="checkbox" class="sync-checkbox">Sync translation/rotation</label>
+        <label>Opacity of top image:<input class='opacity-slider' type="range" min="0" max="100" value="80"></label>
+        <label><input type="checkbox" class="glass-checkbox" checked>Transparent "glass"</label>
+        <button id="open-select-images">Pick slides</button>
+      </div>
+      <div class="bottom-row">
+        <div class="side-nav">
+          <div class="image-info viewport-images">
+            <h4>Create images</h4>
+            <div><input data-dim="width" type="number" step="1" value="256"> by <input data-dim="height" type="number" step="1" value="256"> px
+              <button class="toggle">Toggle ROI</button></div>
+            <div class="background-images">
+              <button class="create-background-images">Get Background Images</button>
+              <div class="viewport-image-container"><img><img></div>
+            </div>
+            <div class="disabled image-sets">
+              Create <input class="num-sets" type="number" step="1" value="1"> pairs: <button class="create-viewport-images">Go</button>
+              <div class="viewport-image-container"></div>
+            </div>
+          </div>
+        </div>
+        <div class="viewer-container side-by-side">
+          <div id="viewer-static" class="viewer static"><div class="img-rect"></div></div>
+          <div id="viewer-moving" class="viewer moving"><div class="img-rect"></div></div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="select-images">
+      <div class="select-images-ui">
+        <div class="select-images-header"><span>Static image</span><span>Moving image</span></div>
+        <div class="image-picker"></div>
+      </div>
+      
+    </div>
+    
+  </body>
+</html>

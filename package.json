@@ -9,6 +9,7 @@
   "dependencies": {
     "async": "^3.2.4",
     "jquery": "^3.6.3",
+    "jquery-ui": "^1.13.2",
     "live-server": "^1.2.2",
     "openseadragon": "^4.0.0",
     "openseadragon-filtering": "https://github.com/pearcetm/OpenSeadragonFiltering",

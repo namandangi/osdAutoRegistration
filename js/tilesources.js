@@ -273,7 +273,7 @@ DSA.makeLayersFromTileSources(
   // console.log(App.dsaItems.slice(0,2))
 
 
-  // ----------
+  // --- demo items using DSA tile/zxy API ---
   if (App.dsaItems) {
     App.dsaItems.forEach(function(item) {
       if (item.tileSource && item.baseURL && item.itemId) {
@@ -296,4 +296,28 @@ DSA.makeLayersFromTileSources(
       }
     });
   }
+
+  // --- demo items using aperio proxy API ---
+  if (App.demoImages) {
+    App.demoImages.forEach(function(item) {
+      let levels = [0.5, 1, 2, 4, 10, 20, 40, 60].filter(l=> l <= item.meta.svsinfo.appmag).length;
+      item.tileSource = {
+        thumbnailUrl: item.meta.baseurl+"?0+0+128+0+-1",
+        width: Number(item.meta.svsinfo.width),
+        height: Number(item.meta.svsinfo.height),
+        tileSize: Number(item.meta.svsinfo.tilewidth)+4,
+        tileOverlap: 2,
+        maxLevel: levels,
+        mm_x: Number(item.meta.svsinfo.mpp)/1000,
+        mm_y: Number(item.meta.svsinfo.mpp)/1000,
+        getTileUrl: function(level, x, y){
+          let p = Math.pow(2, levels - level);
+          x = x * (this._tileWidth-4) * p - 1;
+          y = y * (this._tileHeight-4) * p - 1;
+          return `${item.meta.baseurl}?0${x}+0${y}+${this._tileWidth}+${this._tileHeight}+${p}`;
+        }
+      }
+    });
+  }
+
 })();

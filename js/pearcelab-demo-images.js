@@ -1,5 +1,45 @@
 App.demoImages = [
     {
+        "meta": {
+            "accession": "Brain Tumor - Scaling test",
+            "baseurl": "https://pearcelab.pitt.edu/upmcesm/@960689",
+            "block": "1 A",
+            "ethnicity": "W",
+            "sex": "F",
+            "stain": "Example 1",
+            "svsinfo": {
+                "appmag": "40",
+                "filename": "@960689",
+                "height": "48060",
+                "mpp": "0.25",
+                "tileheight": "240",
+                "tilewidth": "240",
+                "width": "133486"
+            },
+            "type": "svs-link"
+        },
+    },
+    {
+        "meta": {
+            "accession": "Brain Tumor - Scaling test",
+            "baseurl": "https://pearcelab.pitt.edu/upmcesm/@960693",
+            "block": "1 A",
+            "ethnicity": "W",
+            "sex": "F",
+            "stain": "Example 2",
+            "svsinfo": {
+                "appmag": "40",
+                "filename": "@960693",
+                "height": "44750",
+                "mpp": "0.25",
+                "tileheight": "240",
+                "tilewidth": "240",
+                "width": "101609"
+            },
+            "type": "svs-link"
+        },
+    },
+    {
         "_id": "63e2bc14610a6c5c62f4eb57",
         "_modelType": "item",
         "baseParentId": "6112ad298f5f866df6131ae8",
@@ -10,7 +50,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381734",
             "block": "1 AA",
             "ethnicity": "W",
@@ -41,7 +81,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 AA | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 AA | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:08.427000+00:00"
     },
@@ -56,7 +96,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381732",
             "block": "1 AA",
             "ethnicity": "W",
@@ -87,7 +127,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 AA | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 AA | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:08.033000+00:00"
     },
@@ -102,7 +142,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381727",
             "block": "1 AA",
             "ethnicity": "W",
@@ -133,7 +173,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 AA | Initial H&E",
+        "name": "Case 1 | 1 AA | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:07.096000+00:00"
     },
@@ -148,7 +188,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381731",
             "block": "1 AA",
             "ethnicity": "W",
@@ -179,7 +219,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 AA | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 AA | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:07.532000+00:00"
     },
@@ -194,7 +234,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381735",
             "block": "1 AA",
             "ethnicity": "W",
@@ -225,7 +265,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 AA | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 AA | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:09.087000+00:00"
     },
@@ -240,7 +280,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381761",
             "block": "1 B",
             "ethnicity": "W",
@@ -271,7 +311,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 B | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 B | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:17.324000+00:00"
     },
@@ -286,7 +326,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381757",
             "block": "1 B",
             "ethnicity": "W",
@@ -318,7 +358,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 B | Initial H&E",
+        "name": "Case 1 | 1 B | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:16.253000+00:00"
     },
@@ -333,7 +373,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381759",
             "block": "1 B",
             "ethnicity": "W",
@@ -364,7 +404,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 B | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 B | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:16.640000+00:00"
     },
@@ -379,7 +419,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@382001",
             "block": "1 BB",
             "ethnicity": "W",
@@ -410,7 +450,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 BB | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 BB | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:58.440000+00:00"
     },
@@ -425,7 +465,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381994",
             "block": "1 BB",
             "ethnicity": "W",
@@ -456,7 +496,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 BB | Initial H&E",
+        "name": "Case 1 | 1 BB | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:56.333000+00:00"
     },
@@ -471,7 +511,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381996",
             "block": "1 BB",
             "ethnicity": "W",
@@ -502,7 +542,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 BB | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 BB | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:56.728000+00:00"
     },
@@ -517,7 +557,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381998",
             "block": "1 BB",
             "ethnicity": "W",
@@ -548,7 +588,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 BB | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 BB | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:57.303000+00:00"
     },
@@ -563,7 +603,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381999",
             "block": "1 BB",
             "ethnicity": "W",
@@ -594,7 +634,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 BB | Trichrome Stain (Histo)",
+        "name": "Case 1 | 1 BB | Trichrome Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:01:57.731000+00:00"
     },
@@ -609,7 +649,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381763",
             "block": "1 C",
             "ethnicity": "W",
@@ -641,7 +681,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 C | Initial H&E",
+        "name": "Case 1 | 1 C | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:17.718000+00:00"
     },
@@ -656,7 +696,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381765",
             "block": "1 C",
             "ethnicity": "W",
@@ -688,7 +728,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 C | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 C | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:18.277000+00:00"
     },
@@ -703,7 +743,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381686",
             "block": "1 CC",
             "ethnicity": "W",
@@ -734,7 +774,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | Alcian Blue pH 2.5 (HistoV)",
+        "name": "Case 1 | 1 CC | Alcian Blue pH 2.5 (HistoV)",
         "size": 0,
         "updated": "2023-02-07T21:00:59.227000+00:00"
     },
@@ -749,7 +789,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381680",
             "block": "1 CC",
             "ethnicity": "W",
@@ -780,7 +820,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 CC | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:00:58.156000+00:00"
     },
@@ -795,7 +835,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381693",
             "block": "1 CC",
             "ethnicity": "W",
@@ -826,7 +866,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | Colloidal Iron Stain (Histo)",
+        "name": "Case 1 | 1 CC | Colloidal Iron Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:01:00.633000+00:00"
     },
@@ -841,7 +881,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381688",
             "block": "1 CC",
             "ethnicity": "W",
@@ -872,7 +912,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | Epithelial Membrane Antigen NEURO (IPEX)",
+        "name": "Case 1 | 1 CC | Epithelial Membrane Antigen NEURO (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:59.655000+00:00"
     },
@@ -887,7 +927,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381672",
             "block": "1 CC",
             "ethnicity": "W",
@@ -918,7 +958,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | Initial H&E",
+        "name": "Case 1 | 1 CC | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:56.594000+00:00"
     },
@@ -933,7 +973,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381675",
             "block": "1 CC",
             "ethnicity": "W",
@@ -964,7 +1004,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 CC | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:57.245000+00:00"
     },
@@ -979,7 +1019,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381683",
             "block": "1 CC",
             "ethnicity": "W",
@@ -1010,7 +1050,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 CC | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:58.592000+00:00"
     },
@@ -1025,7 +1065,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381691",
             "block": "1 CC",
             "ethnicity": "W",
@@ -1056,7 +1096,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | S100 (IPEX)",
+        "name": "Case 1 | 1 CC | S100 (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:00.247000+00:00"
     },
@@ -1071,7 +1111,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381678",
             "block": "1 CC",
             "ethnicity": "W",
@@ -1102,7 +1142,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 CC | Trichrome Stain (Histo)",
+        "name": "Case 1 | 1 CC | Trichrome Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:00:57.706000+00:00"
     },
@@ -1117,7 +1157,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381774",
             "block": "1 D",
             "ethnicity": "W",
@@ -1149,7 +1189,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 D | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 D | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:20.334000+00:00"
     },
@@ -1164,7 +1204,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381772",
             "block": "1 D",
             "ethnicity": "W",
@@ -1195,7 +1235,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 D | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 D | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:19.783000+00:00"
     },
@@ -1210,7 +1250,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381776",
             "block": "1 D",
             "ethnicity": "W",
@@ -1242,7 +1282,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 D | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 D | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:20.770000+00:00"
     },
@@ -1257,7 +1297,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381768",
             "block": "1 D",
             "ethnicity": "W",
@@ -1289,7 +1329,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 D | Initial H&E",
+        "name": "Case 1 | 1 D | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:18.671000+00:00"
     },
@@ -1304,7 +1344,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381770",
             "block": "1 D",
             "ethnicity": "W",
@@ -1335,7 +1375,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 D | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 D | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:19.364000+00:00"
     },
@@ -1350,7 +1390,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381726",
             "block": "1 DD",
             "ethnicity": "W",
@@ -1381,7 +1421,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 DD | CD3 T Lymphocytes (IPEX)",
+        "name": "Case 1 | 1 DD | CD3 T Lymphocytes (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:06.446000+00:00"
     },
@@ -1396,7 +1436,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381723",
             "block": "1 DD",
             "ethnicity": "W",
@@ -1427,7 +1467,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 DD | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 DD | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:06.059000+00:00"
     },
@@ -1442,7 +1482,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381715",
             "block": "1 DD",
             "ethnicity": "W",
@@ -1473,7 +1513,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 DD | Initial H&E",
+        "name": "Case 1 | 1 DD | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:04.111000+00:00"
     },
@@ -1488,7 +1528,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381717",
             "block": "1 DD",
             "ethnicity": "W",
@@ -1519,7 +1559,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 DD | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 DD | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:04.547000+00:00"
     },
@@ -1534,7 +1574,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381721",
             "block": "1 DD",
             "ethnicity": "W",
@@ -1565,7 +1605,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 DD | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 DD | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:05.567000+00:00"
     },
@@ -1580,7 +1620,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381719",
             "block": "1 DD",
             "ethnicity": "W",
@@ -1611,7 +1651,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 DD | Trichrome Stain (Histo)",
+        "name": "Case 1 | 1 DD | Trichrome Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:01:05.131000+00:00"
     },
@@ -1626,7 +1666,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381786",
             "block": "1 E",
             "ethnicity": "W",
@@ -1657,7 +1697,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 E | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 E | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:22.752000+00:00"
     },
@@ -1672,7 +1712,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381778",
             "block": "1 E",
             "ethnicity": "W",
@@ -1704,7 +1744,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 E | Initial H&E",
+        "name": "Case 1 | 1 E | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:21.379000+00:00"
     },
@@ -1719,7 +1759,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381782",
             "block": "1 E",
             "ethnicity": "W",
@@ -1751,7 +1791,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 E | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 E | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:21.791000+00:00"
     },
@@ -1766,7 +1806,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381783",
             "block": "1 E",
             "ethnicity": "W",
@@ -1798,7 +1838,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 E | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 E | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:22.349000+00:00"
     },
@@ -1813,7 +1853,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381790",
             "block": "1 E",
             "ethnicity": "W",
@@ -1845,7 +1885,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 E | PHF TAU (IPEX)(Neuropath)",
+        "name": "Case 1 | 1 E | PHF TAU (IPEX)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:23.503000+00:00"
     },
@@ -1860,7 +1900,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@382008",
             "block": "1 EE",
             "ethnicity": "W",
@@ -1891,7 +1931,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 EE | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 EE | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:02:01.415000+00:00"
     },
@@ -1906,7 +1946,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381451",
             "block": "1 EE",
             "ethnicity": "W",
@@ -1937,7 +1977,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 EE | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 EE | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:00:40.304000+00:00"
     },
@@ -1952,7 +1992,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@382003",
             "block": "1 EE",
             "ethnicity": "W",
@@ -1983,7 +2023,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 EE | Initial H&E",
+        "name": "Case 1 | 1 EE | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:58.801000+00:00"
     },
@@ -1998,7 +2038,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@382004",
             "block": "1 EE",
             "ethnicity": "W",
@@ -2029,7 +2069,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 EE | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 EE | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:59.426000+00:00"
     },
@@ -2044,7 +2084,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@382009",
             "block": "1 EE",
             "ethnicity": "W",
@@ -2075,7 +2115,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 EE | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 EE | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:02:01.843000+00:00"
     },
@@ -2090,7 +2130,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@382006",
             "block": "1 EE",
             "ethnicity": "W",
@@ -2121,7 +2161,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 EE | Trichrome Stain (Histo)",
+        "name": "Case 1 | 1 EE | Trichrome Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:02:00.848000+00:00"
     },
@@ -2136,7 +2176,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381800",
             "block": "1 F",
             "ethnicity": "W",
@@ -2168,7 +2208,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | Bielschowsky Stain (Histo)",
+        "name": "Case 1 | 1 F | Bielschowsky Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:01:25.627000+00:00"
     },
@@ -2183,7 +2223,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381803",
             "block": "1 F",
             "ethnicity": "W",
@@ -2215,7 +2255,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 F | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:26.064000+00:00"
     },
@@ -2230,7 +2270,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381806",
             "block": "1 F",
             "ethnicity": "W",
@@ -2262,7 +2302,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | Blank Slide (HISTO) (WLO) (1)",
+        "name": "Case 1 | 1 F | Blank Slide (HISTO) (WLO) (1)",
         "size": 0,
         "updated": "2023-02-07T21:01:26.589000+00:00"
     },
@@ -2277,7 +2317,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381808",
             "block": "1 F",
             "ethnicity": "W",
@@ -2309,7 +2349,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 F | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:26.984000+00:00"
     },
@@ -2324,7 +2364,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381811",
             "block": "1 F",
             "ethnicity": "W",
@@ -2356,7 +2396,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 F | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:27.626000+00:00"
     },
@@ -2371,7 +2411,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381793",
             "block": "1 F",
             "ethnicity": "W",
@@ -2403,7 +2443,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | Initial H&E",
+        "name": "Case 1 | 1 F | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:23.931000+00:00"
     },
@@ -2418,7 +2458,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381795",
             "block": "1 F",
             "ethnicity": "W",
@@ -2450,7 +2490,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 F | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:24.565000+00:00"
     },
@@ -2465,7 +2505,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381798",
             "block": "1 F",
             "ethnicity": "W",
@@ -2497,7 +2537,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 F | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 F | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:24.952000+00:00"
     },
@@ -2512,7 +2552,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@382005",
             "block": "1 FF",
             "ethnicity": "W",
@@ -2543,7 +2583,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 FF | Initial H&E",
+        "name": "Case 1 | 1 FF | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:02:00.362000+00:00"
     },
@@ -2558,7 +2598,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381822",
             "block": "1 G",
             "ethnicity": "W",
@@ -2589,7 +2629,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 G | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 G | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:30.386000+00:00"
     },
@@ -2604,7 +2644,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381820",
             "block": "1 G",
             "ethnicity": "W",
@@ -2635,7 +2675,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 G | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 G | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:29.818000+00:00"
     },
@@ -2650,7 +2690,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381817",
             "block": "1 G",
             "ethnicity": "W",
@@ -2681,7 +2721,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 G | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 G | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:29.399000+00:00"
     },
@@ -2696,7 +2736,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381813",
             "block": "1 G",
             "ethnicity": "W",
@@ -2727,7 +2767,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 G | Initial H&E",
+        "name": "Case 1 | 1 G | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:28.304000+00:00"
     },
@@ -2742,7 +2782,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381815",
             "block": "1 G",
             "ethnicity": "W",
@@ -2773,7 +2813,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 G | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 G | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:28.723000+00:00"
     },
@@ -2788,7 +2828,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381461",
             "block": "1 GG",
             "ethnicity": "W",
@@ -2819,7 +2859,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 GG | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 GG | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:00:41.933000+00:00"
     },
@@ -2834,7 +2874,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381454",
             "block": "1 GG",
             "ethnicity": "W",
@@ -2865,7 +2905,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 GG | Initial H&E",
+        "name": "Case 1 | 1 GG | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:40.979000+00:00"
     },
@@ -2880,7 +2920,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381456",
             "block": "1 GG",
             "ethnicity": "W",
@@ -2911,7 +2951,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 GG | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 GG | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:41.398000+00:00"
     },
@@ -2926,7 +2966,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381464",
             "block": "1 GG",
             "ethnicity": "W",
@@ -2957,7 +2997,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 GG | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 GG | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:42.335000+00:00"
     },
@@ -2972,7 +3012,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381468",
             "block": "1 GG",
             "ethnicity": "W",
@@ -3003,7 +3043,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 GG | Trichrome Stain (Histo)",
+        "name": "Case 1 | 1 GG | Trichrome Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:00:42.969000+00:00"
     },
@@ -3018,7 +3058,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381830",
             "block": "1 H",
             "ethnicity": "W",
@@ -3049,7 +3089,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 H | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 H | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:31.892000+00:00"
     },
@@ -3064,7 +3104,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381824",
             "block": "1 H",
             "ethnicity": "W",
@@ -3095,7 +3135,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 H | Initial H&E",
+        "name": "Case 1 | 1 H | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:30.830000+00:00"
     },
@@ -3110,7 +3150,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381826",
             "block": "1 H",
             "ethnicity": "W",
@@ -3141,7 +3181,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 H | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 H | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:31.431000+00:00"
     },
@@ -3156,7 +3196,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381476",
             "block": "1 HH",
             "ethnicity": "W",
@@ -3187,7 +3227,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 HH | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 HH | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:00:44.918000+00:00"
     },
@@ -3202,7 +3242,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381471",
             "block": "1 HH",
             "ethnicity": "W",
@@ -3233,7 +3273,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 HH | Initial H&E",
+        "name": "Case 1 | 1 HH | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:43.397000+00:00"
     },
@@ -3248,7 +3288,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381472",
             "block": "1 HH",
             "ethnicity": "W",
@@ -3279,7 +3319,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 HH | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 HH | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:43.898000+00:00"
     },
@@ -3294,7 +3334,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381475",
             "block": "1 HH",
             "ethnicity": "W",
@@ -3325,7 +3365,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 HH | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 HH | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:44.292000+00:00"
     },
@@ -3340,7 +3380,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381477",
             "block": "1 HH",
             "ethnicity": "W",
@@ -3371,7 +3411,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 HH | Trichrome Stain (Histo)",
+        "name": "Case 1 | 1 HH | Trichrome Stain (Histo)",
         "size": 0,
         "updated": "2023-02-07T21:00:45.396000+00:00"
     },
@@ -3386,7 +3426,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381841",
             "block": "1 I",
             "ethnicity": "W",
@@ -3417,7 +3457,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 I | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 I | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:33.446000+00:00"
     },
@@ -3432,7 +3472,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381845",
             "block": "1 I",
             "ethnicity": "W",
@@ -3463,7 +3503,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 I | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 I | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:33.890000+00:00"
     },
@@ -3478,7 +3518,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381850",
             "block": "1 I",
             "ethnicity": "W",
@@ -3509,7 +3549,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 I | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 I | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:34.466000+00:00"
     },
@@ -3524,7 +3564,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381833",
             "block": "1 I",
             "ethnicity": "W",
@@ -3555,7 +3595,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 I | Initial H&E",
+        "name": "Case 1 | 1 I | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:32.419000+00:00"
     },
@@ -3570,7 +3610,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381837",
             "block": "1 I",
             "ethnicity": "W",
@@ -3601,7 +3641,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 I | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 I | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:32.820000+00:00"
     },
@@ -3616,7 +3656,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381481",
             "block": "1 II",
             "ethnicity": "W",
@@ -3647,7 +3687,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 II | Initial H&E",
+        "name": "Case 1 | 1 II | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:45.879000+00:00"
     },
@@ -3662,7 +3702,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381483",
             "block": "1 II",
             "ethnicity": "W",
@@ -3693,7 +3733,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 II | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 II | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:46.299000+00:00"
     },
@@ -3708,7 +3748,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381853",
             "block": "1 J",
             "ethnicity": "W",
@@ -3739,7 +3779,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 J | Initial H&E",
+        "name": "Case 1 | 1 J | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:34.894000+00:00"
     },
@@ -3754,7 +3794,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381857",
             "block": "1 J",
             "ethnicity": "W",
@@ -3785,7 +3825,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 J | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 J | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:35.545000+00:00"
     },
@@ -3800,7 +3840,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381485",
             "block": "1 JJ",
             "ethnicity": "W",
@@ -3832,7 +3872,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 JJ | Initial H&E",
+        "name": "Case 1 | 1 JJ | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:46.959000+00:00"
     },
@@ -3847,7 +3887,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381493",
             "block": "1 JJ",
             "ethnicity": "W",
@@ -3879,7 +3919,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 JJ | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 JJ | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:47.361000+00:00"
     },
@@ -3894,7 +3934,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381704",
             "block": "1 K",
             "ethnicity": "W",
@@ -3925,7 +3965,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 K | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 K | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:02.606000+00:00"
     },
@@ -3940,7 +3980,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381701",
             "block": "1 K",
             "ethnicity": "W",
@@ -3972,7 +4012,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 K | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 K | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:02.204000+00:00"
     },
@@ -3987,7 +4027,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381707",
             "block": "1 K",
             "ethnicity": "W",
@@ -4019,7 +4059,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 K | Glial Fibrillary Acidic Protein (IPEX) (1)",
+        "name": "Case 1 | 1 K | Glial Fibrillary Acidic Protein (IPEX) (1)",
         "size": 0,
         "updated": "2023-02-07T21:01:03.157000+00:00"
     },
@@ -4034,7 +4074,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381712",
             "block": "1 K",
             "ethnicity": "W",
@@ -4066,7 +4106,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 K | Glutamine Synthetase (IPEX)",
+        "name": "Case 1 | 1 K | Glutamine Synthetase (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:03.560000+00:00"
     },
@@ -4081,7 +4121,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381695",
             "block": "1 K",
             "ethnicity": "W",
@@ -4113,7 +4153,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 K | Initial H&E",
+        "name": "Case 1 | 1 K | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:01.284000+00:00"
     },
@@ -4128,7 +4168,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381699",
             "block": "1 K",
             "ethnicity": "W",
@@ -4159,7 +4199,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 K | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 K | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:01.704000+00:00"
     },
@@ -4174,7 +4214,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381508",
             "block": "1 KK",
             "ethnicity": "W",
@@ -4205,7 +4245,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 KK | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 KK | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:00:49.452000+00:00"
     },
@@ -4220,7 +4260,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381499",
             "block": "1 KK",
             "ethnicity": "W",
@@ -4251,7 +4291,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 KK | Initial H&E",
+        "name": "Case 1 | 1 KK | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:47.887000+00:00"
     },
@@ -4266,7 +4306,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381503",
             "block": "1 KK",
             "ethnicity": "W",
@@ -4297,7 +4337,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 KK | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 KK | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:48.306000+00:00"
     },
@@ -4312,7 +4352,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381506",
             "block": "1 KK",
             "ethnicity": "W",
@@ -4343,7 +4383,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 KK | S100 (IPEX)",
+        "name": "Case 1 | 1 KK | S100 (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:48.982000+00:00"
     },
@@ -4358,7 +4398,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381861",
             "block": "1 L",
             "ethnicity": "W",
@@ -4390,7 +4430,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 L | Initial H&E",
+        "name": "Case 1 | 1 L | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:35.997000+00:00"
     },
@@ -4405,7 +4445,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381865",
             "block": "1 L",
             "ethnicity": "W",
@@ -4437,7 +4477,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 L | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 L | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:36.506000+00:00"
     },
@@ -4452,7 +4492,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381510",
             "block": "1 LL",
             "ethnicity": "W",
@@ -4483,7 +4523,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 LL | Initial H&E",
+        "name": "Case 1 | 1 LL | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:50.003000+00:00"
     },
@@ -4498,7 +4538,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381512",
             "block": "1 LL",
             "ethnicity": "W",
@@ -4529,7 +4569,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 LL | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 LL | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:50.456000+00:00"
     },
@@ -4544,7 +4584,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381873",
             "block": "1 M",
             "ethnicity": "W",
@@ -4576,7 +4616,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 M | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 M | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:38.013000+00:00"
     },
@@ -4591,7 +4631,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381880",
             "block": "1 M",
             "ethnicity": "W",
@@ -4623,7 +4663,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 M | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 M | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:39.108000+00:00"
     },
@@ -4638,7 +4678,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381876",
             "block": "1 M",
             "ethnicity": "W",
@@ -4670,7 +4710,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 M | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 M | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:38.630000+00:00"
     },
@@ -4685,7 +4725,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381868",
             "block": "1 M",
             "ethnicity": "W",
@@ -4717,7 +4757,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 M | Initial H&E",
+        "name": "Case 1 | 1 M | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:36.926000+00:00"
     },
@@ -4732,7 +4772,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381871",
             "block": "1 M",
             "ethnicity": "W",
@@ -4764,7 +4804,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 M | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 M | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:37.568000+00:00"
     },
@@ -4779,7 +4819,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381513",
             "block": "1 MM",
             "ethnicity": "W",
@@ -4810,7 +4850,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 MM | Initial H&E",
+        "name": "Case 1 | 1 MM | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:51.115000+00:00"
     },
@@ -4825,7 +4865,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381515",
             "block": "1 MM",
             "ethnicity": "W",
@@ -4856,7 +4896,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 MM | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 MM | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:51.526000+00:00"
     },
@@ -4871,7 +4911,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381889",
             "block": "1 N",
             "ethnicity": "W",
@@ -4903,7 +4943,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 N | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 N | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:40.737000+00:00"
     },
@@ -4918,7 +4958,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381883",
             "block": "1 N",
             "ethnicity": "W",
@@ -4950,7 +4990,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 N | Initial H&E",
+        "name": "Case 1 | 1 N | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:39.734000+00:00"
     },
@@ -4965,7 +5005,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381886",
             "block": "1 N",
             "ethnicity": "W",
@@ -4997,7 +5037,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 N | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 N | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:40.187000+00:00"
     },
@@ -5012,7 +5052,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381516",
             "block": "1 NN",
             "ethnicity": "W",
@@ -5043,7 +5083,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 NN | Initial H&E",
+        "name": "Case 1 | 1 NN | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:52.094000+00:00"
     },
@@ -5058,7 +5098,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381518",
             "block": "1 NN",
             "ethnicity": "W",
@@ -5089,7 +5129,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 NN | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 NN | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:52.521000+00:00"
     },
@@ -5104,7 +5144,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381897",
             "block": "1 O",
             "ethnicity": "W",
@@ -5135,7 +5175,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 O | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1 O | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:01:42.543000+00:00"
     },
@@ -5150,7 +5190,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381904",
             "block": "1 O",
             "ethnicity": "W",
@@ -5181,7 +5221,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 O | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 O | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:43.688000+00:00"
     },
@@ -5196,7 +5236,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381900",
             "block": "1 O",
             "ethnicity": "W",
@@ -5228,7 +5268,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 O | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 O | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:42.979000+00:00"
     },
@@ -5243,7 +5283,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381892",
             "block": "1 O",
             "ethnicity": "W",
@@ -5275,7 +5315,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 O | Initial H&E",
+        "name": "Case 1 | 1 O | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:41.573000+00:00"
     },
@@ -5290,7 +5330,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381895",
             "block": "1 O",
             "ethnicity": "W",
@@ -5321,7 +5361,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 O | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 O | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:41.967000+00:00"
     },
@@ -5336,7 +5376,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381910",
             "block": "1 O",
             "ethnicity": "W",
@@ -5367,7 +5407,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 O | PHF TAU (IPEX)(Neuropath)",
+        "name": "Case 1 | 1 O | PHF TAU (IPEX)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:44.108000+00:00"
     },
@@ -5382,7 +5422,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381924",
             "block": "1 Q",
             "ethnicity": "W",
@@ -5414,7 +5454,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Q | Initial H&E",
+        "name": "Case 1 | 1 Q | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:45.771000+00:00"
     },
@@ -5429,7 +5469,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381929",
             "block": "1 Q",
             "ethnicity": "W",
@@ -5461,7 +5501,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Q | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 Q | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:46.165000+00:00"
     },
@@ -5476,7 +5516,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381932",
             "block": "1 R",
             "ethnicity": "W",
@@ -5508,7 +5548,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 R | Initial H&E",
+        "name": "Case 1 | 1 R | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:46.757000+00:00"
     },
@@ -5523,7 +5563,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381937",
             "block": "1 R",
             "ethnicity": "W",
@@ -5555,7 +5595,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 R | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 R | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:47.177000+00:00"
     },
@@ -5570,7 +5610,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381941",
             "block": "1 S",
             "ethnicity": "W",
@@ -5602,7 +5642,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 S | Initial H&E",
+        "name": "Case 1 | 1 S | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:47.852000+00:00"
     },
@@ -5617,7 +5657,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381945",
             "block": "1 S",
             "ethnicity": "W",
@@ -5649,7 +5689,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 S | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 S | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:48.272000+00:00"
     },
@@ -5664,7 +5704,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381961",
             "block": "1 T",
             "ethnicity": "W",
@@ -5696,7 +5736,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 T | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 T | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:50.027000+00:00"
     },
@@ -5711,7 +5751,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381966",
             "block": "1 T",
             "ethnicity": "W",
@@ -5743,7 +5783,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 T | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 T | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:50.421000+00:00"
     },
@@ -5758,7 +5798,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381951",
             "block": "1 T",
             "ethnicity": "W",
@@ -5790,7 +5830,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 T | Initial H&E",
+        "name": "Case 1 | 1 T | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:48.847000+00:00"
     },
@@ -5805,7 +5845,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381956",
             "block": "1 T",
             "ethnicity": "W",
@@ -5837,7 +5877,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 T | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 T | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:49.275000+00:00"
     },
@@ -5852,7 +5892,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381970",
             "block": "1 U",
             "ethnicity": "W",
@@ -5884,7 +5924,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 U | Initial H&E",
+        "name": "Case 1 | 1 U | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:51.013000+00:00"
     },
@@ -5899,7 +5939,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381976",
             "block": "1 U",
             "ethnicity": "W",
@@ -5931,7 +5971,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 U | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 U | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:51.441000+00:00"
     },
@@ -5946,7 +5986,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381979",
             "block": "1 V",
             "ethnicity": "W",
@@ -5978,7 +6018,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 V | Initial H&E",
+        "name": "Case 1 | 1 V | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:52.142000+00:00"
     },
@@ -5993,7 +6033,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381980",
             "block": "1 V",
             "ethnicity": "W",
@@ -6025,7 +6065,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 V | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 V | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:52.564000+00:00"
     },
@@ -6040,7 +6080,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381982",
             "block": "1 W",
             "ethnicity": "W",
@@ -6071,7 +6111,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 W | Initial H&E",
+        "name": "Case 1 | 1 W | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:53.139000+00:00"
     },
@@ -6086,7 +6126,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381984",
             "block": "1 W",
             "ethnicity": "W",
@@ -6118,7 +6158,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 W | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 W | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:53.558000+00:00"
     },
@@ -6133,7 +6173,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381990",
             "block": "1 X",
             "ethnicity": "W",
@@ -6165,7 +6205,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 X | ABETA (IPEX)",
+        "name": "Case 1 | 1 X | ABETA (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:55.220000+00:00"
     },
@@ -6180,7 +6220,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381986",
             "block": "1 X",
             "ethnicity": "W",
@@ -6212,7 +6252,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 X | Initial H&E",
+        "name": "Case 1 | 1 X | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:54.234000+00:00"
     },
@@ -6227,7 +6267,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381988",
             "block": "1 X",
             "ethnicity": "W",
@@ -6259,7 +6299,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 X | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 X | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:54.645000+00:00"
     },
@@ -6274,7 +6314,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381992",
             "block": "1 X",
             "ethnicity": "W",
@@ -6306,7 +6346,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 X | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 X | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:55.632000+00:00"
     },
@@ -6321,7 +6361,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381744",
             "block": "1 Y",
             "ethnicity": "W",
@@ -6352,7 +6392,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Y | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 Y | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:11.997000+00:00"
     },
@@ -6367,7 +6407,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381742",
             "block": "1 Y",
             "ethnicity": "W",
@@ -6398,7 +6438,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Y | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 Y | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:11.295000+00:00"
     },
@@ -6413,7 +6453,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381746",
             "block": "1 Y",
             "ethnicity": "W",
@@ -6444,7 +6484,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Y | Glial Fibrillary Acidic Protein (IPEX) (1)",
+        "name": "Case 1 | 1 Y | Glial Fibrillary Acidic Protein (IPEX) (1)",
         "size": 0,
         "updated": "2023-02-07T21:01:12.358000+00:00"
     },
@@ -6459,7 +6499,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381747",
             "block": "1 Y",
             "ethnicity": "W",
@@ -6490,7 +6530,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Y | Glutamine Synthetase (IPEX)",
+        "name": "Case 1 | 1 Y | Glutamine Synthetase (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:13.084000+00:00"
     },
@@ -6505,7 +6545,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381737",
             "block": "1 Y",
             "ethnicity": "W",
@@ -6536,7 +6576,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Y | Initial H&E",
+        "name": "Case 1 | 1 Y | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:09.531000+00:00"
     },
@@ -6551,7 +6591,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381739",
             "block": "1 Y",
             "ethnicity": "W",
@@ -6582,7 +6622,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Y | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 Y | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:10.107000+00:00"
     },
@@ -6597,7 +6637,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381740",
             "block": "1 Y",
             "ethnicity": "W",
@@ -6628,7 +6668,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Y | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 Y | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:10.909000+00:00"
     },
@@ -6643,7 +6683,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381756",
             "block": "1 Z",
             "ethnicity": "W",
@@ -6674,7 +6714,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Z | CD68 Macrophage PGM1 (IPEXB)",
+        "name": "Case 1 | 1 Z | CD68 Macrophage PGM1 (IPEXB)",
         "size": 0,
         "updated": "2023-02-07T21:01:15.661000+00:00"
     },
@@ -6689,7 +6729,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381754",
             "block": "1 Z",
             "ethnicity": "W",
@@ -6720,7 +6760,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Z | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1 Z | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:15.233000+00:00"
     },
@@ -6735,7 +6775,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381749",
             "block": "1 Z",
             "ethnicity": "W",
@@ -6766,7 +6806,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Z | Initial H&E",
+        "name": "Case 1 | 1 Z | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:13.495000+00:00"
     },
@@ -6781,7 +6821,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381751",
             "block": "1 Z",
             "ethnicity": "W",
@@ -6812,7 +6852,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Z | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1 Z | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:14.054000+00:00"
     },
@@ -6827,7 +6867,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381752",
             "block": "1 Z",
             "ethnicity": "W",
@@ -6858,7 +6898,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1 Z | Neurofilament (IPEX)",
+        "name": "Case 1 | 1 Z | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:01:14.474000+00:00"
     },
@@ -6873,7 +6913,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381667",
             "block": "1:00 AM",
             "ethnicity": "W",
@@ -6905,7 +6945,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 AM | Blank Slide (HISTO) (WLO)",
+        "name": "Case 1 | 1:00 AM | Blank Slide (HISTO) (WLO)",
         "size": 0,
         "updated": "2023-02-07T21:00:55.632000+00:00"
     },
@@ -6920,7 +6960,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381664",
             "block": "1:00 AM",
             "ethnicity": "W",
@@ -6952,7 +6992,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 AM | Glial Fibrillary Acidic Protein (IPEX)",
+        "name": "Case 1 | 1:00 AM | Glial Fibrillary Acidic Protein (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:55.221000+00:00"
     },
@@ -6967,7 +7007,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381660",
             "block": "1:00 AM",
             "ethnicity": "W",
@@ -6999,7 +7039,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 AM | Glutamine Synthetase (IPEX)",
+        "name": "Case 1 | 1:00 AM | Glutamine Synthetase (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:54.151000+00:00"
     },
@@ -7014,7 +7054,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381654",
             "block": "1:00 AM",
             "ethnicity": "W",
@@ -7046,7 +7086,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 AM | Initial H&E",
+        "name": "Case 1 | 1:00 AM | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:00:53.180000+00:00"
     },
@@ -7061,7 +7101,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381657",
             "block": "1:00 AM",
             "ethnicity": "W",
@@ -7093,7 +7133,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 AM | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1:00 AM | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:00:53.591000+00:00"
     },
@@ -7108,7 +7148,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381669",
             "block": "1:00 AM",
             "ethnicity": "W",
@@ -7140,7 +7180,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 AM | Neurofilament (IPEX)",
+        "name": "Case 1 | 1:00 AM | Neurofilament (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:56.158000+00:00"
     },
@@ -7155,7 +7195,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381662",
             "block": "1:00 AM",
             "ethnicity": "W",
@@ -7187,7 +7227,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 AM | Parv 19 (IPEX)",
+        "name": "Case 1 | 1:00 AM | Parv 19 (IPEX)",
         "size": 0,
         "updated": "2023-02-07T21:00:54.604000+00:00"
     },
@@ -7202,7 +7242,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381915",
             "block": "1:00 PM",
             "ethnicity": "W",
@@ -7233,7 +7273,7 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 PM | Initial H&E",
+        "name": "Case 1 | 1:00 PM | Initial H&E",
         "size": 0,
         "updated": "2023-02-07T21:01:44.708000+00:00"
     },
@@ -7248,7 +7288,7 @@ App.demoImages = [
         "description": "",
         "folderId": "63e2bbf7610a6c5c62f4eb1e",
         "meta": {
-            "accession": "TMP23-DEMO1",
+            "accession": "Case 1",
             "baseurl": "https://pearcelab.pitt.edu/upmcesm/@381920",
             "block": "1:00 PM",
             "ethnicity": "W",
@@ -7280,8 +7320,3213 @@ App.demoImages = [
             },
             "type": "svs-link"
         },
-        "name": "TMP23-DEMO1 | 1:00 PM | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
+        "name": "Case 1 | 1:00 PM | Luxol Fast Blue-Cresol Violet (Histo)(Neuropath)",
         "size": 0,
         "updated": "2023-02-07T21:01:45.111000+00:00"
-    }
+    },
+    {
+        "_id": "618ea7d50c7e61463b511a2f",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:49.918000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410144",
+          "block": "1 B",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.47",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   105664x85480 [0,100 103601x85380] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410144|Date = 11/23/20|Time = 13:43:39|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.110464|Top = 24.874718|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410144|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 105664|OriginalHeight = 85480|ICC Profile = AT2",
+            "filename": "@410144",
+            "filesize": "3134118912",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "85380",
+            "iccprofile": "AT2",
+            "imagesize": "26536364032",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "103601"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 B | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:50.512000+00:00"
+      },
+      {
+        "_id": "618ea7d60c7e61463b511a30",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:50.721000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410149",
+          "block": "1 B",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.08",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   105664x83849 [0,100 103601x83749] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410149|Date = 11/23/20|Time = 13:50:20|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.479668|Top = 24.544983|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410149|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 105664|OriginalHeight = 83849|ICC Profile = AT2",
+            "filename": "@410149",
+            "filesize": "2865652736",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "83749",
+            "iccprofile": "AT2",
+            "imagesize": "26029441024",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "103601"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 B | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:51.339000+00:00"
+      },
+      {
+        "_id": "618ea7d40c7e61463b511a2d",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:48.299000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410133",
+          "block": "1 B",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.84",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   105664x80258 [0,100 103601x80158] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410133|Date = 11/23/20|Time = 13:30:16|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.906137|Top = 25.321825|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410133|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 105664|OriginalHeight = 80258|ICC Profile = AT2",
+            "filename": "@410133",
+            "filesize": "3644340736",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "80158",
+            "iccprofile": "AT2",
+            "imagesize": "24913346560",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "103601"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 B | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:48.890000+00:00"
+      },
+      {
+        "_id": "618ea7d50c7e61463b511a2e",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:49.101000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410139",
+          "block": "1 B",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.66",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x79772 [0,100 105594x79672] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410139|Date = 11/23/20|Time = 13:37:09|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.288437|Top = 25.328560|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410139|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 79772|ICC Profile = AT2",
+            "filename": "@410139",
+            "filesize": "2913086720",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "79672",
+            "iccprofile": "AT2",
+            "imagesize": "25238654976",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 B | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:49.709000+00:00"
+      },
+      {
+        "_id": "618ea7d70c7e61463b511a31",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:51.589000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410154",
+          "block": "1 C",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.42",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   119888x82726 [0,100 117548x82626] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410154|Date = 11/23/20|Time = 13:56:58|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.050812|Top = 25.324530|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410154|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 119888|OriginalHeight = 82726|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410154",
+            "filesize": "4539083264",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "82626",
+            "iccprofile": "AT2",
+            "imagesize": "29137563648",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "117548"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 C | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:52.166000+00:00"
+      },
+      {
+        "_id": "618ea7d80c7e61463b511a32",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:52.383000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410159",
+          "block": "1 C",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.60",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   113792x87121 [0,100 111571x87021] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410159|Date = 11/23/20|Time = 14:05:37|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.133270|Top = 25.324409|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410159|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 113792|OriginalHeight = 87121|ICC Profile = AT2",
+            "filename": "@410159",
+            "filesize": "3830685184",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "87021",
+            "iccprofile": "AT2",
+            "imagesize": "29127059456",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "111571"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 C | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:53.001000+00:00"
+      },
+      {
+        "_id": "618ea7da0c7e61463b511a35",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:54.890000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410176",
+          "block": "1 D",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.47",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   123952x76204 [0,100 121532x76104] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410176|Date = 11/23/20|Time = 14:26:46|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.043362|Top = 24.007761|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410176|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 123952|OriginalHeight = 76204|ICC Profile = AT2",
+            "filename": "@410176",
+            "filesize": "2929035520",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "76104",
+            "iccprofile": "AT2",
+            "imagesize": "27747213312",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "121532"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 D | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:55.507000+00:00"
+      },
+      {
+        "_id": "618ea7d90c7e61463b511a33",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:53.227000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410165",
+          "block": "1 D",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.49",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   121920x73266 [0,100 119540x73166] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410165|Date = 11/23/20|Time = 14:13:20|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.282574|Top = 24.417448|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410165|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 121920|OriginalHeight = 73266|ICC Profile = AT2",
+            "filename": "@410165",
+            "filesize": "3502754560",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "73166",
+            "iccprofile": "AT2",
+            "imagesize": "26238791680",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "119540"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 D | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:53.878000+00:00"
+      },
+      {
+        "_id": "618ea7da0c7e61463b511a34",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:54.104000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410171",
+          "block": "1 D",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.15",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   121920x74409 [0,100 119540x74309] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410171|Date = 11/23/20|Time = 14:20:14|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.649490|Top = 23.558607|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410171|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 121920|OriginalHeight = 74409|ICC Profile = AT2",
+            "filename": "@410171",
+            "filesize": "2913924352",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "74309",
+            "iccprofile": "AT2",
+            "imagesize": "26648692736",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "119540"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 D | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:54.664000+00:00"
+      },
+      {
+        "_id": "618ea7de0c7e61463b511a39",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:58.208000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410194",
+          "block": "1 E",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "1D3 (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.07",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   119888x77667 [0,100 117548x77567] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410194|Date = 11/23/20|Time = 14:57:32|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.596821|Top = 25.242895|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410194|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 119888|OriginalHeight = 77667|ICC Profile = AT2",
+            "filename": "@410194",
+            "filesize": "3015985152",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "77567",
+            "iccprofile": "AT2",
+            "imagesize": "27353536512",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "117548"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 E | 1D3 (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:58.857000+00:00"
+      },
+      {
+        "_id": "618ea7dd0c7e61463b511a38",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:57.445000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410191",
+          "block": "1 E",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.49",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   119888x81093 [0,100 117548x80993] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410191|Date = 11/23/20|Time = 14:50:15|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.122355|Top = 25.123055|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410191|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 119888|OriginalHeight = 81093|ICC Profile = AT2",
+            "filename": "@410191",
+            "filesize": "3364136704",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "80993",
+            "iccprofile": "AT2",
+            "imagesize": "28561694720",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "117548"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 E | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:57.980000+00:00"
+      },
+      {
+        "_id": "618ea7dc0c7e61463b511a37",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:56.561000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410185",
+          "block": "1 E",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Bielschowsky Stain (Histo)",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.26",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x93654 [0,100 115555x93554] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410185|Date = 11/23/20|Time = 14:40:47|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.988873|Top = 25.245239|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410185|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 93654|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410185",
+            "filesize": "5177943040",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "93554",
+            "iccprofile": "AT2",
+            "imagesize": "32431896576",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 E | Bielschowsky Stain (Histo)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:57.187000+00:00"
+      },
+      {
+        "_id": "618ea7df0c7e61463b511a3a",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:59.075000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410200",
+          "block": "1 E",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.30",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x78644 [0,100 115555x78544] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410200|Date = 11/23/20|Time = 15:04:57|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.071796|Top = 25.327417|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410200|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 78644|ICC Profile = AT2",
+            "filename": "@410200",
+            "filesize": "2926286848",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "78544",
+            "iccprofile": "AT2",
+            "imagesize": "27228454912",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 E | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:59.642000+00:00"
+      },
+      {
+        "_id": "618ea7db0c7e61463b511a36",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:55.749000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410181",
+          "block": "1 E",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.17",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   119888x74730 [0,100 117548x74630] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410181|Date = 11/23/20|Time = 14:33:29|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.916630|Top = 25.323269|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410181|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 119888|OriginalHeight = 74730|ICC Profile = AT2",
+            "filename": "@410181",
+            "filesize": "3670558976",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "74630",
+            "iccprofile": "AT2",
+            "imagesize": "26317821952",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "117548"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 E | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:56.334000+00:00"
+      },
+      {
+        "_id": "618ea7df0c7e61463b511a3b",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:59.857000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410205",
+          "block": "1 E",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "P62 (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.28",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   115824x77662 [0,100 113563x77562] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410205|Date = 11/23/20|Time = 15:12:50|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.783192|Top = 25.327839|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410205|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 115824|OriginalHeight = 77662|ICC Profile = AT2",
+            "filename": "@410205",
+            "filesize": "3191543296",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "77562",
+            "iccprofile": "AT2",
+            "imagesize": "26424520704",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "113563"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 E | P62 (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:00.571000+00:00"
+      },
+      {
+        "_id": "618ea7e00c7e61463b511a3c",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:00.805000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410210",
+          "block": "1 E",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.19",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x78154 [0,100 115555x78054] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410210|Date = 11/23/20|Time = 15:19:32|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.751713|Top = 25.323509|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410210|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 78154|ICC Profile = AT2",
+            "filename": "@410210",
+            "filesize": "3304940288",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "78054",
+            "iccprofile": "AT2",
+            "imagesize": "27058589696",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 E | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:01.414000+00:00"
+      },
+      {
+        "_id": "618ea7e20c7e61463b511a3e",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:02.484000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410223",
+          "block": "1 F",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.04",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   123952x88767 [0,100 121532x88667] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410223|Date = 11/23/20|Time = 15:36:14|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.896385|Top = 25.326214|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410223|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 123952|OriginalHeight = 88767|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410223",
+            "filesize": "4593831424",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "88667",
+            "iccprofile": "AT2",
+            "imagesize": "32327634944",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "121532"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 F | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:03.051000+00:00"
+      },
+      {
+        "_id": "618ea7e10c7e61463b511a3d",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:01.648000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410217",
+          "block": "1 F",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "5.88",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   121920x85829 [0,100 119540x85729] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410217|Date = 11/23/20|Time = 15:26:32|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.030567|Top = 25.327477|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410217|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 121920|OriginalHeight = 85829|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410217",
+            "filesize": "5229512192",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "85729",
+            "iccprofile": "AT2",
+            "imagesize": "30744133632",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "119540"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 F | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:02.275000+00:00"
+      },
+      {
+        "_id": "618ea8060c7e61463b511a68",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:38.083000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410251",
+          "block": "1 G",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.89",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   103632x90045 [0,100 101609x89945] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410251|Date = 11/23/20|Time = 16:05:35|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.616367|Top = 25.116501|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410251|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 103632|OriginalHeight = 90045|ICC Profile = AT2",
+            "filename": "@410251",
+            "filesize": "2771538944",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "89945",
+            "iccprofile": "AT2",
+            "imagesize": "27417665536",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "101609"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 G | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:38.676000+00:00"
+      },
+      {
+        "_id": "618ea8050c7e61463b511a67",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:37.222000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410244",
+          "block": "1 G",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "10.11",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x91354 [0,100 105594x91254] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410244|Date = 11/23/20|Time = 15:58:50|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.493841|Top = 25.322426|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410244|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 91354|ICC Profile = AT2",
+            "filename": "@410244",
+            "filesize": "2859116032",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "91254",
+            "iccprofile": "AT2",
+            "imagesize": "28907624448",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 G | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:37.831000+00:00"
+      },
+      {
+        "_id": "618ea7e30c7e61463b511a3f",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:03.277000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410232",
+          "block": "1 G",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.02",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   105664x86948 [0,100 103601x86848] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410232|Date = 11/23/20|Time = 15:45:28|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 26.658018|Top = 25.316353|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410232|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 105664|OriginalHeight = 86948|ICC Profile = AT2",
+            "filename": "@410232",
+            "filesize": "3366514176",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "86848",
+            "iccprofile": "AT2",
+            "imagesize": "26992617472",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "103601"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 G | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:03.921000+00:00"
+      },
+      {
+        "_id": "618ea7e40c7e61463b511a40",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:04.146000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410237",
+          "block": "1 G",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.86",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x90538 [0,100 105594x90438] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410237|Date = 11/23/20|Time = 15:52:10|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.370153|Top = 25.322607|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410237|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 90538|ICC Profile = AT2",
+            "filename": "@410237",
+            "filesize": "2905736704",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "90438",
+            "iccprofile": "AT2",
+            "imagesize": "28649127936",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 G | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:04.672000+00:00"
+      },
+      {
+        "_id": "618ea7e60c7e61463b511a43",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:06.485000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410265",
+          "block": "1 H",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.37",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   123952x85180 [0,100 121532x85080] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410265|Date = 11/23/20|Time = 16:28:47|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 17.956507|Top = 24.958698|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410265|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 123952|OriginalHeight = 85180|ICC Profile = AT2",
+            "filename": "@410265",
+            "filesize": "3309489152",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "85080",
+            "iccprofile": "AT2",
+            "imagesize": "31019827200",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "121532"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 H | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:07.103000+00:00"
+      },
+      {
+        "_id": "618ea7e40c7e61463b511a41",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:04.907000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410255",
+          "block": "1 H",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.36",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   123952x85017 [0,100 121532x84917] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410255|Date = 11/23/20|Time = 16:12:10|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.597286|Top = 25.325191|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410255|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 123952|OriginalHeight = 85017|ICC Profile = AT2",
+            "filename": "@410255",
+            "filesize": "4206678272",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "84917",
+            "iccprofile": "AT2",
+            "imagesize": "30960398336",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "121532"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 H | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:05.482000+00:00"
+      },
+      {
+        "_id": "618ea7e50c7e61463b511a42",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:05.700000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410260",
+          "block": "1 H",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.86",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   125984x85017 [0,100 123525x84917] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410260|Date = 11/23/20|Time = 16:21:02|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.989338|Top = 25.327538|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410260|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 125984|OriginalHeight = 85017|ICC Profile = AT2",
+            "filename": "@410260",
+            "filesize": "3552653056",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "84917",
+            "iccprofile": "AT2",
+            "imagesize": "31468115968",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "123525"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 H | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:06.267000+00:00"
+      },
+      {
+        "_id": "618ea7e90c7e61463b511a46",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:09.084000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410279",
+          "block": "1 I",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "10.74",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   115824x74563 [0,100 113563x74463] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410279|Date = 11/23/20|Time = 16:49:55|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 25.089436|Top = 24.989445|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410279|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 115824|OriginalHeight = 74563|ICC Profile = AT2",
+            "filename": "@410279",
+            "filesize": "2362801920",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "74463",
+            "iccprofile": "AT2",
+            "imagesize": "25368725504",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "113563"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 I | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:09.685000+00:00"
+      },
+      {
+        "_id": "618ea7e70c7e61463b511a44",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:07.312000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410271",
+          "block": "1 I",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.96",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   121920x76529 [0,100 119540x76429] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410271|Date = 11/23/20|Time = 16:36:06|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 23.066166|Top = 24.457453|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410271|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 121920|OriginalHeight = 76529|ICC Profile = AT2",
+            "filename": "@410271",
+            "filesize": "3443462656",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "76429",
+            "iccprofile": "AT2",
+            "imagesize": "27408967680",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "119540"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 I | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:07.863000+00:00"
+      },
+      {
+        "_id": "618ea7e80c7e61463b511a45",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:08.131000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410276",
+          "block": "1 I",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.29",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   121920x77018 [0,100 119540x76918] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410276|Date = 11/23/20|Time = 16:43:05|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 24.548098|Top = 24.043798|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410276|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 121920|OriginalHeight = 77018|ICC Profile = AT2",
+            "filename": "@410276",
+            "filesize": "2970623232",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "76918",
+            "iccprofile": "AT2",
+            "imagesize": "27584333824",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "119540"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 I | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:08.842000+00:00"
+      },
+      {
+        "_id": "618ea7e90c7e61463b511a47",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:09.911000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410284",
+          "block": "1 J",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.72",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   134112x79482 [0,100 131494x79382] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410284|Date = 11/23/20|Time = 16:56:18|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.360403|Top = 25.326996|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410284|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 134112|OriginalHeight = 79482|ICC Profile = AT2",
+            "filename": "@410284",
+            "filesize": "3221573376",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "79382",
+            "iccprofile": "AT2",
+            "imagesize": "31314769920",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "131494"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 J | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:10.529000+00:00"
+      },
+      {
+        "_id": "618ea7ed0c7e61463b511a4b",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:13.328000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410304",
+          "block": "1 K",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "10.02",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x90865 [0,100 105594x90765] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410304|Date = 11/23/20|Time = 17:26:46|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 25.874659|Top = 25.317495|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410304|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 90865|ICC Profile = AT2",
+            "filename": "@410304",
+            "filesize": "2868832000",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "90765",
+            "iccprofile": "AT2",
+            "imagesize": "28752717824",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 K | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:13.962000+00:00"
+      },
+      {
+        "_id": "618ea7eb0c7e61463b511a49",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:11.657000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410293",
+          "block": "1 K",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Bielschowsky Stain (Histo)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.49",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x87603 [0,100 105594x87503] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410293|Date = 11/23/20|Time = 17:11:29|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 23.153515|Top = 25.321465|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410293|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 87603|ICC Profile = AT2",
+            "filename": "@410293",
+            "filesize": "4271920128",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "87503",
+            "iccprofile": "AT2",
+            "imagesize": "27719372800",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 K | Bielschowsky Stain (Histo)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:12.275000+00:00"
+      },
+      {
+        "_id": "618ea7ee0c7e61463b511a4c",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:14.189000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410310",
+          "block": "1 K",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.90",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x84993 [0,100 105594x84893] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410310|Date = 11/23/20|Time = 17:33:34|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 26.942900|Top = 24.657547|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410310|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 84993|ICC Profile = AT2",
+            "filename": "@410310",
+            "filesize": "2716545792",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "84893",
+            "iccprofile": "AT2",
+            "imagesize": "26892576768",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 K | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:14.798000+00:00"
+      },
+      {
+        "_id": "618ea7ea0c7e61463b511a48",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:10.763000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410287",
+          "block": "1 K",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.40",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x89723 [0,100 105594x89623] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410287|Date = 11/23/20|Time = 17:03:49|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 24.926380|Top = 25.318878|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410287|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 89723|ICC Profile = AT2",
+            "filename": "@410287",
+            "filesize": "3834757120",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "89623",
+            "iccprofile": "AT2",
+            "imagesize": "28390955008",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 K | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:11.339000+00:00"
+      },
+      {
+        "_id": "618ea7ec0c7e61463b511a4a",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:12.526000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410299",
+          "block": "1 K",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.40",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   107696x90049 [0,100 105594x89949] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410299|Date = 11/23/20|Time = 17:19:44|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 25.091066|Top = 25.277489|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410299|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 107696|OriginalHeight = 90049|ICC Profile = AT2",
+            "filename": "@410299",
+            "filesize": "3032142592",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "89949",
+            "iccprofile": "AT2",
+            "imagesize": "28494223360",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "105594"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 K | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:13.102000+00:00"
+      },
+      {
+        "_id": "618ea7f10c7e61463b511a50",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:17.654000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410324",
+          "block": "1 L",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.50",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x69334 [0,100 109578x69234] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410324|Date = 11/23/20|Time = 17:58:25|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.321241|Top = 23.964746|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410324|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 69334|ICC Profile = AT2",
+            "filename": "@410324",
+            "filesize": "2677219072",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "69234",
+            "iccprofile": "AT2",
+            "imagesize": "22759569408",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 L | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:18.240000+00:00"
+      },
+      {
+        "_id": "618ea7ef0c7e61463b511a4e",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:15.901000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410316",
+          "block": "1 L",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Bielschowsky Stain (Histo)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "5.83",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x70153 [0,100 109578x70053] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410316|Date = 11/23/20|Time = 17:45:38|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.902180|Top = 24.622290|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410316|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 70153|ICC Profile = AT2",
+            "filename": "@410316",
+            "filesize": "3948037376",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "70053",
+            "iccprofile": "AT2",
+            "imagesize": "23028803584",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 L | Bielschowsky Stain (Histo)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:16.527000+00:00"
+      },
+      {
+        "_id": "618ea7f20c7e61463b511a51",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:18.457000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410328",
+          "block": "1 L",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.46",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x68030 [0,100 109578x67930] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410328|Date = 11/23/20|Time = 18:04:19|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.911741|Top = 24.459137|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410328|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 68030|ICC Profile = AT2",
+            "filename": "@410328",
+            "filesize": "2360667136",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "67930",
+            "iccprofile": "AT2",
+            "imagesize": "22330900480",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 L | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:19.083000+00:00"
+      },
+      {
+        "_id": "618ea7ef0c7e61463b511a4d",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:15.026000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410312",
+          "block": "1 L",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.16",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   109728x66232 [0,100 107586x66132] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410312|Date = 11/23/20|Time = 17:39:59|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.380648|Top = 25.324049|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410312|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 109728|OriginalHeight = 66232|ICC Profile = AT2",
+            "filename": "@410312",
+            "filesize": "2982373632",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "66132",
+            "iccprofile": "AT2",
+            "imagesize": "21344632832",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "107586"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 L | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:15.692000+00:00"
+      },
+      {
+        "_id": "618ea7f00c7e61463b511a4f",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:16.771000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410321",
+          "block": "1 L",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.95",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x67540 [0,100 109578x67440] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410321|Date = 11/23/20|Time = 17:52:41|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.525991|Top = 23.717552|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410321|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 67540|ICC Profile = AT2",
+            "filename": "@410321",
+            "filesize": "2476595200",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "67440",
+            "iccprofile": "AT2",
+            "imagesize": "22169821184",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 L | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:17.446000+00:00"
+      },
+      {
+        "_id": "618ea7f40c7e61463b511a53",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:20.086000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410338",
+          "block": "1 M",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Bielschowsky Stain (Histo)",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "4.88",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   113792x88427 [0,100 111571x88327] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410338|Date = 11/23/20|Time = 18:18:30|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.855158|Top = 25.326275|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410338|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 113792|OriginalHeight = 88427|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410338",
+            "filesize": "6058684928",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "88327",
+            "iccprofile": "AT2",
+            "imagesize": "29564196864",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "111571"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 M | Bielschowsky Stain (Histo)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:20.729000+00:00"
+      },
+      {
+        "_id": "618ea7f50c7e61463b511a55",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:21.749000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410350",
+          "block": "1 M",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.42",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   113792x88916 [0,100 111571x88816] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410350|Date = 11/23/20|Time = 18:35:33|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.855158|Top = 25.326275|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410350|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 113792|OriginalHeight = 88916|ICC Profile = AT2",
+            "filename": "@410350",
+            "filesize": "3530602752",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "88816",
+            "iccprofile": "AT2",
+            "imagesize": "29727868928",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "111571"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 M | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:22.392000+00:00"
+      },
+      {
+        "_id": "618ea7f30c7e61463b511a52",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:19.308000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410333",
+          "block": "1 M",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.19",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x86141 [0,100 109578x86041] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410333|Date = 11/23/20|Time = 18:10:02|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.102533|Top = 25.325912|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410333|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 86141|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410333",
+            "filesize": "4570978304",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "86041",
+            "iccprofile": "AT2",
+            "imagesize": "28284604416",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 M | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:19.877000+00:00"
+      },
+      {
+        "_id": "618ea7f40c7e61463b511a54",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:20.972000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410345",
+          "block": "1 M",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.79",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x87119 [0,100 109578x87019] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410345|Date = 11/23/20|Time = 18:27:44|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.646681|Top = 24.915085|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410345|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 87119|ICC Profile = AT2",
+            "filename": "@410345",
+            "filesize": "3670283264",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "87019",
+            "iccprofile": "AT2",
+            "imagesize": "28606105600",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 M | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:21.531000+00:00"
+      },
+      {
+        "_id": "618ea7f80c7e61463b511a58",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:24.204000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410365",
+          "block": "1 N",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.09",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   119888x85336 [0,100 117548x85236] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410365|Date = 11/23/20|Time = 19:00:38|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.595890|Top = 25.078297|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410365|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 119888|OriginalHeight = 85336|ICC Profile = AT2",
+            "filename": "@410365",
+            "filesize": "3713686528",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "85236",
+            "iccprofile": "AT2",
+            "imagesize": "30057961472",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "117548"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 N | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:24.915000+00:00"
+      },
+      {
+        "_id": "618ea7f90c7e61463b511a59",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:25.231000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410369",
+          "block": "1 N",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.50",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x83702 [0,100 115555x83602] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410369|Date = 11/23/20|Time = 19:08:58|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.319174|Top = 25.327057|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410369|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 83702|ICC Profile = AT2",
+            "filename": "@410369",
+            "filesize": "3408074752",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "83602",
+            "iccprofile": "AT2",
+            "imagesize": "28981884928",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 N | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:25.859000+00:00"
+      },
+      {
+        "_id": "618ea7f60c7e61463b511a56",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:22.601000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410355",
+          "block": "1 N",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.44",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x83211 [0,100 115555x83111] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410355|Date = 11/23/20|Time = 18:43:16|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.658760|Top = 25.322186|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410355|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 83211|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410355",
+            "filesize": "4474992128",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "83111",
+            "iccprofile": "AT2",
+            "imagesize": "28811675648",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 N | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:23.118000+00:00"
+      },
+      {
+        "_id": "618ea7f70c7e61463b511a57",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:23.335000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410360",
+          "block": "1 N",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.92",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   119888x82889 [0,100 117548x82789] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410360|Date = 11/23/20|Time = 18:52:03|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.896385|Top = 25.326214|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410360|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 119888|OriginalHeight = 82889|ICC Profile = AT2",
+            "filename": "@410360",
+            "filesize": "3685302784",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "82789",
+            "iccprofile": "AT2",
+            "imagesize": "29195046912",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "117548"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 N | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:23.979000+00:00"
+      },
+      {
+        "_id": "618ea7fb0c7e61463b511a5c",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:27.831000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410380",
+          "block": "1 O",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "1D3 (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.86",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   125984x87466 [0,100 123525x87366] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410380|Date = 11/23/20|Time = 19:34:09|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.782492|Top = 25.204390|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410380|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 125984|OriginalHeight = 87466|ICC Profile = AT2",
+            "filename": "@410380",
+            "filesize": "3283936000",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "87366",
+            "iccprofile": "AT2",
+            "imagesize": "32375656448",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "123525"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 O | 1D3 (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:28.466000+00:00"
+      },
+      {
+        "_id": "618ea7fc0c7e61463b511a5d",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:28.700000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410385",
+          "block": "1 O",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "10.56",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   123952x93174 [0,100 121532x93074] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410385|Date = 11/23/20|Time = 19:43:16|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.566549|Top = 25.326694|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410385|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 123952|OriginalHeight = 93174|ICC Profile = AT2",
+            "filename": "@410385",
+            "filesize": "3214826240",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "93074",
+            "iccprofile": "AT2",
+            "imagesize": "33934407680",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "121532"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 O | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:29.343000+00:00"
+      },
+      {
+        "_id": "618ea7fa0c7e61463b511a5a",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:26.093000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410372",
+          "block": "1 O",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.62",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   123952x86811 [0,100 121532x86711] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410372|Date = 11/23/20|Time = 19:16:42|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.968351|Top = 25.324652|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410372|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 123952|OriginalHeight = 86811|ICC Profile = AT2",
+            "filename": "@410372",
+            "filesize": "4146224384",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "86711",
+            "iccprofile": "AT2",
+            "imagesize": "31614484480",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "121532"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 O | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:26.619000+00:00"
+      },
+      {
+        "_id": "618ea7fa0c7e61463b511a5b",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:26.870000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410377",
+          "block": "1 O",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.24",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   125984x87139 [0,100 123525x87039] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410377|Date = 11/23/20|Time = 19:25:24|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.948109|Top = 25.327597|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410377|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 125984|OriginalHeight = 87139|ICC Profile = AT2",
+            "filename": "@410377",
+            "filesize": "3914305536",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "87039",
+            "iccprofile": "AT2",
+            "imagesize": "32254478336",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "123525"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 O | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:27.597000+00:00"
+      },
+      {
+        "_id": "618ea8010c7e61463b511a62",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:33.029000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410399",
+          "block": "1 Q",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.25",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   125984x87465 [0,100 123525x87365] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410399|Date = 11/23/20|Time = 20:20:04|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.388578|Top = 24.872854|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410399|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 125984|OriginalHeight = 87465|ICC Profile = AT2",
+            "filename": "@410399",
+            "filesize": "3501554432",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "87365",
+            "iccprofile": "AT2",
+            "imagesize": "32375285760",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "123525"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 Q | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:33.579000+00:00"
+      },
+      {
+        "_id": "618ea8000c7e61463b511a61",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:32.126000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410397",
+          "block": "1 Q",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.79",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   128016x85185 [0,100 125517x85085] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410397|Date = 11/23/20|Time = 20:11:06|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 21.298187|Top = 25.324171|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410397|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 128016|OriginalHeight = 85185|ICC Profile = AT2",
+            "filename": "@410397",
+            "filesize": "4115092224",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "85085",
+            "iccprofile": "AT2",
+            "imagesize": "32038842368",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "125517"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 Q | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:32.760000+00:00"
+      },
+      {
+        "_id": "618ea7cb0c7e61463b511a23",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:39.854000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410405",
+          "block": "1 R",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "10.66",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   121920x83056 [0,100 119540x82956] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410405|Date = 11/23/20|Time = 20:43:40|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.358074|Top = 24.915504|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410405|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 121920|OriginalHeight = 83056|ICC Profile = AT2",
+            "filename": "@410405",
+            "filesize": "2792080384",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "82956",
+            "iccprofile": "AT2",
+            "imagesize": "29749680128",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "119540"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 R | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:40.495000+00:00"
+      },
+      {
+        "_id": "618ea8010c7e61463b511a63",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:33.813000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410401",
+          "block": "1 R",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.61",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   125984x77023 [0,100 123525x76923] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410401|Date = 11/23/20|Time = 20:28:03|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.154257|Top = 25.327297|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410401|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 125984|OriginalHeight = 77023|ICC Profile = AT2",
+            "filename": "@410401",
+            "filesize": "3745346816",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "76923",
+            "iccprofile": "AT2",
+            "imagesize": "28505741312",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "123525"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 R | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:34.498000+00:00"
+      },
+      {
+        "_id": "618ea7cb0c7e61463b511a22",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:39.032000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410404",
+          "block": "1 R",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.38",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   123952x80120 [0,100 121532x80020] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410404|Date = 11/23/20|Time = 20:36:12|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 17.129356|Top = 24.507261|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410404|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 123952|OriginalHeight = 80120|ICC Profile = AT2",
+            "filename": "@410404",
+            "filesize": "3481743360",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "80020",
+            "iccprofile": "AT2",
+            "imagesize": "29174972416",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "121532"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 R | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:39.584000+00:00"
+      },
+      {
+        "_id": "618ea7cd0c7e61463b511a25",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:41.640000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410409",
+          "block": "1 S",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "10.70",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x86964 [0,100 115555x86864] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410409|Date = 11/23/20|Time = 20:59:43|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.244137|Top = 24.911297|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410409|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 86964|ICC Profile = AT2",
+            "filename": "@410409",
+            "filesize": "2814422272",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "86864",
+            "iccprofile": "AT2",
+            "imagesize": "30112708608",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 S | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:42.249000+00:00"
+      },
+      {
+        "_id": "618ea7cc0c7e61463b511a24",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:40.837000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410407",
+          "block": "1 S",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.17",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x89248 [0,100 115555x89148] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410407|Date = 11/23/20|Time = 20:50:58|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.648544|Top = 25.244278|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410407|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 89248|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410407",
+            "filesize": "4313246208",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "89148",
+            "iccprofile": "AT2",
+            "imagesize": "30904492032",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 S | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:41.430000+00:00"
+      },
+      {
+        "_id": "618ea7ce0c7e61463b511a26",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:42.574000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410412",
+          "block": "1 T",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.00",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x75046 [0,100 109578x74946] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410412|Date = 11/23/20|Time = 21:08:43|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 23.439793|Top = 24.909552|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410412|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 75046|ICC Profile = AT2",
+            "filename": "@410412",
+            "filesize": "3518939136",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "74946",
+            "iccprofile": "AT2",
+            "imagesize": "24637298688",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 T | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:43.194000+00:00"
+      },
+      {
+        "_id": "618ea7cf0c7e61463b511a27",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:43.395000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410414",
+          "block": "1 U",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.48",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x90390 [0,100 115555x90290] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410414|Date = 11/23/20|Time = 21:15:36|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.451448|Top = 25.116741|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410414|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 90390|ICC Profile = AT2",
+            "filename": "@410414",
+            "filesize": "4184064000",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "90290",
+            "iccprofile": "AT2",
+            "imagesize": "31300382720",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 U | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:43.996000+00:00"
+      },
+      {
+        "_id": "618ea7d00c7e61463b511a28",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:44.220000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410416",
+          "block": "1 V",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.62",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   134112x70999 [0,100 131494x70899] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410416|Date = 11/23/20|Time = 21:24:22|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.756399|Top = 22.445959|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410416|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 134112|OriginalHeight = 70999|ICC Profile = AT2",
+            "filename": "@410416",
+            "filesize": "3671183616",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "70899",
+            "iccprofile": "AT2",
+            "imagesize": "27968378880",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "131494"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 V | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:44.806000+00:00"
+      },
+      {
+        "_id": "618ea7d10c7e61463b511a29",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:45.040000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410418",
+          "block": "1 W",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.30",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   115824x84188 [0,100 113563x84088] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410418|Date = 11/23/20|Time = 21:32:24|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.572851|Top = 24.587456|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410418|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 115824|OriginalHeight = 84188|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410418",
+            "filesize": "4545103360",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "84088",
+            "iccprofile": "AT2",
+            "imagesize": "28647856128",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "113563"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1 W | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:45.633000+00:00"
+      },
+      {
+        "_id": "618ea8030c7e61463b511a65",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:35.517000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410124",
+          "block": "1:00 AM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "1D3 (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.73",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   113792x69990 [0,100 111571x69890] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410124|Date = 11/23/20|Time = 13:17:46|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.924330|Top = 24.830923|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410124|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 113792|OriginalHeight = 69990|ICC Profile = AT2",
+            "filename": "@410124",
+            "filesize": "3024881664",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "69890",
+            "iccprofile": "AT2",
+            "imagesize": "23393091584",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "111571"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 AM | 1D3 (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:36.186000+00:00"
+      },
+      {
+        "_id": "618ea8020c7e61463b511a64",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:34.749000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410120",
+          "block": "1:00 AM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "8.43",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   117856x71791 [0,100 115555x71691] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410120|Date = 11/23/20|Time = 13:11:18|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 19.813927|Top = 25.326334|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410120|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 117856|OriginalHeight = 71791|ICC Profile = AT2",
+            "filename": "@410120",
+            "filesize": "2949448448",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "71691",
+            "iccprofile": "AT2",
+            "imagesize": "24852760576",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "115555"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 AM | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:35.250000+00:00"
+      },
+      {
+        "_id": "618ea7d20c7e61463b511a2b",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:46.652000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410107",
+          "block": "1:00 AM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Bielschowsky Stain (Histo)",
+          "svsinfo": {
+            "appmag": "40",
+            "bigtiff": "1",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "5.27",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   111760x69335 [0,100 109578x69235] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410107|Date = 11/23/20|Time = 12:57:34|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.199648|Top = 24.335270|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410107|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 111760|OriginalHeight = 69335|ICC Profile = AT2|BigTIFF = true",
+            "filename": "@410107",
+            "filesize": "4320675328",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "69235",
+            "iccprofile": "AT2",
+            "imagesize": "22759899136",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "109578"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 AM | Bielschowsky Stain (Histo)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:47.253000+00:00"
+      },
+      {
+        "_id": "618ea8040c7e61463b511a66",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:36.428000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410129",
+          "block": "1:00 AM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.43",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   113792x76029 [0,100 111571x75929] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410129|Date = 11/23/20|Time = 13:23:49|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.617298|Top = 25.281096|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410129|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 113792|OriginalHeight = 76029|ICC Profile = AT2",
+            "filename": "@410129",
+            "filesize": "2696017408",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "75929",
+            "iccprofile": "AT2",
+            "imagesize": "25414422528",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "111571"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 AM | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:36.996000+00:00"
+      },
+      {
+        "_id": "618ea7d10c7e61463b511a2a",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:45.842000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410102",
+          "block": "1:00 AM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "6.20",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   113792x69011 [0,100 111571x68911] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410102|Date = 11/23/20|Time = 12:50:32|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.430971|Top = 25.078539|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410102|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 113792|OriginalHeight = 69011|ICC Profile = AT2",
+            "filename": "@410102",
+            "filesize": "3720034048",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "68911",
+            "iccprofile": "AT2",
+            "imagesize": "23065407488",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "111571"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 AM | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:43:46.434000+00:00"
+      },
+      {
+        "_id": "618ea7d30c7e61463b511a2c",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:43:47.479000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410113",
+          "block": "1:00 AM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "PHF TAU (IPEX)(Neuropath)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "7.83",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   113792x70480 [0,100 111571x70380] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410113|Date = 11/23/20|Time = 13:05:03|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.513199|Top = 25.037270|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410113|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 113792|OriginalHeight = 70480|ICC Profile = AT2",
+            "filename": "@410113",
+            "filesize": "3009174784",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "70380",
+            "iccprofile": "AT2",
+            "imagesize": "23557101568",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "111571"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 AM | PHF TAU (IPEX)(Neuropath)",
+        "size": 0,
+        "updated": "2021-11-12T17:43:48.072000+00:00"
+      },
+      {
+        "_id": "618ea7fe0c7e61463b511a5f",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:30.328000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410392",
+          "block": "1:00 PM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "ABETA (IPEX)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "10.89",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   132080x71648 [0,100 129502x71548] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410392|Date = 11/23/20|Time = 19:57:55|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 22.283970|Top = 24.664341|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410392|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 132080|OriginalHeight = 71648|ICC Profile = AT2",
+            "filename": "@410392",
+            "filesize": "2552747264",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "71548",
+            "iccprofile": "AT2",
+            "imagesize": "27796828160",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "129502"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 PM | ABETA (IPEX)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:30.989000+00:00"
+      },
+      {
+        "_id": "618ea7ff0c7e61463b511a60",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:31.224000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410395",
+          "block": "1:00 PM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Blank Slide (HISTO) (WLO)",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "12.31",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   130048x70993 [0,100 127509x70893] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410395|Date = 11/23/20|Time = 20:04:37|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 20.675322|Top = 24.543240|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410395|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 130048|OriginalHeight = 70993|ICC Profile = AT2",
+            "filename": "@410395",
+            "filesize": "2202895872",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "70893",
+            "iccprofile": "AT2",
+            "imagesize": "27118487552",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "127509"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 PM | Blank Slide (HISTO) (WLO)",
+        "size": 0,
+        "updated": "2021-11-12T17:44:31.799000+00:00"
+      },
+      {
+        "_id": "618ea7fd0c7e61463b511a5e",
+        "_modelType": "item",
+        "baseParentId": "618981ce9ff5f18879c473e4",
+        "baseParentType": "collection",
+        "created": "2021-11-12T17:44:29.552000+00:00",
+        "creatorId": "6189817f9ff5f18879c473e1",
+        "description": "",
+        "folderId": "618ea7ca0c7e61463b511a21",
+        "meta": {
+          "accession": "Case 2",
+          "baseurl": "https://pearcelab.pitt.edu/upmcesm/@410389",
+          "block": "1:00 PM",
+          "ethnicity": "W",
+          "sex": "F",
+          "stain": "Initial H&E",
+          "svsinfo": {
+            "appmag": "40",
+            "compcodec": "JPEG using libjpeg",
+            "compqual": "70",
+            "compratio": "9.51",
+            "comptype": "2",
+            "comptypedesc": "SVS/JPEG",
+            "depth": "1",
+            "description": "Aperio Image Library v12.0.16   130048x73439 [0,100 127509x73339] (240x240) JPEG/RGB Q=70|AppMag = 40|StripeWidth = 2032|ScanScope ID = LCA-AT1-SCF|Filename = 410389|Date = 11/23/20|Time = 19:51:09|Time Zone = GMT-05:00|User = d9fe81ae-bc08-430d-99b2-960b95680d54|Parmset = Scan to (Production)|MPP = 0.2522|Left = 18.741961|Top = 25.327898|LineCameraSkew = 0.000324|LineAreaXOffset = 0.024970|LineAreaYOffset = -0.004387|Focus Offset = 0.000000|DSR ID = winlcansprd01|ImageID = 410389|Exposure Time = 45|Exposure Scale = 0.000001|DisplayColor = 0|SessonMode = NR|OriginalWidth = 130048|OriginalHeight = 73439|ICC Profile = AT2",
+            "filename": "@410389",
+            "filesize": "2950009088",
+            "haslabel": "0",
+            "hasmacro": "0",
+            "hasthumb": "1",
+            "height": "73339",
+            "iccprofile": "AT2",
+            "imagesize": "28054147072",
+            "mpp": "0.25",
+            "tileheight": "240",
+            "tilewidth": "240",
+            "title": "",
+            "width": "127509"
+          },
+          "type": "svs-link"
+        },
+        "name": "Case 2 | 1:00 PM | Initial H&E",
+        "size": 0,
+        "updated": "2021-11-12T17:44:30.103000+00:00"
+      }
 ]

@@ -25,45 +25,22 @@ Object.values(cases).forEach( c => {
     }, {});
 });
 
-// let tilesource1 = demoImages[3].tileSource;
-// let tilesource2 = demoImages[4].tileSource;
-
 let drawingCanvas = document.createElement('canvas');
 
-
-// let staticViewer = window.viewer1 = makeViewer('viewer-static', tilesource1);
-// let movingViewer = window.viewer2 = makeViewer('viewer-moving', tilesource2);
 let staticViewer = window.viewer1 = makeViewer('viewer-static');
 let movingViewer = window.viewer2 = makeViewer('viewer-moving');
 staticViewer.synchronizedViewers = [{viewer:movingViewer}];
 movingViewer.synchronizedViewers = [{viewer:staticViewer}];
 staticViewer.addHandler('open',onImageOpen);
 movingViewer.addHandler('open',onImageOpen);
+staticViewer.addHandler('close',unsynchronize);
+movingViewer.addHandler('close',unsynchronize);
 staticViewer.rotationControl = new RotationControlOverlay(staticViewer);
 movingViewer.rotationControl = new RotationControlOverlay(movingViewer);
 
 setupImagePicker(cases);
 
-function onImageOpen(event){
-    let viewer = event.eventSource;
-    
-    let tileSource = viewer.world.getItemAt(0).source;
-    if(tileSource.backgroundColor){
-        $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-    } else {
-         getGlassColor(tileSource).then(color=>{
-            tileSource.backgroundColor = color;
-            //make sure we're still viewing this tile source before updating the viewer background color
-            if(viewer.world.getItemAt(0).source == tileSource){
-                $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-            }  
-        });
-    }
-
-    initializeSynchronizeBehavior();
-   
-}
-
+$('#sanity-check-dialog').dialog({autoOpen:false,width:'auto',height:'auto',title:'Sanity check. Are images aligned?'});
 
 $('input.opacity-slider').on('input',function(){
     $('.openseadragon-canvas').css('--stacked-opacity',this.value/100);
@@ -73,50 +50,51 @@ $('input.glass-checkbox').on('change',function(){
     if(this.checked){
         enableTransparentBackground(staticViewer, transparentGlassRGBThreshold, 0);
         enableTransparentBackground(movingViewer, transparentGlassRGBThreshold, 0);
+        // $('.create-viewport-images').attr('disabled',false);
+        // $('.create-background-images').attr('disabled',true);
     } else {
         disableTransparentBackground(staticViewer);
         disableTransparentBackground(movingViewer);
+        // $('.create-viewport-images').attr('disabled',true);
+        // $('.create-background-images').attr('disabled',false);
     }
-}).attr('checked',false);
+}).prop('checked',false);
 
 $('input.combine-checkbox').on('change',function(){
+    //unsync zoom until the initial rescaling is 
+    staticViewer.removeHandler('zoom',synchronizingZoomHandler);
+    movingViewer.removeHandler('zoom',synchronizingZoomHandler);
+    let staticResizeFinished = false;
+    let movingResizeFinished = false;
+    staticViewer.addOnceHandler('resize',()=>{
+        staticResizeFinished = true;
+        if(staticResizeFinished && movingResizeFinished){
+            window.setTimeout( ()=> {
+                staticViewer.addHandler('zoom',synchronizingZoomHandler);
+                movingViewer.addHandler('zoom',synchronizingZoomHandler);
+                setSynchronizingMatrices();
+            });
+        }
+    });
+    movingViewer.addOnceHandler('resize',()=>{
+        movingResizeFinished = true;
+        if(staticResizeFinished && movingResizeFinished){
+            window.setTimeout( ()=> {
+                staticViewer.addHandler('zoom',synchronizingZoomHandler);
+                movingViewer.addHandler('zoom',synchronizingZoomHandler);
+                setSynchronizingMatrices();
+            });
+        }
+    });
     if(this.checked){
         $('.viewer-container').addClass('stacked').removeClass('side-by-side');
         staticViewer.rotationControl.deactivate();
     } else {
         $('.viewer-container').addClass('side-by-side').removeClass('stacked');
     }
-}).attr('checked',false);
+}).prop('checked',false);
 
-$('input.sync-checkbox').on('change',function(){
-    if(this.checked){
-        setSynchronizingMatrices();
-
-        staticViewer.addHandler('pan',synchronizingPanHandler);
-        movingViewer.addHandler('pan',synchronizingPanHandler);
-
-        staticViewer.addHandler('rotate',synchronizingRotateHandler);
-        movingViewer.addHandler('rotate',synchronizingRotateHandler);
-
-        staticViewer.removeHandler('pan', setSynchronizingMatrices);
-        movingViewer.removeHandler('pan', setSynchronizingMatrices);
-        
-        staticViewer.removeHandler('rotate', setSynchronizingMatrices);
-        movingViewer.removeHandler('rotate', setSynchronizingMatrices);
-    } else {
-        staticViewer.removeHandler('pan',synchronizingPanHandler);
-        movingViewer.removeHandler('pan',synchronizingPanHandler);
-
-        staticViewer.removeHandler('rotate',synchronizingRotateHandler);
-        movingViewer.removeHandler('rotate',synchronizingRotateHandler);
-
-        staticViewer.addHandler('pan', setSynchronizingMatrices);
-        movingViewer.addHandler('pan', setSynchronizingMatrices);
-        
-        staticViewer.addHandler('rotate', setSynchronizingMatrices);
-        movingViewer.addHandler('rotate', setSynchronizingMatrices);
-    }
-}).attr('checked',false);
+$('input.sync-checkbox').on('change',setSynchronizingStatus).attr('checked',false);
 
 $('.viewport-images .toggle').on('click',function(){
     $('.img-rect').toggle();
@@ -142,16 +120,81 @@ $('.create-viewport-images').on('click',()=>{
     let bgImgs = $('.background-images img').toArray();
     createTransformedImages(targetContainer, $('.image-sets .num-sets').val(), bgImgs).then(()=>{
         console.log('All created!');
+        $('.download-images').attr('disabled',false);
     });
 });
+
+$('.download-images').on('click',function(){
+    let zip = new JSZip();
+    let transformInfo = [];
+    let files = $('.image-sets .static-image').toArray().map((staticImg,idx)=>{
+        let prefix = 'image'+idx;
+        let movingImg= $(staticImg).data('moving');
+        let transform = $(staticImg).data('transform');
+        let staticName = prefix + '-static.png';
+        let movingName = prefix + '-moving.png';
+        transform.staticImage = staticName;
+        transform.movingImage = movingName;
+        transformInfo[idx] = transform;
+        return Promise.all([
+            fetch(staticImg.src).then(response=>response.arrayBuffer()).then(ab=>{
+                return zip.file(staticName, ab, {base64: true});
+            }),
+            fetch(movingImg.src).then(response=>response.arrayBuffer()).then(ab=>{
+                return zip.file(movingName, ab, {base64: true});
+            }),
+        ]);
+    });
+    zip.file('info.json',JSON.stringify(transformInfo));
+    Promise.all(files).then(()=>{
+        zip.generateAsync({type:"blob"}).then(function(content) {
+            // see FileSaver.js
+            window.saveAs(content, "image-sets.zip");
+        });
+    });
+})
+
+$('.image-sets').on('click','img',ev=>{
+    let img = $(ev.currentTarget);
+    setupSanityCheck(img.data());
+    $('#sanity-check-dialog').dialog('open');
+})
+
+function onImageOpen(event){
+    let viewer = event.eventSource;
+    
+    let tileSource = viewer.world.getItemAt(0).source;
+    if(tileSource.backgroundColor){
+        $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+    } else {
+         getGlassColor(tileSource).then(color=>{
+            tileSource.backgroundColor = color;
+            //make sure we're still viewing this tile source before updating the viewer background color
+            if(viewer.world.getItemAt(0).source == tileSource){
+                $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+            }  
+        });
+    }
+
+    initializeSynchronizeBehavior();
+   
+}
+
+// Get images as-is from ROI
 function createImages(targetContainer, remainingIterations, bgImgs=[]){
     let staticImage = getImageRect(staticViewer, bgImgs[0], 'image/png');
     targetContainer.append($('<img>',{src:staticImage, class:'static-image'}));
 
     let movingImage = getImageRect(movingViewer, bgImgs[1], 'image/png');
     targetContainer.append($('<img>',{src:movingImage, class:'moving-image'}));
+
+    console.log('Background images created');
 }
 function createTransformedImages(targetContainer, remainingIterations, bgImgs=[]){
+    //sync images if necessary
+    if(!$('input.sync-checkbox').prop('checked')){
+        $('input.sync-checkbox').prop('checked',true).trigger('change');
+    }
     let rotation1 = Math.random()*360;
     let rotation2 = Math.random()*360;
 
@@ -162,22 +205,29 @@ function createTransformedImages(targetContainer, remainingIterations, bgImgs=[]
     let ty2 = Math.random()*0.2;
 
     let transform = {
-        dTheta: rotation2-rotation1,
-        dX: tx2-tx1,
-        dY: ty2-ty1,
+        deltaTheta: rotation2-rotation1,
+        deltaXviewport: tx2-tx1,
+        deltaYviewport: ty2-ty1,
     };
-    console.log(transform);
+
+
+    let staticImage;
+    let movingImage;
     //rotate and translate operation 1 - before getting static image
     staticViewer.viewport.rotateBy(rotation1, null, true);
     staticViewer.viewport.panBy(new OpenSeadragon.Point(tx1, ty1), true);
+    let refPoint = staticViewer.viewport.getCenter();
+    let refAngle = staticViewer.viewport.getRotation(true);
     //wait for the viewers to update
-    return Promise.all([
+    let promise = Promise.all([
         new Promise(resolve=>staticViewer.addOnceHandler('update-viewport',()=>resolve())),
         new Promise(resolve=>movingViewer.addOnceHandler('update-viewport',()=>resolve())),
-    ]).then( ()=>{
+    ]);
+
+    return promise.then( ()=>{
         //get staticImage data in transformed state
-        let staticImage = getImageRect(staticViewer, bgImgs[0], 'image/png');
-        targetContainer.append($('<img>',{src:staticImage, class:'static-image'}));
+        let staticImageData = getImageRect(staticViewer, bgImgs[0], 'image/png');
+        staticImage = $('<img>',{src:staticImageData, class:'static-image'}).appendTo(targetContainer);
 
         //undo operation 1
         staticViewer.viewport.rotateBy(-rotation1, null, true);
@@ -187,24 +237,41 @@ function createTransformedImages(targetContainer, remainingIterations, bgImgs=[]
         staticViewer.viewport.rotateBy(rotation2, null, true);
         staticViewer.viewport.panBy(new OpenSeadragon.Point(tx2, ty2), true);
 
+        let transformedPixels = staticViewer.viewport.viewportToViewerElementCoordinates(staticViewer.viewport.getCenter())
+            .minus(staticViewer.viewport.viewportToViewerElementCoordinates(refPoint));
+        let transformedAngle = staticViewer.viewport.getRotation(true) - refAngle;
+        transform.a = OpenSeadragon.positiveModulo(transformedAngle, 360);
+        transform.x = transformedPixels.x;
+        transform.y = transformedPixels.y;
+
         //wait for viewers to update
-        return Promise.all([
+
+        let promise = Promise.all([
             new Promise(resolve=>staticViewer.addOnceHandler('update-viewport',()=>resolve())),
             new Promise(resolve=>movingViewer.addOnceHandler('update-viewport',()=>resolve())),
-        ])
-    }).then( ()=>{
-        let movingImage = getImageRect(movingViewer, bgImgs[1], 'image/png');
-        targetContainer.append($('<img>',{src:movingImage, class:'moving-image', 'data-transform':JSON.stringify(transform)}));
+        ]);
 
+        return promise; 
+
+    }).then( ()=>{
+        let movingImageData = getImageRect(movingViewer, bgImgs[1], 'image/png');
+        movingImage = $('<img>',{src:movingImageData, class:'moving-image'}).appendTo(targetContainer);
+        staticImage.data({moving:movingImage[0],static:staticImage[0],transform:transform});
+        movingImage.data({moving:movingImage[0],static:staticImage[0],transform:transform});
+
+        //add handlers to wait for viewers to update
+        
         //undo operation 2
         staticViewer.viewport.rotateBy(-rotation2, null, true);
         staticViewer.viewport.panBy(new OpenSeadragon.Point(-tx2, -ty2), true);
 
-        //wait for viewers to update
-        return Promise.all([
+        let promise = Promise.all([
             new Promise(resolve=>staticViewer.addOnceHandler('update-viewport',()=>resolve())),
             new Promise(resolve=>movingViewer.addOnceHandler('update-viewport',()=>resolve())),
-        ])
+        ]);
+        
+
+        return promise;
         
     }).then( ()=>{
         if(remainingIterations > 1){
@@ -237,6 +304,32 @@ function getImageRect(viewer, backgroundImg, type='image/jpg'){
     return drawingCanvas.toDataURL(type);
 }
 
+function setupSanityCheck(params){
+    let transform = params.transform;
+    let canvas = $('.sanity-canvas')[0];
+    let w = params.static.naturalWidth;
+    let h = params.static.naturalHeight;
+    canvas.width = w * 2;
+    canvas.height = h * 2;
+    
+    let angleInRadians = -transform.a * Math.PI / 180;
+    
+    let context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    //translate to center
+    context.translate(w, h);
+    //draw static image as-is
+    context.drawImage(params.static, -w/2, -h/2);
+    //set semi-transparent for next draw
+    context.globalAlpha = 0.5;
+    //rotate the viewport
+    context.rotate(angleInRadians);
+    //draw moving image rotated and translated
+    context.drawImage(params.moving, -w/2 + transform.x, -h/2 + transform.y);
+    
+}
+
 function setSynchronizingMatrices(){
     //create affine matrices
     //depends on paper.js
@@ -265,8 +358,13 @@ function initializeSynchronizeBehavior(){
     }
     let ts1 = item1.source;
     let ts2 = item2.source;
+    // console.log('Setting up sync');
+    // console.log(`Static viewer: zoom(${staticViewer.viewport.getZoom()}), mmx(${ts1.mm_x}), w(${ts1.width})`);
+    // console.log(`Moving viewer: zoom(${movingViewer.viewport.getZoom()}), mmx(${ts2.mm_x}), w(${ts2.width})`);
+    staticViewer.removeHandler('zoom',synchronizingZoomHandler);
+    movingViewer.removeHandler('zoom',synchronizingZoomHandler);
     movingViewer.viewport.zoomTo(staticViewer.viewport.getZoom() * (ts2.mm_x * ts2.width) / (ts1.mm_x * ts1.width) );
-
+    console.log(`New zooms: static(${staticViewer.viewport.getZoom()}), moving(${movingViewer.viewport.getZoom()})`);
     setSynchronizingMatrices();
 
     staticViewer.addHandler('zoom',synchronizingZoomHandler);
@@ -276,7 +374,52 @@ function initializeSynchronizeBehavior(){
     
     staticViewer.addHandler('rotate', setSynchronizingMatrices);
     movingViewer.addHandler('rotate', setSynchronizingMatrices);
+}
 
+function unsynchronize(){
+    // console.log('Unsynchronizing')
+    $('input.sync-checkbox').prop('checked',false);
+    staticViewer.removeHandler('zoom',synchronizingZoomHandler);
+    movingViewer.removeHandler('zoom',synchronizingZoomHandler);
+    staticViewer.removeHandler('pan', setSynchronizingMatrices);
+    movingViewer.removeHandler('pan', setSynchronizingMatrices);
+    staticViewer.removeHandler('rotate', setSynchronizingMatrices);
+    movingViewer.removeHandler('rotate', setSynchronizingMatrices);
+    staticViewer.removeHandler('pan',synchronizingPanHandler);
+    movingViewer.removeHandler('pan',synchronizingPanHandler);
+    staticViewer.removeHandler('rotate',synchronizingRotateHandler);
+    movingViewer.removeHandler('rotate',synchronizingRotateHandler);
+}
+
+function setSynchronizingStatus(){
+    //`this` is the checkbox that triggers the event
+    if(this.checked){
+        setSynchronizingMatrices();
+
+        staticViewer.addHandler('pan',synchronizingPanHandler);
+        movingViewer.addHandler('pan',synchronizingPanHandler);
+
+        staticViewer.addHandler('rotate',synchronizingRotateHandler);
+        movingViewer.addHandler('rotate',synchronizingRotateHandler);
+
+        staticViewer.removeHandler('pan', setSynchronizingMatrices);
+        movingViewer.removeHandler('pan', setSynchronizingMatrices);
+        
+        staticViewer.removeHandler('rotate', setSynchronizingMatrices);
+        movingViewer.removeHandler('rotate', setSynchronizingMatrices);
+    } else {
+        staticViewer.removeHandler('pan',synchronizingPanHandler);
+        movingViewer.removeHandler('pan',synchronizingPanHandler);
+
+        staticViewer.removeHandler('rotate',synchronizingRotateHandler);
+        movingViewer.removeHandler('rotate',synchronizingRotateHandler);
+
+        staticViewer.addHandler('pan', setSynchronizingMatrices);
+        movingViewer.addHandler('pan', setSynchronizingMatrices);
+        
+        staticViewer.addHandler('rotate', setSynchronizingMatrices);
+        movingViewer.addHandler('rotate', setSynchronizingMatrices);
+    }
 }
 
 function synchronizingPanHandler(event){
@@ -371,7 +514,15 @@ function setupImagePicker(cases){
     $('.select-images').on('click', '.case-name', ev=>{
         $(ev.currentTarget).closest('.case').find('.blocklist').toggleClass('collapsed');
     }).on('click','.thumbnail',ev=>{
-        let d = $(ev.currentTarget).data();
+        let img = $(ev.currentTarget);
+        if(img.hasClass('static')){
+            $('.thumbnail.static.selected').removeClass('selected');
+        }
+        if(img.hasClass('moving')){
+            $('.thumbnail.moving.selected').removeClass('selected');
+        }
+        img.addClass('selected');
+        let d = img.data();
         d.viewer.open(d.block.tileSource);
     })
     let imagePicker=$('.image-picker').empty();
@@ -385,8 +536,8 @@ function setupImagePicker(cases){
             let staticList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
             let movingList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
             blocks[blockKey].forEach(block=>{
-                $('<img>',{class:'thumbnail',title:block.meta.stain,src:block.tileSource.thumbnailUrl}).appendTo(staticList).data({viewer:staticViewer, block: block});
-                $('<img>',{class:'thumbnail',title:block.meta.stain,src:block.tileSource.thumbnailUrl}).appendTo(movingList).data({viewer:movingViewer, block: block});
+                $('<img>',{class:'thumbnail static',title:block.meta.stain,src:block.tileSource.thumbnailUrl,loading:'lazy'}).appendTo(staticList).data({viewer:staticViewer, block: block});
+                $('<img>',{class:'thumbnail moving',title:block.meta.stain,src:block.tileSource.thumbnailUrl,loading:'lazy'}).appendTo(movingList).data({viewer:movingViewer, block: block});
             })
         });
         imagePicker.append(c);
@@ -401,6 +552,7 @@ function makeViewer(id, tileSource){
         maxZoomPixelRatio: 10,
         minZoomImageRatio: 0.2,
         visibilityRatio: 0,
+        preserveImageSizeOnResize: true,
         subPixelRoundingForTransparency: {'*': OpenSeadragon.SUBPIXEL_ROUNDING_OCCURRENCES.ALWAYS},
     });
 }

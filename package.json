@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "async": "^3.2.4",
+    "file-saver": "2.0.0",
     "jquery": "^3.6.3",
     "jquery-ui": "^1.13.2",
-    "live-server": "^1.2.2",
+    "jszip": "3.10.1",
+    "live-server": "^1.1.0",
     "openseadragon": "^4.0.0",
     "openseadragon-filtering": "https://github.com/pearcetm/OpenSeadragonFiltering",
     "osd-paperjs-annotation": "https://github.com/pearcetm/osd-paperjs-annotation#6284a71",

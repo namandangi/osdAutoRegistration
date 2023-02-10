@@ -139,6 +139,14 @@
 .thumbnail{
     width:64px;
 }
+.thumbnail.selected{
+    outline:medium solid black;
+    z-index:1;
+}
+.thumbnail:not(.selected):hover{
+    outline:medium gray solid;
+    z-index:2;
+}
 .case{
     border:thin gray solid;
     border-radius:5px;
@@ -150,4 +158,14 @@
 .blocklist.collapsed{
     height:1em;
     overflow:hidden;
+}
+.sanity-wrapper{
+    background-color:lightgrey;
+    /* padding:0.2em; */
+}
+.sanity-canvas{
+    width:300px;
+    height:300px;
+    margin: 0 auto;
+    background-color:black;
 }

@@ -11,7 +11,8 @@
     <script src="/node_modules/underscore/underscore-min.js"></script>
     <script src="/node_modules/openseadragon/build/openseadragon/openseadragon.js"></script>
     <script src="/node_modules/openseadragon-filtering/openseadragon-filtering.js"></script>
-    
+    <script src="/node_modules/file-saver/dist/FileSaver.min.js"></script>
+    <script src="/node_modules/jszip/dist/jszip.min.js"></script>
     <script src="/node_modules/paper/dist/paper-full.js"></script>
     <script src="/js/dsa/common.js"></script>
     <script src="/js/dsa/overlaid-viewer.js"></script>
@@ -36,15 +37,19 @@
       <div class="bottom-row">
         <div class="side-nav">
           <div class="image-info viewport-images">
-            <h4>Create images</h4>
+            <h4>Select image size</h4>
             <div><input data-dim="width" type="number" step="1" value="256"> by <input data-dim="height" type="number" step="1" value="256"> px
               <button class="toggle">Toggle ROI</button></div>
             <div class="background-images">
+              <p>Navigate to a region of background (glass) and select a background image for each slide.</p>
               <button class="create-background-images">Get Background Images</button>
               <div class="viewport-image-container"><img><img></div>
             </div>
             <div class="disabled image-sets">
+              <p>Once background is selected, place the entire tissue sections within the ROIs.</p>
+              
               Create <input class="num-sets" type="number" step="1" value="1"> pairs: <button class="create-viewport-images">Go</button>
+              <button class="download-images" disabled>Download zip</button>
               <div class="viewport-image-container"></div>
             </div>
           </div>
@@ -63,6 +68,10 @@
       </div>
       
     </div>
-    
+    <div id="sanity-check-dialog">
+      <div class="sanity-wrapper">
+        <canvas class="sanity-canvas"></canvas>
+      </div>
+    </div>
   </body>
 </html>

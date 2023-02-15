@@ -16,6 +16,7 @@
     this._clickMode = 'none';
     this._syncMode = false;
     this._offset = new OpenSeadragon.Point(0, 0);
+    this._tileImages = [];
 
     this._props = {
       onAddMarker: args.onAddMarker,
@@ -26,7 +27,7 @@
     if (args.prefixUrl) {
       config.prefixUrl = args.prefixUrl;
     }
-
+    // debugger
     var openPromise0 = new Promise(function (resolve, reject) {
       self._osdViews.push(
         self._createOsdView({
@@ -81,6 +82,7 @@
 
     // ----------
     setState: function (state) {
+      // debugger
       var self = this;
       var needsSyncUpdate = false;
       var needsFilterUpdate = false;
@@ -294,12 +296,21 @@
         self._sync(osdView);
       });
 
+      viewer.addHandler('tile-loaded', function (tile) {
+        let regex = /\/0\/0\/0/;
+        if(regex.test(tile.tile._url)){
+            self._tileImages.push(tile.data);
+            console.log("tile", tile);
+        }        
+        });
+
       return osdView;
     },
 
     // ----------
     _handleClick: function (osdView, pos) {
       if (this._clickMode === 'add') {
+        // compute the anchor points and add them here
         this._props.onAddMarker(osdView.index, pos);
       } else if (this._clickMode === 'remove') {
         var best;

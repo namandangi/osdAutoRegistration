@@ -29,6 +29,7 @@
       {
         element: element,
         tileSources: _.map(args.state.layers, function(layer) {
+          console.log("layer: ",layer)
           return {
             tileSource: layer.tileSource,
             x: layer.x,
@@ -51,8 +52,12 @@
 
     this._overlay = this._viewer.svgOverlay();
 
+    console.trace()
+    // debugger
+    console.log("about to add layers")
     this._viewer.addHandler('open', function() {
       var count = self._viewer.world.getItemCount();
+      console.log("layer count: ", count)
       var layer;
       for (var i = 0; i < count; i++) {
         layer = {

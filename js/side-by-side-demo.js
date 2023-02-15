@@ -17,6 +17,7 @@
       this.removeRadio = document.querySelector('.remove-radio');
       this.syncCheckbox = document.querySelector('.sync-checkbox');
       var combineCheckbox = document.querySelector('.combine-checkbox');
+      var logDataCheckbox = document.querySelector('.log-data-checkbox');
 
       this.noneRadio.addEventListener('click', function () {
         self.viewer.setClickMode('none');
@@ -39,6 +40,12 @@
           self.startCombined();
         } else {
           self.startSeparate();
+        }
+      });
+      logDataCheckbox.addEventListener('click', function () {
+        if (logDataCheckbox.checked) {
+          console.log("testing stuff")
+          self.LogData();
         }
       });
       /* Note here you can specify various starting data sets using the urlParams data */
@@ -81,7 +88,7 @@
     // ----------
     startSeparate: function () {
       var self = this;
-
+      // debugger
       if (this.viewer) {
         this.viewer.destroy();
       }
@@ -130,6 +137,131 @@
 
       this.$top.empty();
       this.$bottom.empty();
+    },
+
+    // ----------
+    LogData: function() {
+      console.log(this.viewer)
+      let imageTileUrls = [];
+      this.viewer._osdViews.forEach(view => {
+        let { viewer } = view;        
+        let {_tilesLoaded} = viewer.world.getItemAt(0)._tileCache;
+        imageTileUrls.push(_tilesLoaded[0].tile.url);        
+      });
+      this.ProcessImages(this.viewer._tileImages);
+     console.log(imageTileUrls); 
+    },
+
+    // ---------
+    ProcessImages: function (imageList) {
+      console.log("testing in process")
+      let source1 = imageList[0];
+      let source2 = imageList[1];
+
+      console.log(source1);
+      console.log(source2);
+
+      // step 1
+      let im1 = cv.imread(source1);
+      let im2 = cv.imread(source2);
+
+      console.log("im2:", im2);
+
+      // step 2
+      let im1Gray = new cv.Mat();
+      let im2Gray = new cv.Mat();
+
+      cv.cvtColor(im1, im1Gray, cv.COLOR_BGRA2GRAY);
+      cv.cvtColor(im2, im2Gray, cv.COLOR_BGRA2GRAY);
+
+      console.log("im2gray:", im2Gray);
+
+      // step 3
+      let keypoints1 = new cv.KeyPointVector();
+      let keypoints2 = new cv.KeyPointVector();
+      let descriptors1 = new cv.Mat();
+      let descriptors2 = new cv.Mat();
+
+      // var orb = new cv.AKAZE();
+      var orb = new cv.ORB();
+
+      orb.detectAndCompute(im1Gray, new cv.Mat(), keypoints1, descriptors1);
+      orb.detectAndCompute(im2Gray, new cv.Mat(), keypoints2, descriptors2);
+
+      // mid way test
+      console.log("Total of ", keypoints1.size(), " keypoints1 (img to align) and ", keypoints2.size(), " keypoints2 (reference)");
+      console.log("here are the first 5 keypoints for keypoints1:");
+      for (let i = 0; i < keypoints1.size(); i++) {
+        console.log("keypoints1: [",i,"]", keypoints1.get(i).pt.x, keypoints1.get(i).pt.y);
+        if (i === 5){break;}
+      }
+
+      for (let i = 0; i < keypoints2.size(); i++) {
+        console.log("keypoints2: [",i,"]", keypoints2.get(i).pt.x, keypoints2.get(i).pt.y);
+        if (i === 5){break;}
+      }
+
+      // step 4
+// -- brute force hamming --
+      // let bf = new cv.BFMatcher(cv.NORM_HAMMING, true);
+      // let matches = new cv.DMatchVector();
+
+      // bf.match(descriptors1, descriptors2, matches);
+
+      // console.log("matches:", matches);
+
+// -- knn matching --      
+      let knnDistance_option = 0.85;
+      let good_matches = new cv.DMatchVector();
+
+      let bf = new cv.BFMatcher();
+
+      let matches = new cv.DMatchVectorVector();
+      
+
+      bf.knnMatch(descriptors1, descriptors2, matches, 2);      
+      
+      console.log("matches:", matches);
+
+      let counter = 0;
+      for (let i = 0; i < matches.size(); ++i) {
+          let match = matches.get(i);
+          let dMatch1 = match.get(0);
+          let dMatch2 = match.get(1);
+          console.log("[", i, "] ", "dMatch1: ", dMatch1, "dMatch2: ", dMatch2);
+          if (dMatch1.distance <= dMatch2.distance * parseFloat(knnDistance_option)) {
+              //console.log("***Good Match***", "dMatch1.distance: ", dMatch1.distance, "was less than or = to: ", "dMatch2.distance * parseFloat(knnDistance_option)", dMatch2.distance * parseFloat(knnDistance_option), "dMatch2.distance: ", dMatch2.distance, "knnDistance", knnDistance_option);
+              good_matches.push_back(dMatch1);
+              counter++;
+          }
+      }
+
+      // -- sanity check for step 4 -- 
+      // logging data
+      console.log("keeping ", counter, " points in good_matches vector out of ", matches.size(), " contained in this match vector:", matches);
+      console.log("here are first 5 matches");
+      for (let t = 0; t < matches.size(); ++t) {
+          console.log("[" + t + "]", "matches: ", matches.get(t));
+          if (t === 5){break;}
+      }
+        
+      console.log("here are first 5 good_matches");
+      for (let r = 0; r < good_matches.size(); ++r) {
+          console.log("[" + r + "]", "good_matches: ", good_matches.get(r));
+          if (r === 5){break;}
+      }
+
+      // step 5
+      console.log("creating anchor point objs");
+      let anchorPoints = [];
+      for (let r = 0; r < good_matches.size(); ++r) {
+        let match = good_matches.get(r);
+        let { queryIdx, trainIdx } = match;
+        anchorPoints.push({pt1: keypoints1.get(queryIdx), pt2: keypoints2.get(trainIdx)});
+      }
+      console.log("anchorPoints: ", anchorPoints);
+
+      // plot anchor points
     },
 
     // ----------

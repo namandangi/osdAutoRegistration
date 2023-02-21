@@ -16,7 +16,7 @@
     this._clickMode = 'none';
     this._syncMode = false;
     this._offset = new OpenSeadragon.Point(0, 0);
-    this._tileImages = [];
+    this._tileImages = {};
 
     this._props = {
       onAddMarker: args.onAddMarker,
@@ -82,7 +82,6 @@
 
     // ----------
     setState: function (state) {
-      // debugger
       var self = this;
       var needsSyncUpdate = false;
       var needsFilterUpdate = false;
@@ -90,6 +89,7 @@
 
       _.each(state.layers, function (layer, layerIndex) {
         var osdView = self._osdViews[layerIndex];
+        // console.log("view", osdView);
         console.assert(osdView, 'Must have valid index', layerIndex);
         var oldLayer = self._state && self._state.layers && self._state.layers[layerIndex];
 
@@ -298,10 +298,13 @@
 
       viewer.addHandler('tile-loaded', function (tile) {
         let regex = /\/0\/0\/0/;
-        if(regex.test(tile.tile._url)){
-            self._tileImages.push(tile.data);
-            console.log("tile", tile);
-        }        
+        // if(regex.test(tile.tile._url)){
+            const key = "" + tile.tile.x + tile.tile.y + tile.tile.level;
+            if(!(key in self._tileImages)){
+              self._tileImages[key] = []; 
+            }
+            self._tileImages[key].push({id: args.index, tile: tile.data, x: tile.tile.x, y: tile.tile.y, level: tile.tile.level});
+        // }
         });
 
       return osdView;
@@ -310,6 +313,7 @@
     // ----------
     _handleClick: function (osdView, pos) {
       if (this._clickMode === 'add') {
+        console.log("managing click", osdView, pos)
         // compute the anchor points and add them here
         this._props.onAddMarker(osdView.index, pos);
       } else if (this._clickMode === 'remove') {

@@ -143,29 +143,60 @@
     LogData: function() {
       console.log(this.viewer)
       let imageTileUrls = [];
-      this.viewer._osdViews.forEach(view => {
-        let { viewer } = view;        
-        let {_tilesLoaded} = viewer.world.getItemAt(0)._tileCache;
-        imageTileUrls.push(_tilesLoaded[0].tile.url);        
-      });
-      this.ProcessImages(this.viewer._tileImages);
-     console.log(imageTileUrls); 
+      // let id = 0;
+      // this.viewer._osdViews.forEach((view) => {
+      //   let { viewer } = view;        
+      //   let {_tilesLoaded} = viewer.world.getItemAt(0)._tileCache;
+      //   imageTileUrls.push({id: id, tileSource: _tilesLoaded[0].tile.url});
+      //   id++;
+      // });
+
+        // {
+        //   "001": [{..}],
+        //   "010": [{..}],
+        // }
+
+      console.log("tiles", this.viewer._tileImages);
+
+      for(let key in this.viewer._tileImages){
+        if(this.viewer._tileImages[key].length == 2)
+          this.ProcessImages(this.viewer._tileImages[key]);
+      }
+      
+    },
+
+    findPair: function(data) {
+      // 0 0 0  | 0
+      // 0 0 0  | 1
+      // 1 0 0  | 0
+      // 1 0 0  | 1
+      // 1 0 1  | 0
+      // 1 0 1  | 1
+      // 1 1 0  | 0
+      // 2 0 1  | 1
+      // 1 1 1  | 1
+      // 2 1 1  | 1
+      // 2 0 0  | 1
+      // 2 1 0  | 1
+      // 2 0 2  | 1 
+      // 2 1 2  | 1
     },
 
     // ---------
     ProcessImages: function (imageList) {
       console.log("testing in process")
-      let source1 = imageList[0];
-      let source2 = imageList[1];
+      let source1 = imageList[0].tile;
+      let source1ID = imageList[0].id;
 
-      console.log(source1);
-      console.log(source2);
+      let source2 = imageList[1].tile;
+      let source2ID = imageList[1].id;
+
+      console.log("source1", source1ID);
+      console.log("source2", source2ID);
 
       // step 1
       let im1 = cv.imread(source1);
       let im2 = cv.imread(source2);
-
-      console.log("im2:", im2);
 
       // step 2
       let im1Gray = new cv.Mat();
@@ -211,7 +242,7 @@
       // console.log("matches:", matches);
 
 // -- knn matching --      
-      let knnDistance_option = 0.85;
+      let knnDistance_option = 0.78;
       let good_matches = new cv.DMatchVector();
 
       let bf = new cv.BFMatcher();
@@ -228,9 +259,9 @@
           let match = matches.get(i);
           let dMatch1 = match.get(0);
           let dMatch2 = match.get(1);
-          console.log("[", i, "] ", "dMatch1: ", dMatch1, "dMatch2: ", dMatch2);
+          // console.log("[", i, "] ", "dMatch1: ", dMatch1, "dMatch2: ", dMatch2);
           if (dMatch1.distance <= dMatch2.distance * parseFloat(knnDistance_option)) {
-              //console.log("***Good Match***", "dMatch1.distance: ", dMatch1.distance, "was less than or = to: ", "dMatch2.distance * parseFloat(knnDistance_option)", dMatch2.distance * parseFloat(knnDistance_option), "dMatch2.distance: ", dMatch2.distance, "knnDistance", knnDistance_option);
+              console.log("***Good Match***", "dMatch1.distance: ", dMatch1.distance, "was less than or = to: ", "dMatch2.distance * parseFloat(knnDistance_option)", dMatch2.distance * parseFloat(knnDistance_option), "dMatch2.distance: ", dMatch2.distance, "knnDistance", knnDistance_option);
               good_matches.push_back(dMatch1);
               counter++;
           }
@@ -257,11 +288,22 @@
       for (let r = 0; r < good_matches.size(); ++r) {
         let match = good_matches.get(r);
         let { queryIdx, trainIdx } = match;
-        anchorPoints.push({pt1: keypoints1.get(queryIdx), pt2: keypoints2.get(trainIdx)});
+        anchorPoints.push({layer: source1ID, pt: keypoints1.get(queryIdx).pt});
+        anchorPoints.push({layer: source2ID, pt: keypoints2.get(trainIdx).pt});
       }
       console.log("anchorPoints: ", anchorPoints);
 
       // plot anchor points
+      // qID = keypt1 | trainId = keypt2
+      console.log("testing layer:", this.layers);
+      console.log("testing viewer:", this.viewer);
+
+      anchorPoints.forEach(anchor => {
+        let { layer, pt } = anchor;
+        // console.log(this.viewer._osdViews[layer], pt);
+        this.viewer._handleClick(this.viewer._osdViews[layer], pt);
+      });
+      console.log('plotted')
     },
 
     // ----------

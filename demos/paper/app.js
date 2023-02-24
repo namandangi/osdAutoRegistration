@@ -19,24 +19,38 @@ setupInfoHandler(staticViewer, $('.image-info.static'));
 setupInfoHandler(movingViewer, $('.image-info.moving'));
 
 let transparentGlassRGBThreshold = 10;
-let transparentGlassEdgeThreshold = 0.5;
+// let transparentGlassEdgeThreshold = 0.5;
 
-getGlassColor(tilesource1).then(color=>{
-    tilesource1.backgroundColor = color;
-    $(staticViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-    if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
-        enableTransparentBackground(staticViewer, color, transparentGlassRGBThreshold, 0);
-        $('input.glass-checkbox').attr('checked',true);
+// getGlassColor(tilesource1).then(color=>{
+//     tilesource1.backgroundColor = color;
+//     $(staticViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+//     if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
+//         enableTransparentBackground(staticViewer, color, transparentGlassRGBThreshold, 0);
+//         $('input.glass-checkbox').attr('checked',true);
+//     }
+// });
+// getGlassColor(tilesource2).then(color=>{
+//     tilesource2.backgroundColor = color;
+//     $(movingViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
+//     if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
+//         enableTransparentBackground(movingViewer, color, transparentGlassRGBThreshold, 0);
+//         $('input.glass-checkbox').attr('checked',true);
+//     }
+// });
+
+$('input.glass-checkbox').on('change',function(){
+    if(this.checked){
+        enableTransparentBackground(staticViewer, transparentGlassRGBThreshold, 0);
+        enableTransparentBackground(movingViewer, transparentGlassRGBThreshold, 0);
+        // $('.create-viewport-images').attr('disabled',false);
+        // $('.create-background-images').attr('disabled',true);
+    } else {
+        disableTransparentBackground(staticViewer);
+        disableTransparentBackground(movingViewer);
+        // $('.create-viewport-images').attr('disabled',true);
+        // $('.create-background-images').attr('disabled',false);
     }
-});
-getGlassColor(tilesource2).then(color=>{
-    tilesource2.backgroundColor = color;
-    $(movingViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-    if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
-        enableTransparentBackground(movingViewer, color, transparentGlassRGBThreshold, 0);
-        $('input.glass-checkbox').attr('checked',true);
-    }
-});
+}).prop('checked',false);
 
 // on opening both images, start syncing the zoom
 Promise.all([
@@ -419,4 +433,72 @@ function disableTransparentBackground(viewer){
             processors:[]
         }
     })
+}
+
+$('.create-viewport-images').on('click',()=>{
+    let targetContainer = $('.viewport-image-container');
+    targetContainer.empty();
+    // let bgImgs = $('.background-images img').toArray();
+    createROIImages(targetContainer);
+    $('.download-images').attr('disabled',false);
+    
+});
+
+$('.download-images').on('click',function(){
+    let zip = new JSZip();
+    // let transformInfo = [];
+    let files = $('.image-sets .static-image').toArray().map((staticImg,idx)=>{
+        let prefix = 'viewport';
+        let movingImg= $(staticImg).data('moving');
+        let staticName = prefix + '-static.png';
+        let movingName = prefix + '-moving.png';
+        
+        return Promise.all([
+            fetch(staticImg.src).then(response=>response.arrayBuffer()).then(ab=>{
+                return zip.file(staticName, ab, {base64: true});
+            }),
+            fetch(movingImg.src).then(response=>response.arrayBuffer()).then(ab=>{
+                return zip.file(movingName, ab, {base64: true});
+            }),
+        ]);
+    });
+    // zip.file('info.json',JSON.stringify(transformInfo));
+    Promise.all(files).then(()=>{
+        zip.generateAsync({type:"blob"}).then(function(content) {
+            // see FileSaver.js
+            window.saveAs(content, "image-set.zip");
+        });
+    });
+});
+
+function createROIImages(targetContainer){
+
+    movingViewer.viewport.goHome(true);
+    staticViewer.viewport.goHome(true);
+    
+    // let staticImageData = getImageRect(staticViewer, 'image/png');
+    let staticImage = $('<img>',{src:getImageUrl(staticViewer, 'image/png'), class:'static-image'}).appendTo(targetContainer);
+
+    // let movingImageData = getImageRect(movingViewer, 'image/png');
+    let movingImage = $('<img>',{src:getImageUrl(movingViewer, 'image/png'), class:'moving-image'}).appendTo(targetContainer);
+
+    staticImage.data({moving:movingImage[0],static:staticImage[0]});
+    movingImage.data({moving:movingImage[0],static:staticImage[0]});
+}
+
+function getImageUrl(viewer, type='image/jpg'){
+    // let pixelRatio = OpenSeadragon.pixelDensityRatio;
+    // let center_x = viewer.drawer.canvas.width/2;
+    // let center_y = viewer.drawer.canvas.height/2;
+    // let w = drawingCanvas.width;
+    // let h = drawingCanvas.height;
+    // let left = Math.round(center_x - w*pixelRatio/2);
+    // let top = Math.round(center_y - h*pixelRatio/2);
+    
+    // let ctx = drawingCanvas.getContext("2d",{willReadFrequently: true});
+    // ctx.imageSmoothingEnabled = false;
+    // ctx.clearRect(0, 0, w, h);
+    // ctx.drawImage(viewer.drawer.canvas, left, top, w*pixelRatio, h*pixelRatio, 0, 0, w, h);
+
+    return viewer.drawer.canvas.toDataURL(type);
 }

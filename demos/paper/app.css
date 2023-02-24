@@ -113,3 +113,10 @@
     opacity:0.5;
     pointer-events:none;
 }
+.viewport-image-container{
+    display: grid;
+    grid-template-rows:50% 50%;
+}
+.viewport-image-container img{
+    width:100%;
+}

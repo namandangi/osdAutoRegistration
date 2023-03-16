@@ -138,6 +138,145 @@
           });
         }
       };
+    },
+
+    /**
+    *    Depends on App.demoImages being populated appropriately
+    *    
+    **/
+    createImagePicker: function(staticViewer, movingViewer, imageSelectionButton){
+      // use App.demoImages to create image picker data
+      let cases = App.demoImages.reduce((acc, item, index)=>{
+        if(!acc[item.meta.accession]){
+            acc[item.meta.accession] = {items: []};
+        }
+        acc[item.meta.accession].items.push(item);
+        item.index = index; 
+        return acc; 
+      }, {});
+      Object.values(cases).forEach( c => {
+          c.blocks = c.items.reduce((acc,item)=>{
+              let block = item.meta.block.replace(':00 AM', ' A').replace(':00 PM', ' P');
+              if(!acc[block]){
+                  acc[block] = [];
+              }
+              acc[block].push(item); 
+              return acc; 
+          }, {});
+      });
+
+      let html = `
+        <div class="select-images">
+        <div class="select-images-ui">
+          <div class="select-images-header"><span>Static image</span><span>Moving image</span></div>
+          <div class="image-picker"></div>
+        </div>
+        
+      </div>
+      `;
+      let css = `
+      .select-images-ui{
+          display:grid;
+          grid-template-rows:auto 1fr;
+          max-height:80vh;
+      }
+      .select-images-header{
+          display: grid;
+          grid-template-columns: 50% 50%;
+          text-align: center;
+      }
+      .image-picker{
+          overflow:auto;
+      }
+      .blocklist{
+          display:grid;
+          grid-template-columns:auto 1fr 1fr;
+      }
+      .slidelist{
+          display:flex;
+      }
+      .block-name{
+          white-space: nowrap;
+      }
+      .thumbnail{
+          width:64px;
+      }
+      .thumbnail.selected{
+          outline:medium solid black;
+          z-index:1;
+      }
+      .thumbnail:not(.selected):hover{
+          outline:medium gray solid;
+          z-index:2;
+      }
+      .case{
+          border:thin gray solid;
+          border-radius:5px;
+          padding:5px;
+      }
+      .case-name{
+          cursor:pointer;
+      }
+      .blocklist.collapsed{
+          height:1em;
+          overflow:hidden;
+      }
+      `;
+      let imageSelectionWindow = $(html).appendTo('body');
+      let imageSelectionCSS = $('<style>').html(css).appendTo('head');
+      imageSelectionWindow.dialog({title:'Pick images to sync',width:'auto',autoOpen:false,});
+      
+      if(!imageSelectionButton){
+        imageSelectionButton = $('<button>').text('Select Images');
+      } else {
+        imageSelectionButton = $(imageSelectionButton);
+      }
+
+      imageSelectionButton.on('click',()=>imageSelectionWindow.dialog('open'));
+      
+      imageSelectionWindow.on('click', '.case-name', ev=>{
+          $(ev.currentTarget).closest('.case').find('.blocklist').toggleClass('collapsed');
+      }).on('click','.thumbnail',ev=>{
+          let img = $(ev.currentTarget);
+          let d = img.data();
+          if(img.hasClass('static')){
+              $('.thumbnail.static.selected').removeClass('selected');
+              window.localStorage.setItem('static-index',d.index);
+          }
+          if(img.hasClass('moving')){
+              $('.thumbnail.moving.selected').removeClass('selected');
+              window.localStorage.setItem('moving-index',d.index);
+          }
+          img.addClass('selected');
+          d.viewer.open(d.block.tileSource);
+      })
+      let imagePicker=$('.image-picker').empty();
+      Object.keys(cases).forEach(name=>{
+          let blocks = cases[name].blocks;
+          let c = $('<div>',{class:'case'});
+          $('<div>',{class:'case-name'}).text(name).appendTo(c);
+          let blocklist=$('<div>',{class:'blocklist'}).appendTo(c);
+          Object.keys(blocks).sort((a,b)=>a.length - b.length || a.localeCompare(b)).forEach(blockKey=>{
+              $('<span>',{class:'block-name'}).appendTo(blocklist).text(blockKey);
+              let staticList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
+              let movingList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
+              blocks[blockKey].forEach(block=>{
+                  $('<img>',{class:'thumbnail static',title:block.meta.stain,src:block.tileSource.thumbnailUrl,loading:'lazy'})
+                    .appendTo(staticList).data({viewer:staticViewer, block: block, index: block.index});
+                  $('<img>',{class:'thumbnail moving',title:block.meta.stain,src:block.tileSource.thumbnailUrl,loading:'lazy'})
+                    .appendTo(movingList).data({viewer:movingViewer, block: block, index: block.index});
+              })
+          });
+          imagePicker.append(c);
+      });
+
+      let staticIndex = window.localStorage.getItem('static-index');
+      let movingIndex = window.localStorage.getItem('moving-index');
+      $('.thumbnail.static').filter((i,el)=>$(el).data('index')==staticIndex).trigger('click');
+      $('.thumbnail.moving').filter((i,el)=>$(el).data('index')==movingIndex).trigger('click');
+
+      return imageSelectionButton;
+    
     }
   });
 })();

@@ -4,6 +4,7 @@ import {RotationControlOverlay} from '/node_modules/osd-paperjs-annotation/js/ro
 let dsaItems = window.App.dsaItems;
 console.log('Loaded dsaItems:',dsaItems);
 
+
 let tilesource1 = dsaItems[3].tileSource;
 let tilesource2 = dsaItems[4].tileSource;
 
@@ -19,24 +20,11 @@ setupInfoHandler(staticViewer, $('.image-info.static'));
 setupInfoHandler(movingViewer, $('.image-info.moving'));
 
 let transparentGlassRGBThreshold = 10;
-// let transparentGlassEdgeThreshold = 0.5;
 
-// getGlassColor(tilesource1).then(color=>{
-//     tilesource1.backgroundColor = color;
-//     $(staticViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-//     if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
-//         enableTransparentBackground(staticViewer, color, transparentGlassRGBThreshold, 0);
-//         $('input.glass-checkbox').attr('checked',true);
-//     }
-// });
-// getGlassColor(tilesource2).then(color=>{
-//     tilesource2.backgroundColor = color;
-//     $(movingViewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
-//     if(color.maxDifference.filter(d=>d<transparentGlassRGBThreshold).length / color.maxDifference.length > transparentGlassEdgeThreshold){
-//         enableTransparentBackground(movingViewer, color, transparentGlassRGBThreshold, 0);
-//         $('input.glass-checkbox').attr('checked',true);
-//     }
-// });
+
+App.createImagePicker(staticViewer, movingViewer, $('#imagePickerButton'));
+
+
 
 $('input.glass-checkbox').on('change',function(){
     if(this.checked){

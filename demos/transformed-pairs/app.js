@@ -5,26 +5,6 @@ import {RotationControlOverlay} from '/node_modules/osd-paperjs-annotation/js/ro
 // constants
 const transparentGlassRGBThreshold = 10;
 
-// let dsaItems = window.App.dsaItems;
-// let demoImages = window.App.demoImages;
-let cases = App.demoImages.reduce((acc,item)=>{
-    if(!acc[item.meta.accession]){
-        acc[item.meta.accession] = {items: []};
-    }
-    acc[item.meta.accession].items.push(item); 
-    return acc; 
-}, {});
-Object.values(cases).forEach( c => {
-    c.blocks = c.items.reduce((acc,item)=>{
-        let block = item.meta.block.replace(':00 AM', ' A').replace(':00 PM', ' P');
-        if(!acc[block]){
-            acc[block] = [];
-        }
-        acc[block].push(item); 
-        return acc; 
-    }, {});
-});
-
 let drawingCanvas = document.createElement('canvas');
 
 let staticViewer = window.viewer1 = makeViewer('viewer-static');
@@ -38,7 +18,7 @@ movingViewer.addHandler('close',unsynchronize);
 staticViewer.rotationControl = new RotationControlOverlay(staticViewer);
 movingViewer.rotationControl = new RotationControlOverlay(movingViewer);
 
-setupImagePicker(cases);
+App.createImagePicker(staticViewer, movingViewer, '#open-select-images');
 
 $('#sanity-check-dialog').dialog({autoOpen:false,width:'auto',height:'auto',title:'Sanity check. Are images aligned?'});
 
@@ -123,6 +103,8 @@ $('.create-viewport-images').on('click',()=>{
         $('.download-images').attr('disabled',false);
     });
 });
+
+
 
 $('.download-images').on('click',function(){
     let zip = new JSZip();
@@ -508,41 +490,6 @@ function synchronizingRotateHandler(event){
     self.synchronizing=false;
 }
 
-function setupImagePicker(cases){
-    $('#open-select-images').on('click',()=>$('.select-images').dialog('open'));
-    $('.select-images').dialog({title:'Pick images to sync',width:'auto',autoOpen:false,});
-    $('.select-images').on('click', '.case-name', ev=>{
-        $(ev.currentTarget).closest('.case').find('.blocklist').toggleClass('collapsed');
-    }).on('click','.thumbnail',ev=>{
-        let img = $(ev.currentTarget);
-        if(img.hasClass('static')){
-            $('.thumbnail.static.selected').removeClass('selected');
-        }
-        if(img.hasClass('moving')){
-            $('.thumbnail.moving.selected').removeClass('selected');
-        }
-        img.addClass('selected');
-        let d = img.data();
-        d.viewer.open(d.block.tileSource);
-    })
-    let imagePicker=$('.image-picker').empty();
-    Object.keys(cases).forEach(name=>{
-        let blocks = cases[name].blocks;
-        let c = $('<div>',{class:'case'});
-        $('<div>',{class:'case-name'}).text(name).appendTo(c);
-        let blocklist=$('<div>',{class:'blocklist'}).appendTo(c);
-        Object.keys(blocks).sort((a,b)=>a.length - b.length || a.localeCompare(b)).forEach(blockKey=>{
-            $('<span>',{class:'block-name'}).appendTo(blocklist).text(blockKey);
-            let staticList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
-            let movingList=$('<span>',{class:'slidelist'}).appendTo(blocklist);
-            blocks[blockKey].forEach(block=>{
-                $('<img>',{class:'thumbnail static',title:block.meta.stain,src:block.tileSource.thumbnailUrl,loading:'lazy'}).appendTo(staticList).data({viewer:staticViewer, block: block});
-                $('<img>',{class:'thumbnail moving',title:block.meta.stain,src:block.tileSource.thumbnailUrl,loading:'lazy'}).appendTo(movingList).data({viewer:movingViewer, block: block});
-            })
-        });
-        imagePicker.append(c);
-    })
-}
 function makeViewer(id, tileSource){
     return new OpenSeadragon({
         id: id,

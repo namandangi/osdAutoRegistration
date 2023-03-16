@@ -6,6 +6,8 @@
     <!-- <link rel="stylesheet" type="text/css" href="/style/side-by-side.css"> -->
     <link rel="stylesheet" type="text/css" href="./app.css">
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-ui/dist/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/node_modules/jquery-ui/dist/themes/ui-lightness/jquery-ui.css">
     <script src="/node_modules/underscore/underscore-min.js"></script>
     <script src="/node_modules/openseadragon/build/openseadragon/openseadragon.js"></script>
     <script src="/node_modules/openseadragon-filtering/openseadragon-filtering.js"></script>
@@ -17,6 +19,7 @@
     <script src="/js/dsa/side-by-side-viewer.js"></script>
     <script src="/js/dsa/data-set-manager.js"></script> <!-- Needs to be included above tilesources.js -->
     <script src="/js/app-common.js"></script>
+    <script src="/js/pearcelab-demo-images.js"></script> <!-- Needs to be included above tilesources.js -->
     <script src="/js/dsa-items.js"></script> <!-- Needs to be included above tilesources.js -->
     <script src="/js/tilesources.js"></script>
     <script type="module" src="./app.js"></script>
@@ -29,6 +32,7 @@
         <label><input type="checkbox" class="sync-checkbox">Sync translation/rotation</label>
         <label>Opacity of top image:<input class='opacity-slider' type="range" min="0" max="100" value="80"></label>
         <label><input type="checkbox" class="glass-checkbox" checked>Transparent "glass"</label>
+        <button id="imagePickerButton">Select Images</button>
       </div>
       <div class="bottom-row">
         <div class="side-nav">

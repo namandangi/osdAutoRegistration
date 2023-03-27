@@ -239,16 +239,34 @@
       }).on('click','.thumbnail',ev=>{
           let img = $(ev.currentTarget);
           let d = img.data();
+          let index;
+          let imageType;
           if(img.hasClass('static')){
               $('.thumbnail.static.selected').removeClass('selected');
               window.localStorage.setItem('static-index',d.index);
+              index = 0;
+              imageType = 'static';
           }
           if(img.hasClass('moving')){
               $('.thumbnail.moving.selected').removeClass('selected');
               window.localStorage.setItem('moving-index',d.index);
+              index = 1;
+              imageType = 'moving';
           }
           img.addClass('selected');
-          d.viewer.open(d.block.tileSource);
+          
+          d.viewer.world.addOnceHandler('add-item',(event)=>{
+            d.viewer[`_userdata_${imageType}`] = event.item;
+          });
+          let options = {
+            tileSource: d.block.tileSource,
+            index: index,
+          }
+          if(d.viewer[`_userdata_${imageType}`] ){
+            options.index = d.viewer.world.getIndexOfItem(d.viewer[`_userdata_${imageType}`]);
+            options.replace = true;
+          }
+          d.viewer.addTiledImage(options);
       })
       let imagePicker=$('.image-picker').empty();
       Object.keys(cases).forEach(name=>{

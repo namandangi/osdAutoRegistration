@@ -11,10 +11,10 @@ let staticViewer = window.viewer1 = makeViewer('viewer-static');
 let movingViewer = window.viewer2 = makeViewer('viewer-moving');
 staticViewer.synchronizedViewers = [{viewer:movingViewer}];
 movingViewer.synchronizedViewers = [{viewer:staticViewer}];
-staticViewer.addHandler('open',onImageOpen);
-movingViewer.addHandler('open',onImageOpen);
-staticViewer.addHandler('close',unsynchronize);
-movingViewer.addHandler('close',unsynchronize);
+staticViewer.world.addHandler('add-item',onImageAdded);
+movingViewer.world.addHandler('add-item',onImageAdded);
+staticViewer.world.addHandler('remove-item',unsynchronize);
+movingViewer.world.addHandler('remove-item',unsynchronize);
 staticViewer.rotationControl = new RotationControlOverlay(staticViewer);
 movingViewer.rotationControl = new RotationControlOverlay(movingViewer);
 
@@ -142,17 +142,17 @@ $('.image-sets').on('click','img',ev=>{
     $('#sanity-check-dialog').dialog('open');
 })
 
-function onImageOpen(event){
-    let viewer = event.eventSource;
+function onImageAdded(event){
+    let viewer = event.eventSource.viewer;
     
-    let tileSource = viewer.world.getItemAt(0).source;
+    let tileSource = event.item.source;
     if(tileSource.backgroundColor){
         $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
     } else {
          getGlassColor(tileSource).then(color=>{
             tileSource.backgroundColor = color;
             //make sure we're still viewing this tile source before updating the viewer background color
-            if(viewer.world.getItemAt(0).source == tileSource){
+            if(viewer.world.getIndexOfItem(event.item) !== -1){
                 $(viewer.element).css('--background-color',`rgb(${color.red}, ${color.green}, ${color.blue})`);
             }  
         });

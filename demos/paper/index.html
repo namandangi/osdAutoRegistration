@@ -14,6 +14,9 @@
     <script src="/node_modules/file-saver/dist/FileSaver.min.js"></script>
     <script src="/node_modules/jszip/dist/jszip.min.js"></script>
     <script src="/node_modules/paper/dist/paper-full.js"></script>
+    <script src="/lib/openseadragon-svg-overlay.js"></script>
+    <script src="/lib/openseadragon-filtering.js"></script>
+    <script src="/lib/opencv.js"></script>
     <script src="/js/dsa/common.js"></script>
     <script src="/js/dsa/overlaid-viewer.js"></script>
     <script src="/js/dsa/side-by-side-viewer.js"></script>
@@ -29,6 +32,7 @@
     <div class="page-wrapper">
       <div class="top-nav">
         <label class="combine-label"><input type="checkbox" class="combine-checkbox">Combine</label>
+        <label class="log-data-label"><input type="checkbox" class="log-data-checkbox">Log Data</label>
         <label><input type="checkbox" class="sync-checkbox">Sync translation/rotation</label>
         <label>Opacity of top image:<input class='opacity-slider' type="range" min="0" max="100" value="80"></label>
         <label><input type="checkbox" class="glass-checkbox" checked>Transparent "glass"</label>

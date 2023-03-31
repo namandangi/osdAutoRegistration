@@ -8,6 +8,15 @@ console.log('Loaded dsaItems:',dsaItems);
 let tilesource1 = dsaItems[3].tileSource;
 let tilesource2 = dsaItems[4].tileSource;
 
+const CLICK_MODE = {
+    ADD: "ADD",
+    REMOVE: "REMOVE"
+};
+
+const STATIC_VIEWER_ID = 0;
+const MOVING_VIEWER_ID = 1;
+let current_click_mode = CLICK_MODE.ADD;
+
 let drawingCanvas = document.createElement('canvas');
 
 console.log(dsaItems)
@@ -16,6 +25,20 @@ tilesource1.hasTransparency = ()=>true; //do this before makeViewer so it is inc
 tilesource2.hasTransparency = ()=>true; //do this before makeViewer so it is included in TileSource object
 let staticViewer = window.viewer1 = makeViewer('viewer-static', tilesource1);
 let movingViewer = window.viewer2 = makeViewer('viewer-moving', tilesource2);
+
+let staticViewerState = initializeViewerState(staticViewer, STATIC_VIEWER_ID);
+let movingViewerState = initializeViewerState(movingViewer, MOVING_VIEWER_ID);
+
+let viewerState = {
+    [STATIC_VIEWER_ID]: staticViewerState,
+    [MOVING_VIEWER_ID]: movingViewerState
+};
+
+console.log("viewerState", viewerState);
+
+setupCanvasClick(STATIC_VIEWER_ID); // id: 0 for static
+setupCanvasClick(MOVING_VIEWER_ID); // id: 1 for moving
+
 setupInfoHandler(staticViewer, $('.image-info.static'));
 setupInfoHandler(movingViewer, $('.image-info.moving'));
 
@@ -337,6 +360,128 @@ function makeViewer(id, tileSource){
         // subPixelRoundingForTransparency: OpenSeadragon.SUBPIXEL_ROUNDING_OCCURRENCES.ALWAYS
     });
 }
+
+function initializeViewerState(viewer, id) {
+    
+    let overlay = viewer.svgOverlay();
+
+    let osdView = {
+        viewer: viewer,
+        overlay: overlay,
+        index: id,
+        markers: []
+    }
+    return osdView;
+}
+
+function setupCanvasClick(viewerId){
+    
+    let currViewerState = viewerState[viewerId];
+    let { viewer } = currViewerState;
+
+    viewer.addHandler('canvas-click', function (event) {
+        if (!event.quick) {
+          return;
+        }
+
+        let pos = viewer.viewport.pointFromPixel(event.position);
+        handleClick(currViewerState, pos);
+
+        event.preventDefaultAction = true;
+    });
+}
+
+function plotMarker(viewerId){
+    
+    let { viewer, overlay, markers } = viewerState[viewerId];
+
+    let svgNode = overlay.node();
+
+    _.each(viewer.markers, function (marker) {
+        marker.group.remove();
+      });
+
+      viewer.markers = _.map(markers, function (marker, markerIndex) {
+        let pos = marker;
+        let size = 0.005;
+        let halfSize = size * 0.5;
+
+        let group = DSA.createSVGElement('g', svgNode);
+
+        var line = DSA.createSVGElement('line', group, {
+          x1: pos.x - halfSize,
+          x2: pos.x + halfSize,
+          y1: pos.y,
+          y2: pos.y,
+          stroke: 'red',
+          'stroke-width': 0.05
+        });
+
+        line = DSA.createSVGElement('line', group, {
+          x1: pos.x,
+          x2: pos.x,
+          y1: pos.y - halfSize,
+          y2: pos.y + halfSize,
+          stroke: 'red',
+          'stroke-width': 0.05
+        });
+
+        let text = DSA.createSVGElement('text', group, {
+          x: pos.x + halfSize * 0.5,
+          y: pos.y - halfSize * 0.5,
+          fill: 'red',
+          'font-size': 0.04
+        });
+
+        text.innerHTML = markerIndex + 1;
+
+        let output = {
+          group: group,
+          pos: pos
+        };
+
+        return output;
+      });
+
+}
+
+function onAddMarker(viewerId, marker) {
+    viewerState[viewerId].markers.push(marker);
+    plotMarker(viewerId);
+}
+
+function onRemoveMarker(viewerId, markerId) {
+    viewerState[viewerId].markers.splice(markerId, 1);
+    eraseMarker();
+}
+
+function handleClick(osdView, pos) {
+
+    if (current_click_mode === CLICK_MODE.ADD) {
+
+        console.log("managing click", osdView, pos)
+        // compute the anchor points and add them here
+        onAddMarker(osdView.index, pos);
+
+      } else if (current_click_mode === CLICK_MODE.REMOVE) {
+        let best;
+        osdView.markers.forEach(function (marker, i) {
+          let distance = Math.abs(pos.x - marker.pos.x) + Math.abs(pos.y - marker.pos.y);
+          if (!best || best.distance > distance) {
+            best = {
+              marker: marker,
+              distance: distance,
+              index: i
+            };
+          }
+        });
+
+        if (best && best.distance < 30) {
+          onRemoveMarker(osdView.index, best.index);
+        }
+    }
+}
+
 function getGlassColor(dsaTileSource){
     let thumbUrl = dsaTileSource.getTileUrl(1,1,1).replace(/\/tiles\/.*/, '/tiles/thumbnail');
     let image = new Image();
@@ -490,3 +635,148 @@ function getImageUrl(viewer, type='image/jpg'){
 
     return viewer.drawer.canvas.toDataURL(type);
 }
+
+$('.log-data-checkbox').on('click', function() {
+    if ($('.log-data-checkbox').is(':checked')) {
+        staticViewer.setClickMode('add');
+        movingViewer.setClickMode('add');
+        console.log("testing new stuff")
+        // LogData();
+        ProcessImages();
+      }
+})
+
+ function LogData() {
+
+    // console.log("tiles", this.viewer._tileImages);
+    console.log("tiles", staticViewer);
+
+    for(let key in this.viewer._tileImages){
+      if(this.viewer._tileImages[key].length == 2)
+        ProcessImages(this.viewer._tileImages[key]);
+    }
+  }
+
+//   function ProcessImages(imageList) {
+    function ProcessImages() {
+    console.log("testing in processImgs")
+    let source1 = imageList[0].tile;
+    let source1ID = imageList[0].id;
+
+    let source2 = imageList[1].tile;
+    let source2ID = imageList[1].id;
+
+    console.log("source1", source1ID);
+    console.log("source2", source2ID);
+
+    // step 1
+    let im1 = cv.imread(source1);
+    let im2 = cv.imread(source2);
+
+    // step 2
+    let im1Gray = new cv.Mat();
+    let im2Gray = new cv.Mat();
+
+    cv.cvtColor(im1, im1Gray, cv.COLOR_BGRA2GRAY);
+    cv.cvtColor(im2, im2Gray, cv.COLOR_BGRA2GRAY);
+
+    console.log("im2gray:", im2Gray);
+
+    // step 3
+    let keypoints1 = new cv.KeyPointVector();
+    let keypoints2 = new cv.KeyPointVector();
+    let descriptors1 = new cv.Mat();
+    let descriptors2 = new cv.Mat();
+
+    // var orb = new cv.AKAZE();
+    var orb = new cv.ORB();
+
+    orb.detectAndCompute(im1Gray, new cv.Mat(), keypoints1, descriptors1);
+    orb.detectAndCompute(im2Gray, new cv.Mat(), keypoints2, descriptors2);
+
+    // mid way test
+    console.log("Total of ", keypoints1.size(), " keypoints1 (img to align) and ", keypoints2.size(), " keypoints2 (reference)");
+    console.log("here are the first 5 keypoints for keypoints1:");
+    for (let i = 0; i < keypoints1.size(); i++) {
+      console.log("keypoints1: [",i,"]", keypoints1.get(i).pt.x, keypoints1.get(i).pt.y);
+      if (i === 5){break;}
+    }
+
+    for (let i = 0; i < keypoints2.size(); i++) {
+      console.log("keypoints2: [",i,"]", keypoints2.get(i).pt.x, keypoints2.get(i).pt.y);
+      if (i === 5){break;}
+    }
+
+    // step 4
+// -- brute force hamming --
+    // let bf = new cv.BFMatcher(cv.NORM_HAMMING, true);
+    // let matches = new cv.DMatchVector();
+
+    // bf.match(descriptors1, descriptors2, matches);
+
+    // console.log("matches:", matches);
+
+// -- knn matching --      
+    let knnDistance_option = 0.78;
+    let good_matches = new cv.DMatchVector();
+
+    let bf = new cv.BFMatcher();
+
+    let matches = new cv.DMatchVectorVector();
+    
+
+    bf.knnMatch(descriptors1, descriptors2, matches, 2);      
+    
+    console.log("matches:", matches);
+
+    let counter = 0;
+    for (let i = 0; i < matches.size(); ++i) {
+        let match = matches.get(i);
+        let dMatch1 = match.get(0);
+        let dMatch2 = match.get(1);
+        // console.log("[", i, "] ", "dMatch1: ", dMatch1, "dMatch2: ", dMatch2);
+        if (dMatch1.distance <= dMatch2.distance * parseFloat(knnDistance_option)) {
+            console.log("***Good Match***", "dMatch1.distance: ", dMatch1.distance, "was less than or = to: ", "dMatch2.distance * parseFloat(knnDistance_option)", dMatch2.distance * parseFloat(knnDistance_option), "dMatch2.distance: ", dMatch2.distance, "knnDistance", knnDistance_option);
+            good_matches.push_back(dMatch1);
+            counter++;
+        }
+    }
+
+    // -- sanity check for step 4 -- 
+    // logging data
+    console.log("keeping ", counter, " points in good_matches vector out of ", matches.size(), " contained in this match vector:", matches);
+    console.log("here are first 5 matches");
+    for (let t = 0; t < matches.size(); ++t) {
+        console.log("[" + t + "]", "matches: ", matches.get(t));
+        if (t === 5){break;}
+    }
+      
+    console.log("here are first 5 good_matches");
+    for (let r = 0; r < good_matches.size(); ++r) {
+        console.log("[" + r + "]", "good_matches: ", good_matches.get(r));
+        if (r === 5){break;}
+    }
+
+    // step 5
+    console.log("creating anchor point objs");
+    let anchorPoints = [];
+    for (let r = 0; r < good_matches.size(); ++r) {
+      let match = good_matches.get(r);
+      let { queryIdx, trainIdx } = match;
+      anchorPoints.push({layer: source1ID, pt: keypoints1.get(queryIdx).pt});
+      anchorPoints.push({layer: source2ID, pt: keypoints2.get(trainIdx).pt});
+    }
+    console.log("anchorPoints: ", anchorPoints);
+
+    // plot anchor points
+    // qID = keypt1 | trainId = keypt2
+    console.log("testing layer:", this.layers);
+    console.log("testing viewer:", this.viewer);
+
+    anchorPoints.forEach(anchor => {
+      let { layer, pt } = anchor;
+      // console.log(this.viewer._osdViews[layer], pt);
+      this.viewer._handleClick(this.viewer._osdViews[layer], pt);
+    });
+    console.log('plotted')
+  }

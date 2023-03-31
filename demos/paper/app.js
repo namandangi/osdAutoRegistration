@@ -15,7 +15,8 @@ const CLICK_MODE = {
 
 const STATIC_VIEWER_ID = 0;
 const MOVING_VIEWER_ID = 1;
-let current_click_mode = CLICK_MODE.ADD;
+
+let current_click_mode = $('.add-radio').is(':checked') ? CLICK_MODE.ADD : CLICK_MODE.REMOVE;
 
 let drawingCanvas = document.createElement('canvas');
 
@@ -47,6 +48,16 @@ let transparentGlassRGBThreshold = 10;
 
 App.createImagePicker(staticViewer, movingViewer, $('#imagePickerButton'));
 
+
+$('.add-radio').on('click', function() {
+    current_click_mode = CLICK_MODE.ADD;
+    console.log("click mode: ", current_click_mode)
+});
+
+$('.remove-radio').on('click', function() {
+    current_click_mode = CLICK_MODE.REMOVE;
+    console.log("click mode: ", current_click_mode)
+});
 
 
 $('input.glass-checkbox').on('change',function(){
@@ -397,11 +408,21 @@ function plotMarker(viewerId){
 
     let svgNode = overlay.node();
 
-    _.each(viewer.markers, function (marker) {
-        marker.group.remove();
-      });
+    // debugger
+    markers = _.map(markers, function(marker){
+        if(marker.hasOwnProperty("group")) {
+            marker.group.remove();
+            return marker.pos;
+        }
+        else
+            return marker;
+    });
 
-      viewer.markers = _.map(markers, function (marker, markerIndex) {
+    console.log("post removing", markers);
+
+    viewer.clearOverlays();
+    
+    viewerState[viewerId].markers = _.map(markers, function (marker, markerIndex) {
         let pos = marker;
         let size = 0.005;
         let halfSize = size * 0.5;
@@ -409,63 +430,69 @@ function plotMarker(viewerId){
         let group = DSA.createSVGElement('g', svgNode);
 
         var line = DSA.createSVGElement('line', group, {
-          x1: pos.x - halfSize,
-          x2: pos.x + halfSize,
-          y1: pos.y,
-          y2: pos.y,
-          stroke: 'red',
-          'stroke-width': 0.05
+            x1: pos.x - halfSize,
+            x2: pos.x + halfSize,
+            y1: pos.y,
+            y2: pos.y,
+            stroke: 'red',
+            'stroke-width': 0.05
         });
 
         line = DSA.createSVGElement('line', group, {
-          x1: pos.x,
-          x2: pos.x,
-          y1: pos.y - halfSize,
-          y2: pos.y + halfSize,
-          stroke: 'red',
-          'stroke-width': 0.05
+            x1: pos.x,
+            x2: pos.x,
+            y1: pos.y - halfSize,
+            y2: pos.y + halfSize,
+            stroke: 'red',
+            'stroke-width': 0.05
         });
 
         let text = DSA.createSVGElement('text', group, {
-          x: pos.x + halfSize * 0.5,
-          y: pos.y - halfSize * 0.5,
-          fill: 'red',
-          'font-size': 0.04
+            x: pos.x + halfSize * 0.5,
+            y: pos.y - halfSize * 0.5,
+            fill: 'red',
+            'font-size': 0.04
         });
 
         text.innerHTML = markerIndex + 1;
 
         let output = {
-          group: group,
-          pos: pos
+            group: group,
+            pos: pos
         };
 
         return output;
-      });
+    });
 
 }
 
 function onAddMarker(viewerId, marker) {
     viewerState[viewerId].markers.push(marker);
     plotMarker(viewerId);
+    console.log("added: ", viewerState[viewerId].markers);
 }
 
 function onRemoveMarker(viewerId, markerId) {
+    // delete the svg before removing it from markers
+    viewerState[viewerId].markers[markerId].group.remove();
     viewerState[viewerId].markers.splice(markerId, 1);
-    eraseMarker();
+    plotMarker(viewerId);
+    console.log("removed: ", viewerState[viewerId].markers);
 }
 
 function handleClick(osdView, pos) {
 
-    if (current_click_mode === CLICK_MODE.ADD) {
+    console.log("managing click", osdView, pos)
 
-        console.log("managing click", osdView, pos)
+    if (current_click_mode === CLICK_MODE.ADD) {
+        
         // compute the anchor points and add them here
         onAddMarker(osdView.index, pos);
 
       } else if (current_click_mode === CLICK_MODE.REMOVE) {
         let best;
         osdView.markers.forEach(function (marker, i) {
+
           let distance = Math.abs(pos.x - marker.pos.x) + Math.abs(pos.y - marker.pos.y);
           if (!best || best.distance > distance) {
             best = {
@@ -476,7 +503,9 @@ function handleClick(osdView, pos) {
           }
         });
 
-        if (best && best.distance < 30) {
+        console.log("Best matched point: ", best);
+
+        if (best && best.distance < 0.025) {
           onRemoveMarker(osdView.index, best.index);
         }
     }

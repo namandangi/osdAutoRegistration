@@ -35,8 +35,6 @@ let viewerState = {
     [MOVING_VIEWER_ID]: movingViewerState
 };
 
-console.log("viewerState", viewerState);
-
 setupCanvasClick(STATIC_VIEWER_ID); // id: 0 for static
 setupCanvasClick(MOVING_VIEWER_ID); // id: 1 for moving
 
@@ -380,7 +378,11 @@ function initializeViewerState(viewer, id) {
         viewer: viewer,
         overlay: overlay,
         index: id,
-        markers: []
+        markers: [],
+        dimensions: {
+            width: viewer.container.clientWidth,
+            height: viewer.container.clientHeight
+        }
     }
     return osdView;
 }
@@ -407,8 +409,7 @@ function plotMarker(viewerId){
     let { viewer, overlay, markers } = viewerState[viewerId];
 
     let svgNode = overlay.node();
-
-    // debugger
+    
     markers = _.map(markers, function(marker){
         if(marker.hasOwnProperty("group")) {
             marker.group.remove();
@@ -417,8 +418,6 @@ function plotMarker(viewerId){
         else
             return marker;
     });
-
-    console.log("post removing", markers);
 
     viewer.clearOverlays();
     
@@ -463,13 +462,11 @@ function plotMarker(viewerId){
 
         return output;
     });
-
 }
 
 function onAddMarker(viewerId, marker) {
     viewerState[viewerId].markers.push(marker);
     plotMarker(viewerId);
-    console.log("added: ", viewerState[viewerId].markers);
 }
 
 function onRemoveMarker(viewerId, markerId) {
@@ -477,12 +474,9 @@ function onRemoveMarker(viewerId, markerId) {
     viewerState[viewerId].markers[markerId].group.remove();
     viewerState[viewerId].markers.splice(markerId, 1);
     plotMarker(viewerId);
-    console.log("removed: ", viewerState[viewerId].markers);
 }
 
 function handleClick(osdView, pos) {
-
-    console.log("managing click", osdView, pos)
 
     if (current_click_mode === CLICK_MODE.ADD) {
         
@@ -502,8 +496,6 @@ function handleClick(osdView, pos) {
             };
           }
         });
-
-        console.log("Best matched point: ", best);
 
         if (best && best.distance < 0.025) {
           onRemoveMarker(osdView.index, best.index);
@@ -665,38 +657,26 @@ function getImageUrl(viewer, type='image/jpg'){
     return viewer.drawer.canvas.toDataURL(type);
 }
 
-$('.log-data-checkbox').on('click', function() {
-    if ($('.log-data-checkbox').is(':checked')) {
-        staticViewer.setClickMode('add');
-        movingViewer.setClickMode('add');
-        console.log("testing new stuff")
-        // LogData();
+$('.autoregister-checkbox').on('click', function() {
+    if ($('.autoregister-checkbox').is(':checked')) {
+        current_click_mode = CLICK_MODE.ADD;
         ProcessImages();
       }
-})
+});
 
- function LogData() {
-
-    // console.log("tiles", this.viewer._tileImages);
-    console.log("tiles", staticViewer);
-
-    for(let key in this.viewer._tileImages){
-      if(this.viewer._tileImages[key].length == 2)
-        ProcessImages(this.viewer._tileImages[key]);
-    }
-  }
-
-//   function ProcessImages(imageList) {
     function ProcessImages() {
-    console.log("testing in processImgs")
-    let source1 = imageList[0].tile;
-    let source1ID = imageList[0].id;
 
-    let source2 = imageList[1].tile;
-    let source2ID = imageList[1].id;
+    movingViewer.viewport.goHome(true);
+    staticViewer.viewport.goHome(true);
 
-    console.log("source1", source1ID);
-    console.log("source2", source2ID);
+    let source1 = $('<img>',{src:getImageUrl(movingViewer, 'image/png')})[0];
+    let source1ID = viewerState[MOVING_VIEWER_ID].index;
+
+    let source2 = $('<img>',{src:getImageUrl(staticViewer, 'image/png')})[0];
+    let source2ID = viewerState[STATIC_VIEWER_ID].index;
+
+    console.log("source1", source1);
+    console.log("source2", source2);
 
     // step 1
     let im1 = cv.imread(source1);
@@ -717,8 +697,8 @@ $('.log-data-checkbox').on('click', function() {
     let descriptors1 = new cv.Mat();
     let descriptors2 = new cv.Mat();
 
-    // var orb = new cv.AKAZE();
-    var orb = new cv.ORB();
+    // var orb = new cv.AKAZE();    // less keypoints detected
+    var orb = new cv.ORB();     // more keypoints detected
 
     orb.detectAndCompute(im1Gray, new cv.Mat(), keypoints1, descriptors1);
     orb.detectAndCompute(im2Gray, new cv.Mat(), keypoints2, descriptors2);
@@ -746,7 +726,7 @@ $('.log-data-checkbox').on('click', function() {
     // console.log("matches:", matches);
 
 // -- knn matching --      
-    let knnDistance_option = 0.78;
+    let knnDistance_option = 0.5;  // lesser the value more the matches
     let good_matches = new cv.DMatchVector();
 
     let bf = new cv.BFMatcher();
@@ -756,8 +736,6 @@ $('.log-data-checkbox').on('click', function() {
 
     bf.knnMatch(descriptors1, descriptors2, matches, 2);      
     
-    console.log("matches:", matches);
-
     let counter = 0;
     for (let i = 0; i < matches.size(); ++i) {
         let match = matches.get(i);
@@ -792,20 +770,36 @@ $('.log-data-checkbox').on('click', function() {
     for (let r = 0; r < good_matches.size(); ++r) {
       let match = good_matches.get(r);
       let { queryIdx, trainIdx } = match;
-      anchorPoints.push({layer: source1ID, pt: keypoints1.get(queryIdx).pt});
-      anchorPoints.push({layer: source2ID, pt: keypoints2.get(trainIdx).pt});
+        anchorPoints.push(transformPoint({layer: source1ID, pt: keypoints1.get(queryIdx).pt}));
+        anchorPoints.push(transformPoint({layer: source2ID, pt: keypoints2.get(trainIdx).pt}));
     }
     console.log("anchorPoints: ", anchorPoints);
 
     // plot anchor points
     // qID = keypt1 | trainId = keypt2
-    console.log("testing layer:", this.layers);
-    console.log("testing viewer:", this.viewer);
 
     anchorPoints.forEach(anchor => {
       let { layer, pt } = anchor;
-      // console.log(this.viewer._osdViews[layer], pt);
-      this.viewer._handleClick(this.viewer._osdViews[layer], pt);
+      handleClick(viewerState[layer], pt);
     });
+   
     console.log('plotted')
   }
+
+// convert image coordinates to viewport coordinates
+function transformPoint(anchorPt) {
+    let { layer, pt } = anchorPt;
+    
+    // console.log("pt before: ", pt);
+   
+    let osdPoint = new OpenSeadragon.Point(pt.x, pt.y)
+    pt = viewerState[layer].viewer.viewport.pointFromPixel(osdPoint);
+
+    pt.x *= viewerState[layer].viewer.viewport.getContainerSize().x / viewerState[layer].dimensions["width"];
+    pt.y *= viewerState[layer].viewer.viewport.getContainerSize().y / viewerState[layer].dimensions["height"];
+    
+    // console.log("pt after: ", pt);
+
+    anchorPt.pt = pt;
+    return anchorPt;
+}

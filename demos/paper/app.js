@@ -16,6 +16,8 @@ const CLICK_MODE = {
 const STATIC_VIEWER_ID = 0;
 const MOVING_VIEWER_ID = 1;
 
+let knnDistance_option = 0.5;
+
 let current_click_mode = $('.add-radio').is(':checked') ? CLICK_MODE.ADD : CLICK_MODE.REMOVE;
 
 let drawingCanvas = document.createElement('canvas');
@@ -55,6 +57,11 @@ $('.add-radio').on('click', function() {
 $('.remove-radio').on('click', function() {
     current_click_mode = CLICK_MODE.REMOVE;
     console.log("click mode: ", current_click_mode)
+});
+
+$('.knn-dist').on('change', function() {
+    console.log("knn distance: ", this.value);
+    knnDistance_option = this.value;
 });
 
 
@@ -469,6 +476,11 @@ function onAddMarker(viewerId, marker) {
     plotMarker(viewerId);
 }
 
+function addAllMarkers(viewerId, markers) {
+    viewerState[viewerId].markers = markers;
+    plotMarker(viewerId);
+}
+
 function onRemoveMarker(viewerId, markerId) {
     // delete the svg before removing it from markers
     viewerState[viewerId].markers[markerId].group.remove();
@@ -664,7 +676,7 @@ $('.autoregister-checkbox').on('click', function() {
       }
 });
 
-    function ProcessImages() {
+function ProcessImages() {
 
     movingViewer.viewport.goHome(true);
     staticViewer.viewport.goHome(true);
@@ -726,7 +738,7 @@ $('.autoregister-checkbox').on('click', function() {
     // console.log("matches:", matches);
 
 // -- knn matching --      
-    let knnDistance_option = 0.5;  // lesser the value more the matches
+      // lesser the value more the matches
     let good_matches = new cv.DMatchVector();
 
     let bf = new cv.BFMatcher();
@@ -766,23 +778,47 @@ $('.autoregister-checkbox').on('click', function() {
 
     // step 5
     console.log("creating anchor point objs");
-    let anchorPoints = [];
+    let staticAnchorPoints = [];
+    let movingAnchorPoints = [];
+    let points1  = [];
+    let points2 = [];
     for (let r = 0; r < good_matches.size(); ++r) {
       let match = good_matches.get(r);
       let { queryIdx, trainIdx } = match;
-        anchorPoints.push(transformPoint({layer: source1ID, pt: keypoints1.get(queryIdx).pt}));
-        anchorPoints.push(transformPoint({layer: source2ID, pt: keypoints2.get(trainIdx).pt}));
+
+        staticAnchorPoints.push(transformPoint({layer: source2ID, pt: keypoints2.get(trainIdx).pt}));
+        movingAnchorPoints.push(transformPoint({layer: source1ID, pt: keypoints1.get(queryIdx).pt}));
+
+        points1.push(keypoints1.get(queryIdx).pt.x);
+        points1.push(keypoints1.get(queryIdx).pt.y);
+        points2.push(keypoints2.get(trainIdx).pt.x);
+        points2.push(keypoints2.get(trainIdx).pt.y);
     }
-    console.log("anchorPoints: ", anchorPoints);
+    console.log("anchorPoints: ", staticAnchorPoints, movingAnchorPoints);
 
     // plot anchor points
     // qID = keypt1 | trainId = keypt2
 
-    anchorPoints.forEach(anchor => {
-      let { layer, pt } = anchor;
-      handleClick(viewerState[layer], pt);
-    });
-   
+    // step 6
+    // creating mat to prepare for homography
+    let mat1 = cv.matFromArray(points1.length, 1, cv.CV_32FC2, points1);
+    let mat2 = cv.matFromArray(points2.length, 1, cv.CV_32FC2, points2);
+
+    // step 7
+    // calculating homography
+    let h = cv.findHomography(mat1, mat2, cv.RANSAC);
+
+    console.log("homography: ", h.data64F);
+
+    for(let id=0; id < h.data64F.length; id++){
+        console.log("h.data64F[", id, "]: ", h.data64F[id]);
+        $(`.coordinate-${id+1}`).val(h.data64F[id]);
+    }
+
+    // plot all points together instead of using handleClicks
+    addAllMarkers(viewerState[source1ID].index, movingAnchorPoints);
+    addAllMarkers(viewerState[source2ID].index, staticAnchorPoints);
+
     console.log('plotted')
   }
 
@@ -800,6 +836,5 @@ function transformPoint(anchorPt) {
     
     // console.log("pt after: ", pt);
 
-    anchorPt.pt = pt;
-    return anchorPt;
+    return pt;
 }

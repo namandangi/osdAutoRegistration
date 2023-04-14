@@ -120,3 +120,34 @@
 .viewport-image-container img{
     width:100%;
 }
+
+.image-registration {
+    margin: 5% 0 5% 0;
+    justify-content: space-around;
+}
+
+.homography-grid{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.grid-item > input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+.grid-item{
+    border:thin gray solid;
+    background-color:var(--background-color);
+    width: calc(100% * (1/2.85) - 10px);
+}
+
